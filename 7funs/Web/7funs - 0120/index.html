@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+<title>7funs 找食譜 我最大</title>
+<link rel="stylesheet" href="css/7funs_layout.css">
+<link rel="stylesheet" href="css/reset.css">
+<link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+</head>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+    $('.slideshow').cycle({
+		fx: 'fade'
+	});
+});
+</script>
+<link rel="stylesheet" type="text/css" href="jvmobilemenu/jv-jquery-mobile-menu.css">
+  
+<body class="page">
+<article class="Header_wrap">
+    <div class="theContents">
+        <h1 class="logo"><a href="index.html"><span>7</span>funs</a></h1>
+        <div class="none_loginBox">
+            <p><a href="login.html">登入</a>│
+            <a href="sign.html">註冊</a>│
+            <a class="icon_FB" href="#">登入</a></p>
+            <br class="CLEAR" />
+        </div>
+        <!--<div class="UserBox">
+            <p class="name"><a href="#" id="id_tool">Mark 吳</a></p>
+            <div class="user_photo"><img src="images/h.jpg" /></div>
+            <br class="CLEAR" />
+        </div>-->
+        <div class="user_tools" id="tools" style="display:none;">
+            <ul>
+                <li><p><a href="love.html">我收藏的</a></p></li>
+                <li><p><a href="setting.html">個人設定</a></p></li>
+                <!--<li><p><a href="#">修改密碼</a></p></li>-->
+                <li><p><a class="none_line" href="#">登出</a></p></li>
+            </ul>
+        </div>
+        <div class="SearchBox"><input type="text" tabindex="0" size="26" maxlength="50" onfocus="if (this.value=='搜尋食譜 ') this.value='';" onblur="if (this.value=='') this.value='搜尋食譜 ';" value="搜尋食譜 " /></div>
+        <!--<div class="theSideMenu"><a href="#menu"></a></div>-->
+        <br class="CLEAR" />
+    </div>
+</article>
+<article class="CenterBox">
+	<div class="theContents">
+        <div class="MenuBox">
+            <ul>
+                <li><h3 class="h50"><a id="MenuMain01" href="#">食材</a></h3></li>
+                <li><h3 class="btm_in"><a id="MenuMain02" href="#">烹調<br />法</a></h3></li>
+                <div class="sub_menu" id="Sub_M01">
+                    <ul class="arr_br-l">
+                        <li class="bor"><p><a href="#">單身</a></p></li>
+                        <li><p><a href="#">二人</a></p></li>
+                        <li><p><a href="#">四人</a></p></li>
+                        <li><p><a class="none_line" href="#">12人</a></p></li>
+                    </ul>
+                </div>
+                <div class="sub_menu" id="Sub_M02" style="display:block;">
+                    <ul class="arr_br-r">
+                        <li class="bor"><p><a href="#">單身</a></p></li>
+                        <li><p><a href="#">二人</a></p></li>
+                        <li><p><a href="#">四人</a></p></li>
+                        <li><p><a class="none_line" href="#">12人</a></p></li>
+                    </ul>
+                </div>
+                
+                <li><h3 class="h50"><a id="MenuMain03" href="#">主食</a></h3></li>
+                <li><h3><a id="MenuMain04" href="#">主題<br />料理</a></h3></li>
+                 <div class="sub_menu" id="Sub_M03">
+                    <ul class="arr_br-l">
+                        <li class="bor"><p><a href="#">單身</a></p></li>
+                        <li><p><a href="#">二人</a></p></li>
+                        <li><p><a href="#">四人</a></p></li>
+                        <li><p><a class="none_line" href="#">12人</a></p></li>
+                    </ul>
+                </div>
+                <div class="sub_menu" id="Sub_M04">
+                    <ul class="arr_br-r">
+                        <li class="bor"><p><a href="#">單身</a></p></li>
+                        <li><p><a href="#">二人</a></p></li>
+                        <li><p><a href="#">四人</a></p></li>
+                        <li><p><a class="none_line" href="#">12人</a></p></li>
+                    </ul>
+                </div>
+                
+                <li><h3><a id="MenuMain05" href="#">糖油<br />蛋粉</a></h3></li>
+                <li><h3><a id="MenuMain06" href="#">料理<br />份量</a></h3></li>
+                <div class="sub_menu" id="Sub_M05">
+                    <ul class="arr_br-l">
+                        <li class="bor"><p><a href="#">單身</a></p></li>
+                        <li><p><a href="#">二人</a></p></li>
+                        <li><p><a href="#">四人</a></p></li>
+                        <li><p><a class="none_line" href="#">12人</a></p></li>
+                    </ul>
+                </div>
+                <div class="sub_menu" id="Sub_M06">
+                    <ul class="arr_br-r">
+                        <li class="bor"><p><a href="#">單身</a></p></li>
+                        <li><p><a href="#">二人</a></p></li>
+                        <li><p><a href="#">四人</a></p></li>
+                        <li><p><a class="none_line" href="#">12人</a></p></li>
+                    </ul>
+                </div>
+                
+                <li><h3><a id="MenuMain07" href="#">料理<br />時間</a></h3></li>
+                <li><h3><a id="MenuMain08" href="#">經典<br />料理</a></h3></li>
+                <div class="sub_menu" id="Sub_M07">
+                    <ul class="arr_br-l">
+                        <li class="bor"><p><a href="#">單身</a></p></li>
+                        <li><p><a href="#">二人</a></p></li>
+                        <li><p><a href="#">四人</a></p></li>
+                        <li><p><a class="none_line" href="#">12人</a></p></li>
+                    </ul>
+                </div>
+                <div class="sub_menu" id="Sub_M08">
+                    <ul class="arr_br-r">
+                        <li class="bor"><p><a href="#">單身</a></p></li>
+                        <li><p><a href="#">二人</a></p></li>
+                        <li><p><a href="#">四人</a></p></li>
+                        <li><p><a class="none_line" href="#">12人</a></p></li>
+                    </ul>
+                </div>
+                
+                <li><h3><a id="MenuMain09" href="#">創意<br />料理</a></h3></li>
+                <li><h3><a id="MenuMain10" href="#">料理<br />工具</a></h3></li>
+                <div class="sub_menu" id="Sub_M09">
+                    <ul class="arr_br-l">
+                        <li class="bor"><p><a href="#">單身</a></p></li>
+                        <li><p><a href="#">二人</a></p></li>
+                        <li><p><a href="#">四人</a></p></li>
+                        <li><p><a class="none_line" href="#">12人</a></p></li>
+                    </ul>
+                </div>
+                <div class="sub_menu" id="Sub_M10">
+                    <ul class="arr_br-r">
+                        <li class="bor"><p><a href="#">單身</a></p></li>
+                        <li><p><a href="#">二人</a></p></li>
+                        <li><p><a href="#">四人</a></p></li>
+                        <li><p><a class="none_line" href="#">12人</a></p></li>
+                    </ul>
+                </div>
+                
+                <li><h3><a id="MenuMain11" href="#">特地<br />族群</a></h3></li>
+                <div class="sub_menu" id="Sub_M11">
+                    <ul class="arr_br-l">
+                        <li class="bor"><p><a href="#">單身</a></p></li>
+                        <li><p><a href="#">二人</a></p></li>
+                        <li><p><a href="#">四人</a></p></li>
+                        <li><p><a class="none_line" href="#">12人</a></p></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+    	
+        <div class="rightBox">
+            <div class="top_toole">
+                <p class="keywords"><a href="#">中秋</a>   
+                <a href="#">元宵</a>   
+                <a href="#">冬至</a>   
+                <a href="#">年菜</a>   
+                <a href="#">情人節</a>   
+                <a href="#">端午</a>   
+                <a href="#">聖誕</a>   
+                <a href="#">萬聖節</a></p>
+                <p class="sort"><span>排序依</span><a class="btm01 btm_in"href="#">新進食譜</a><a class="btm02" href="#">熱門食譜</a></p>
+                <br class="CLEAR" />
+            </div>
+            <div class="meals">
+                <div class="msBox fancybox fancybox.iframe DBox_xx">
+                    <div class="food_photo">
+                    	<div class="bk-Box">
+                            <p class="like favorites">已收藏</p>
+                    	</div>
+                    	<img src="images/meals/food_default.jpg" width="100%" alt="" />
+                    </div>
+                    <div class="food_info">
+                    	<p class="title">義式托斯卡納麵包佐番茄沙沙</p>
+                        <p class="chef">白家豪師傅</p>
+                        <p class="nb">991人看過</p>
+                        <p class="look"><a href="food.html">料理GO</a></p>
+                    </div>
+                    <br class="CLEAR" />
+                </div>
+                <div class="msBox fancybox fancybox.iframe DBox_xx">
+                    <div class="food_photo">
+                    	<div class="bk-Box">
+                            <p class="like">收藏</p>
+                    	</div>
+                    	<img src="images/meals/02.jpg" width="100%" alt="" />
+                    </div>
+                    <div class="food_info">
+                    	<p class="title">海鮮燉飯</p>
+                        <p class="chef">白家豪師傅</p>
+                        <p class="nb">991人看過</p>
+                        <p class="look"><a href="food.html">料理GO</a></p>
+                    </div>
+                    <br class="CLEAR" />
+                </div>
+                <div class="msBox fancybox fancybox.iframe DBox_xx">
+                    <div class="food_photo">
+                    	<div class="bk-Box">
+                            <p class="like">收藏</p>
+                    	</div>
+                    	<img src="images/meals/03.jpg" width="100%" alt="" />
+                    </div>
+                    <div class="food_info">
+                    	<p class="title">燒烤豬</p>
+                        <p class="chef">白家豪師傅</p>
+                        <p class="nb">991人看過</p>
+                        <p class="look"><a href="food.html">料理GO</a></p>
+                    </div>
+                    <br class="CLEAR" />
+                </div>
+                <div class="msBox fancybox fancybox.iframe DBox_xx">
+                    <div class="food_photo">
+                    	<div class="bk-Box">
+                            <p class="like">收藏</p>
+                    	</div>
+                    	<img src="images/meals/04.jpg" width="100%" alt="" />
+                    </div>
+                    <div class="food_info">
+                    	<p class="title">蛋塔好好吃</p>
+                        <p class="chef">白家豪師傅</p>
+                        <p class="nb">991人看過</p>
+                        <p class="look"><a href="food.html">料理GO</a></p>
+                    </div>
+                    <br class="CLEAR" />
+                </div>
+                <div class="msBox fancybox fancybox.iframe DBox_xx">
+                    <div class="food_photo">
+                    	<div class="bk-Box">
+                            <p class="like">收藏</p>
+                    	</div>
+                    	<img src="images/meals/05.jpg" width="100%" alt="" />
+                    </div>
+                    <div class="food_info">
+                    	<p class="title">鮮蝦海鮮義大利麵</p>
+                        <p class="chef">白家豪師傅</p>
+                        <p class="nb">991人看過</p>
+                        <p class="look"><a href="food.html">料理GO</a></p>
+                    </div>
+                    <br class="CLEAR" />
+                </div>
+                <div class="msBox fancybox fancybox.iframe DBox_xx">
+                    <div class="food_photo">
+                    	<div class="bk-Box">
+                            <p class="like">收藏</p>
+                    	</div>
+                    	<img src="images/meals/06.jpg" width="100%" alt="" />
+                    </div>
+                    <div class="food_info">
+                    	<p class="title">春川辣炒雞 </p>
+                        <p class="chef">白家豪師傅</p>
+                        <p class="nb">991人看過</p>
+                        <p class="look"><a href="food.html">料理GO</a></p>
+                    </div>
+                    <br class="CLEAR" />
+                </div>
+                <div class="msBox fancybox fancybox.iframe DBox_xx">
+                    <div class="food_photo">
+                    	<div class="bk-Box">
+                            <p class="like">收藏</p>
+                    	</div>
+                    	<img src="images/meals/07.jpg" width="100%" alt="" />
+                    </div>
+                    <div class="food_info">
+                    	<p class="title">椒香台式泡菜&黃金泡菜</p>
+                        <p class="chef">白家豪師傅</p>
+                        <p class="nb">991人看過</p>
+                        <p class="look"><a href="food.html">料理GO</a></p>
+                    </div>
+                    <br class="CLEAR" />
+                </div>
+                <div class="msBox fancybox fancybox.iframe DBox_xx">
+                    <div class="food_photo">
+                    	<div class="bk-Box">
+                            <p class="like">收藏</p>
+                    	</div>
+                    	<img src="images/meals/08.jpg" width="100%" alt="" />
+                    </div>
+                    <div class="food_info">
+                    	<p class="title">牧羊人牛肉派</p>
+                        <p class="chef">白家豪師傅</p>
+                        <p class="nb">991人看過</p>
+                        <p class="look"><a href="food.html">料理GO</a></p>
+                    </div>
+                    <br class="CLEAR" />
+                </div>
+                <div class="msBox fancybox fancybox.iframe DBox_xx">
+                    <div class="food_photo">
+                    	<div class="bk-Box">
+                            <p class="like">收藏</p>
+                    	</div>
+                    	<img src="images/meals/09.jpg" width="100%" alt="" />
+                    </div>
+                    <div class="food_info">
+                    	<p class="title">腐乳燒豆腐&豆腐麻糬 </p>
+                        <p class="chef">白家豪師傅</p>
+                        <p class="nb">991人看過</p>
+                        <p class="look"><a href="food.html">料理GO</a></p>
+                    </div>
+                    <br class="CLEAR" />
+                </div>
+                <div class="msBox fancybox fancybox.iframe DBox_xx">
+                    <div class="food_photo">
+                    	<div class="bk-Box">
+                            <p class="like">收藏</p>
+                    	</div>
+                    	<img src="images/meals/10.jpg" width="100%" alt="" />
+                    </div>
+                    <div class="food_info">
+                    	<p class="title">乾炒牛河</p>
+                        <p class="chef">白家豪師傅</p>
+                        <p class="nb">991人看過</p>
+                        <p class="look"><a href="food.html">料理GO</a></p>
+                    </div>
+                    <br class="CLEAR" />
+                </div>
+                <br class="CLEAR" />
+            </div>
+            <div class="PageBox">
+                <p>	<a class="pege_arr-l arr_no"></a><!--在沒有前一頁時會增加arr_no這class屬性，表示無法點選-->
+                <a class="btm_in" href="#">1</a>
+                <a href="#">2</a>
+                <a href="#" class="more">‧‧‧</a>
+                <a href="#">17</a>
+                <a href="#">18</a>
+                <span>總共</span>137<span>筆</span>
+                <a class="pege_arr-r" href="#"></a><!--相同的在沒有下一頁時會增加arr_no這屬性，表示無法點選-->
+                </p>
+            </div>
+        </div>
+        
+        <div class="rightBoxII">
+            <div class="FoodList_QABox">
+                <ul class="qa">
+                    <li><h3>最新問與答</h3></li>
+                    <li><p class="name">Mark wu<span>10:56 AM</span></p>
+                        <p><a href="Reply.html">請問紅油辣渣要怎麼做? 可以存放多久 ?</a></p>
+                    </li>
+                    <li><p class="name">Mark wu<span>10:56 AM</span></p>
+                        <p><a href="Reply.html">如何煮花生 Part 2</a></p>
+                    </li>
+                    <li><p class="name">EikiyChang<span>10:56 AM</span></p>
+                        <p><a href="Reply.html">請問，紅油辣渣要怎麼做? 可以存放多久 ?</a></p>
+                    </li>
+                    <li><p class="name">Gina<span>10:56 AM</span></p>
+                        <p><a href="Reply.html">請問，紅油辣渣要怎麼做? 可以存放多久 ?</a></p>
+                    </li>
+                    <li><p class="name">郭小明<span>10:56 AM</span></p>
+                        <p><a href="Reply.html">如何煮花生 Part 2</a></p>
+                    </li>
+                </ul>
+                <p class="more"><a href="QA.html">更多問與答...</a></p>
+            </div>
+            <div class="AdBox">
+                <a href="#" target="_blank"><img src="images/img_ADs_00.jpg" width="100%" /></a>
+                <a href="#" target="_blank"><img src="images/img_ADs_01.jpg" width="100%" /></a>
+            </div>
+        </div>
+    	<br class="CLEAR" />
+    </div>
+</article>
+
+<article class="Footer_wrap"><p><a href="7funs.html">關於7funs</a>│<a href="index.html">食譜</a>│<a href="QA.html">問與答</a></p>
+<p>© 2016 7funs Group Inc. All Rights Reserved. 版權所有 不得轉載</p></article>
+	
+	<div class="mobile-nav">
+        <ul class="food_menu">
+          <li><h4>食材</h4>
+          	<p><a href="#">肉類</a>
+            <a href="#">海鮮</a>
+            <a href="#">葉菜</a>
+            <a href="#">根莖</a>
+            <a href="#">水果</a>
+            <a href="#">瓜類</a>
+            <a href="#">菌藻</a>
+            <a href="#">蛋豆</a>
+            </p>
+          </li>
+          <li><h4>主食</h4>
+          	<p><a href="#">2人</a>
+            <a href="#">4人</a>
+            <a href="#">16人</a>
+            </p>
+          </li>
+          <li><h4>主題料理</h4>
+          	<p><a href="#">在地美食</a>
+            <a href="#">時令節慶</a>
+            <a href="#">異國料理</a>
+            <a href="#">節慶料理</a>
+            <a href="#">素食料理</a>
+            <a href="#">美味時刻</a>
+            </p>
+          </li>
+          <li><h4>主題料理</h4>
+          	<p><a href="#">2人</a><a href="#">4人</a><a href="#">16人</a></p>
+          </li>
+          <li><h4>糖油蛋粉</h4>
+          	<p><a href="#">2人</a><a href="#">4人</a><a href="#">16人</a></p>
+          </li>
+          <li><h4>料理份量</h4>
+          	<p><a href="#">2人</a><a href="#">4人</a><a href="#">16人</a></p>
+          </li>
+        </ul>
+        <ul class="Oneself">
+			<li><p><a href="#">問與答</a></p></li>
+            <li><p><a href="#">我收藏的</a></p></li>
+			<li><p><a href="#">設定</a></p></li>
+			<li><p><a href="#">修改密碼</a></p></li>
+			<li><p><a href="#">登入</a></p></li><!--尚未登入沒有圖案-->
+            <li class="user"><p><img src="images/h.jpg"><a href="#">mark_wu 登出</a><br class="CLEAR" /></p></li><!--登入中 有大頭圖案-->
+        </ul>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="jvmobilemenu/jv-jquery-mobile-menu-min.js"></script>
+	<script src="js/script-right.js"></script>
+</body>
+
+</html>
+
+
+

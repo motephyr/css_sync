@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+<title>7funs Q &amp; A 我要提問</title>
+<link rel="stylesheet" href="css/7funs_layout.css">
+<link rel="stylesheet" href="css/reset.css">
+<link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+</head>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+    $('.slideshow').cycle({
+		fx: 'fade'
+	});
+});
+</script>
+<link rel="stylesheet" type="text/css" href="jvmobilemenu/jv-jquery-mobile-menu.css">
+  
+<body class="page">
+<article class="Header_wrap">
+    <div class="theContents">
+        <h1 class="logo"><a href="index.html"><span>7</span>funs</a></h1>
+        <div class="UserBox">
+            <p class="name"><a href="#" id="id_tool">Mark 吳</a></p>
+            <div class="user_photo"><img src="images/h.jpg" /></div>
+            <br class="CLEAR" />
+        </div>
+        <div class="user_tools" id="tools" style="display:none;">
+            <ul>
+                <li><p><a href="love.html">我收藏的</a></p></li>
+                <li><p><a href="setting.html">個人設定</a></p></li>
+                <!--<li><p><a href="#">修改密碼</a></p></li>-->
+                <li><p><a class="none_line" href="#">登出</a></p></li>
+            </ul>
+        </div>
+        <div class="SearchBox"><input type="text" tabindex="0" size="26" maxlength="50" onfocus="if (this.value=='問與答搜尋 ') this.value='';" onblur="if (this.value=='') this.value='問與答搜尋 ';" value="問與答搜尋 " /></div>
+        <!--<div class="theSideMenu"><a href="#menu"></a></div>-->
+        <br class="CLEAR" />
+    </div>
+</article>
+<article class="theUserBox forQA">
+    <div class="user_photo">
+    	<div class="photo_L"><img src="images/h.jpg"></div>
+        <p class="name">Yi-Ju Wu</p>
+    </div>
+    <p class="error">尚未輸入標題或內文</p>
+    <!--填入時會變深灰色加入class="f_in"-->
+    <div class="FillBox"><input type="text" tabindex="0" size="26" maxlength="50" onfocus="if (this.value=='標題') this.value='';" onblur="if (this.value=='') this.value='標題';" value="標題"></div>
+    <div class="FillBox"><textarea class="b1 f_in" tabindex="0" size="26" maxlength="50" onfocus="if (this.value=='請輸入內容') this.value='';" onblur="if (this.value=='') this.value='請輸入內容';" value="請輸入內容">填寫中文字時，文字會從淺灰色變深灰色喔~~~~~~~</textarea></div>
+    <div class="FillBox"><p><a class="btm_c_org" href="#">送出</a></p><p class="cancel"><a href="QA.html">取消</a></p></div>
+</article>
+
+<article class="Footer_wrap pos_bottom"><p><a href="index.html">首頁</a>│<a href="7funs.html">關於7funs</a>│<a href="QA.html">問與答</a></p>
+<p>© 2016 7funs Group Inc. All Rights Reserved. 版權所有 不得轉載</p></article>
+    <div class="mobile-nav">
+        <ul class="Oneself">
+			<li><p><a href="#">問與答</a></p></li>
+            <li><p><a href="#">我收藏的</a></p></li>
+			<li><p><a href="#">個人設定</a></p></li>
+			<li><p><a href="#">修改密碼</a></p></li>
+			<li><p><a href="#">登入</a></p></li><!--尚未登入沒有圖案-->
+            <li class="user"><p><img src="images/h.jpg"><a href="#">mark_wu 登出</a><br class="CLEAR" /></p></li><!--登入中 有大頭圖案-->
+        </ul>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="jvmobilemenu/jv-jquery-mobile-menu-min.js"></script>
+	<script src="js/script-right.js"></script>
+</body>
+</html>
+
+
+

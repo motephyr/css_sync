@@ -1,0 +1,839 @@
+<!DOCTYPE HTML><html><head><title>Example API documentation</title><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="generator" content="https://github.com/kevinrenskers/raml2html 1.6.0"><link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"><link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css"><script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script><script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {
+            $('.page-header pre code, .top-resource-description pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+
+            $('[data-toggle]').click(function() {
+                var selector = $(this).data('target') + ' pre code';
+                $(selector).each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+            });
+            
+            
+            // open modal on hashes like #_action_get
+            $(window).bind('hashchange', function(e) {
+                var anchor_id = document.location.hash.substr(1); //strip #
+                var element = $('#' + anchor_id);
+
+                // do we have such element + is it a modal?  --> show it
+                if (element.length && element.hasClass('modal')) {
+                    element.modal('show');
+                }
+            });
+
+            // execute hashchange on first page load
+            $(window).trigger('hashchange');
+            
+            // remove url fragment on modal hide
+            $('.modal').on('hidden.bs.modal', function() {
+                if(history && history.replaceState) { 
+                    history.replaceState({}, '', '#');
+                }
+            });
+        });
+    </script><style>
+        .hljs {
+            background: transparent;
+        }
+        .parent {
+            color: #999;
+        }
+        .list-group-item > .badge {
+            float: none;
+            margin-right: 6px;
+        }
+        .panel-title > .methods {
+            float: right;
+        }
+        .badge {
+            border-radius: 0;
+            text-transform: uppercase;
+            width: 70px;
+            font-weight: normal;
+            color: #f3f3f6;
+            line-height: normal;
+        }
+        .badge_get {
+            background-color: #63a8e2;
+        }
+        .badge_post {
+            background-color: #6cbd7d;
+        }
+        .badge_put {
+            background-color: #22bac4;
+        }
+        .badge_delete {
+            background-color: #d26460;
+        }
+        .badge_patch {
+            background-color: #ccc444;
+        }
+        .list-group, .panel-group {
+            margin-bottom: 0;
+        }
+        .panel-group .panel+.panel-white {
+            margin-top: 0;
+        }
+        .panel-group .panel-white {
+            border-bottom: 1px solid #F5F5F5;
+            border-radius: 0;
+        }
+        .panel-white:last-child {
+            border-bottom-color: white;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        .panel-white .panel-heading {
+            background: white;
+        }
+        .tab-pane ul {
+            padding-left: 2em;
+        }
+        .tab-pane h2 {
+            font-size: 1.2em;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab-pane h3 {
+            font-size: 1.1em;
+        }
+        .tab-content {
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        #sidebar {
+            margin-top: 30px;
+            padding-right: 5px;
+            overflow: auto;
+            height: 90%;
+        }
+        .top-resource-description {
+            border-bottom: 1px solid #ddd;
+            background: #fcfcfc;
+            padding: 15px 15px 0 15px;
+            margin: -15px -15px 10px -15px;
+        }
+        .resource-description {
+            border-bottom: 1px solid #fcfcfc;
+            background: #fcfcfc;
+            padding: 15px 15px 0 15px;
+            margin: -15px -15px 10px -15px;
+        }
+        .resource-description p:last-child {
+            margin: 0;
+        }
+        .list-group .badge {
+            float: left;
+        }
+        .method_description {
+            margin-left: 85px;
+        }
+        .method_description p:last-child {
+            margin: 0;
+        }
+        .list-group-item {
+            cursor: pointer;
+        }
+        .list-group-item:hover {
+            background-color: #f5f5f5;
+        }
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>Example API documentation <small>version 1</small></h1><p>http://7funs.com/</p><h3 id="Welcome"><a href="#Welcome">Welcome</a></h3><p>Welcome to the 7funs Documentation.</p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="_api_v1" class="panel-title">User相關功能</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__api_v1_sessions_json"><span class="parent">/api/v1</span>/sessions.json</a> <span class="methods"><a href="#_api_v1_sessions_json_post"><span class="badge badge_post">post</span></a> <a href="#_api_v1_sessions_json_delete"><span class="badge badge_delete">delete</span></a></span></h4></div><div id="panel__api_v1_sessions_json" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_api_v1_sessions_json_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>登入</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#_api_v1_sessions_json_delete'" class="list-group-item"><span class="badge badge_delete">delete</span><div class="method_description"><p>登出</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_api_v1_sessions_json_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/api/v1</span>/sessions.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>登入</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_api_v1_sessions_json_post_request" data-toggle="tab">Request</a></li><li><a href="#_api_v1_sessions_json_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_api_v1_sessions_json_post_request"><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum a1f7227bc737661ace68f3262e2f65ccbcdedf03",
+  "type": "object",
+  "required": [
+  "user"
+  ],
+  "properties": {
+    "user": {
+      "type": "object",
+      "required": [
+      "email",
+      "password"
+      ],
+      "properties": {
+        "email": {
+          "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+</code></pre><p><strong>Example</strong>:</p><pre><code>{:user=&gt;{:email=&gt;"motephyr@gmail.com", :password=&gt;"12341234"}}
+</code></pre></div><div class="tab-pane" id="_api_v1_sessions_json_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum 8fada7e1abb8f9c53b9004746a930d702ccefbd6",
+  "type": "object",
+  "required": [
+  "success",
+  "info",
+  "data"
+  ],
+  "properties": {
+    "success": {
+      "type": "boolean"
+      },
+      "info": {
+        "type": "string"
+        },
+        "data": {
+          "type": "object",
+          "required": [
+          "auth_token"
+          ],
+          "properties": {
+            "auth_token": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+</code></pre><p><strong>Example</strong>:</p><pre><code>{"success"=&gt;true, "info"=&gt;"Logged in", "data"=&gt;{"auth_token"=&gt;"9uaW37mztabxnp7GyYxP"}}
+</code></pre></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="_api_v1_sessions_json_delete"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_delete">delete</span> <span class="parent">/api/v1</span>/sessions.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>登出</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_api_v1_sessions_json_delete_request" data-toggle="tab">Request</a></li><li><a href="#_api_v1_sessions_json_delete_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_api_v1_sessions_json_delete_request"><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum d7a92a68766f635d71007bd8abbbb5b33b29fdd1",
+  "type": "object",
+  "required": [
+  "auth_token"
+  ],
+  "properties": {
+    "auth_token": {
+      "type": "string"
+    }
+  }
+}
+</code></pre><p><strong>Example</strong>:</p><pre><code>{:auth_token=&gt;"9uaW37mztabxnp7GyYxP"}
+</code></pre></div><div class="tab-pane" id="_api_v1_sessions_json_delete_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum 89dfae6f7fbc6b046236d8c6fec4f14bd5174e31",
+  "type": "object",
+  "required": [
+  "success",
+  "info",
+  "data"
+  ],
+  "properties": {
+    "success": {
+      "type": "boolean"
+      },
+      "info": {
+        "type": "string"
+        },
+        "data": {
+          "type": "object",
+          "properties": {
+          }
+        }
+      }
+    }
+</code></pre><p><strong>Example</strong>:</p><pre><code>{"success"=&gt;true, "info"=&gt;"Logged out", "data"=&gt;{}}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__api_v1_registrations_json"><span class="parent">/api/v1</span>/registrations.json</a> <span class="methods"><a href="#_api_v1_registrations_json_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel__api_v1_registrations_json" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_api_v1_registrations_json_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>註冊</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_api_v1_registrations_json_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/api/v1</span>/registrations.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>註冊</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_api_v1_registrations_json_post_request" data-toggle="tab">Request</a></li><li><a href="#_api_v1_registrations_json_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_api_v1_registrations_json_post_request"><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum 29518e1a05874279856e03795fd0f8852c8182ca",
+  "type": "object",
+  "required": [
+  "user"
+  ],
+  "properties": {
+    "user": {
+      "type": "object",
+      "required": [
+      "email",
+      "password",
+      "name",
+      "password_confirmation"
+      ],
+      "properties": {
+        "email": {
+          "type": "string"
+          },
+          "password": {
+            "type": "string"
+            },
+            "name": {
+              "type": "string"
+              },
+              "password_confirmation": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+</code></pre><p><strong>Example</strong>:</p><pre><code>{:user=&gt;{:email=&gt;"motephyr_test@gmail.com", :password=&gt;"12341234", :name=&gt;"ABC", :password_confirmation=&gt;"12341234"}}
+</code></pre></div><div class="tab-pane" id="_api_v1_registrations_json_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum 69e7516ba0881401fb5d9e38f410367791a9ec7d",
+  "type": "object",
+  "required": [
+  "success",
+  "info",
+  "data"
+  ],
+  "properties": {
+    "success": {
+      "type": "boolean"
+      },
+      "info": {
+        "type": "string"
+        },
+        "data": {
+          "type": "object",
+          "required": [
+          "user",
+          "auth_token"
+          ],
+          "properties": {
+            "user": {
+              "type": "object",
+              "required": [
+              "id",
+              "email",
+              "created_at",
+              "updated_at",
+              "fb_id",
+              "token",
+              "name",
+              "is_admin",
+              "authentication_token"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                  },
+                  "email": {
+                    "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                        },
+                        "fb_id": {
+                          },
+                          "token": {
+                            },
+                            "name": {
+                              "type": "string"
+                              },
+                              "is_admin": {
+                                "type": "boolean"
+                                },
+                                "authentication_token": {
+                                  "type": "string"
+                                }
+                              }
+                              },
+                              "auth_token": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+</code></pre><p><strong>Example</strong>:</p><pre><code>{"success"=&gt;true, "info"=&gt;"Registered", "data"=&gt;{"user"=&gt;{"id"=&gt;8, "email"=&gt;"motephyr_test@gmail.com", "created_at"=&gt;"2015-05-29T05:01:01.164Z", "updated_at"=&gt;"2015-05-29T05:01:01.177Z", "fb_id"=&gt;nil, "token"=&gt;nil, "name"=&gt;"ABC", "is_admin"=&gt;false, "authentication_token"=&gt;"GwA1sC8xup6zXAxA_58V"}, "auth_token"=&gt;"GwA1sC8xup6zXAxA_58V"}}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__api_v1_passwords_json"><span class="parent">/api/v1</span>/passwords.json</a> <span class="methods"><a href="#_api_v1_passwords_json_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel__api_v1_passwords_json" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_api_v1_passwords_json_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>重設密碼</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_api_v1_passwords_json_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/api/v1</span>/passwords.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>重設密碼</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_api_v1_passwords_json_post_request" data-toggle="tab">Request</a></li><li><a href="#_api_v1_passwords_json_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_api_v1_passwords_json_post_request"><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{:email=&gt;"motephyr_test@gmail.com"}
+</code></pre></div><div class="tab-pane" id="_api_v1_passwords_json_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="_recipe_videos" class="panel-title">影音</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__recipe_videos__json"><span class="parent">/recipe_videos</span>/.json</a> <span class="methods"><a href="#_recipe_videos__json_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel__recipe_videos__json" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_recipe_videos__json_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>列表</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_recipe_videos__json_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/recipe_videos</span>/.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>列表</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_recipe_videos__json_get_request" data-toggle="tab">Request</a></li><li><a href="#_recipe_videos__json_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_recipe_videos__json_get_request"><h3>Body</h3><p><strong>Type: application/json</strong></p></div><div class="tab-pane" id="_recipe_videos__json_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum 27deae2f316da6c0d23c9d2967da1f53182cb124",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+    "id",
+    "recipe_id",
+    "youtube_video_code",
+    "number",
+    "created_at",
+    "updated_at"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer"
+        },
+        "recipe_id": {
+          "type": "integer"
+          },
+          "youtube_video_code": {
+            "type": "string"
+            },
+            "number": {
+              "type": "integer"
+              },
+              "created_at": {
+                "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+</code></pre><p><strong>Example</strong>:</p><pre><code>[{"id"=&gt;9, "recipe_id"=&gt;5, "youtube_video_code"=&gt;"PpNg52xpCMU", "number"=&gt;1, "created_at"=&gt;"2015-05-17T11:58:22.671Z", "updated_at"=&gt;"2015-05-21T15:24:06.940Z"}, {"id"=&gt;13, "recipe_id"=&gt;8, "youtube_video_code"=&gt;"", "number"=&gt;1, "created_at"=&gt;"2015-05-26T02:40:43.854Z", "updated_at"=&gt;"2015-05-26T02:40:43.854Z"}]
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="_recipes" class="panel-title">食譜</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__recipes__json"><span class="parent">/recipes</span>/.json</a> <span class="methods"><a href="#_recipes__json_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel__recipes__json" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_recipes__json_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>列表</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_recipes__json_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/recipes</span>/.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>列表</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_recipes__json_get_request" data-toggle="tab">Request</a></li><li><a href="#_recipes__json_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_recipes__json_get_request"><h3>Body</h3><p><strong>Type: application/json</strong></p></div><div class="tab-pane" id="_recipes__json_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum d535677fb3447dcd0503d3f6ea682177af3175b0",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+    "id",
+    "image",
+    "chef_name",
+    "title"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer"
+        },
+        "image": {
+          "type": "object",
+          "required": [
+          "url",
+          "thumb",
+          "medium"
+          ],
+          "properties": {
+            "url": {
+              },
+              "thumb": {
+                "type": "object",
+                "required": [
+                "url"
+                ],
+                "properties": {
+                  "url": {
+                  }
+                }
+                },
+                "medium": {
+                  "type": "object",
+                  "required": [
+                  "url"
+                  ],
+                  "properties": {
+                    "url": {
+                    }
+                  }
+                }
+              }
+              },
+              "chef_name": {
+                "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                  },
+                  "hits": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+</code></pre><p><strong>Example</strong>:</p><pre><code>[{"id"=&gt;6, "image"=&gt;{"url"=&gt;nil, "thumb"=&gt;{"url"=&gt;nil}, "medium"=&gt;{"url"=&gt;nil}}, "chef_name"=&gt;"程安琪", "title"=&gt;"四季紅魚麵", "hits"=&gt;9}, {"id"=&gt;9, "image"=&gt;{"url"=&gt;nil, "thumb"=&gt;{"url"=&gt;nil}, "medium"=&gt;{"url"=&gt;nil}}, "chef_name"=&gt;"", "title"=&gt;"日式風味海膽醬", "hits"=&gt;1}, {"id"=&gt;3, "image"=&gt;{"url"=&gt;"/uploads/recipe/image/3/Screen_Shot_2015-03-04_at_1.23.00_AM.png", "thumb"=&gt;{"url"=&gt;"/uploads/recipe/image/3/thumb_Screen_Shot_2015-03-04_at_1.23.00_AM.png"}, "medium"=&gt;{"url"=&gt;"/uploads/recipe/image/3/medium_Screen_Shot_2015-03-04_at_1.23.00_AM.png"}}, "chef_name"=&gt;"溫國智", "title"=&gt;"萵筍鳯爪", "hits"=&gt;1}, {"id"=&gt;7, "image"=&gt;{"url"=&gt;nil, "thumb"=&gt;{"url"=&gt;nil}, "medium"=&gt;{"url"=&gt;nil}}, "chef_name"=&gt;"程安琪", "title"=&gt;"蝦仁奶油焗烤飯", "hits"=&gt;2}, {"id"=&gt;2, "image"=&gt;{"url"=&gt;"/uploads/recipe/image/2/Photo_on_7-31-14_at_9.35_PM.jpg", "thumb"=&gt;{"url"=&gt;"/uploads/recipe/image/2/thumb_Photo_on_7-31-14_at_9.35_PM.jpg"}, "medium"=&gt;{"url"=&gt;"/uploads/recipe/image/2/medium_Photo_on_7-31-14_at_9.35_PM.jpg"}}, "chef_name"=&gt;"溫國智", "title"=&gt;"素干貝佐番茄沙沙醬", "hits"=&gt;73}, {"id"=&gt;10, "image"=&gt;{"url"=&gt;nil, "thumb"=&gt;{"url"=&gt;nil}, "medium"=&gt;{"url"=&gt;nil}}, "chef_name"=&gt;"吳文智", "title"=&gt;"海膽醬佐蟹肉餅", "hits"=&gt;nil}, {"id"=&gt;11, "image"=&gt;{"url"=&gt;nil, "thumb"=&gt;{"url"=&gt;nil}, "medium"=&gt;{"url"=&gt;nil}}, "chef_name"=&gt;"吳文智", "title"=&gt;"寬麵燻雞野菌佐黃菇醬", "hits"=&gt;nil}, {"id"=&gt;12, "image"=&gt;{"url"=&gt;nil, "thumb"=&gt;{"url"=&gt;nil}, "medium"=&gt;{"url"=&gt;nil}}, "chef_name"=&gt;"吳文智", "title"=&gt;"墨西哥檸香辣雞翅", "hits"=&gt;nil}, {"id"=&gt;13, "image"=&gt;{"url"=&gt;nil, "thumb"=&gt;{"url"=&gt;nil}, "medium"=&gt;{"url"=&gt;nil}}, "chef_name"=&gt;"", "title"=&gt;"墨西哥檸香辣醬", "hits"=&gt;nil}, {"id"=&gt;4, "image"=&gt;{"url"=&gt;nil, "thumb"=&gt;{"url"=&gt;nil}, "medium"=&gt;{"url"=&gt;nil}}, "chef_name"=&gt;"溫國智", "title"=&gt;"臘腸酒釀午魚", "hits"=&gt;nil}, {"id"=&gt;18, "image"=&gt;{"url"=&gt;"/uploads/recipe/image/18/IMG_3476.jpg", "thumb"=&gt;{"url"=&gt;"/uploads/recipe/image/18/thumb_IMG_3476.jpg"}, "medium"=&gt;{"url"=&gt;"/uploads/recipe/image/18/medium_IMG_3476.jpg"}}, "chef_name"=&gt;"蔡季芳老師", "title"=&gt;"鹼粽（14~16個）", "hits"=&gt;nil}, {"id"=&gt;1, "image"=&gt;{"url"=&gt;"/uploads/recipe/image/1/Photo_on_7-31-14_at_9.35_PM.jpg", "thumb"=&gt;{"url"=&gt;"/uploads/recipe/image/1/thumb_Photo_on_7-31-14_at_9.35_PM.jpg"}, "medium"=&gt;{"url"=&gt;"/uploads/recipe/image/1/medium_Photo_on_7-31-14_at_9.35_PM.jpg"}}, "chef_name"=&gt;"溫國智", "title"=&gt;"豆苗三菇白玉丸", "hits"=&gt;27}, {"id"=&gt;5, "image"=&gt;{"url"=&gt;nil, "thumb"=&gt;{"url"=&gt;nil}, "medium"=&gt;{"url"=&gt;nil}}, "chef_name"=&gt;"程安琪", "title"=&gt;"紅油抄手", "hits"=&gt;14}, {"id"=&gt;8, "image"=&gt;{"url"=&gt;nil, "thumb"=&gt;{"url"=&gt;nil}, "medium"=&gt;{"url"=&gt;nil}}, "chef_name"=&gt;"吳文智", "title"=&gt;"酥炸軟殼蟹佐海膽醬", "hits"=&gt;2}, {"id"=&gt;20, "image"=&gt;{"url"=&gt;nil, "thumb"=&gt;{"url"=&gt;nil}, "medium"=&gt;{"url"=&gt;nil}}, "chef_name"=&gt;"", "title"=&gt;"test", "hits"=&gt;nil}]
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__recipes_2_json"><span class="parent">/recipes</span>/2.json</a> <span class="methods"><a href="#_recipes_2_json_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel__recipes_2_json" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_recipes_2_json_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>取得單一內容</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_recipes_2_json_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/recipes</span>/2.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>取得單一內容</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_recipes_2_json_get_request" data-toggle="tab">Request</a></li><li><a href="#_recipes_2_json_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_recipes_2_json_get_request"><h3>Body</h3><p><strong>Type: application/json</strong></p></div><div class="tab-pane" id="_recipes_2_json_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum 62c7617c6a035bba84df905ff8f3783e92728786",
+  "type": "object",
+  "required": [
+  "recipe",
+  "is_my_love",
+  "love_hits"
+  ],
+  "properties": {
+    "recipe": {
+      "type": "object",
+      "required": [
+      "id",
+      "image",
+      "chef_name",
+      "title",
+      "description",
+      "ingredient",
+      "seasoning",
+      "method",
+      "reminder",
+      "hits",
+      "created_at",
+      "updated_at",
+      "creator_id",
+      "updater_id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer"
+          },
+          "image": {
+            "type": "object",
+            "required": [
+            "url",
+            "thumb",
+            "medium"
+            ],
+            "properties": {
+              "url": {
+                "type": "string"
+                },
+                "thumb": {
+                  "type": "object",
+                  "required": [
+                  "url"
+                  ],
+                  "properties": {
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                  },
+                  "medium": {
+                    "type": "object",
+                    "required": [
+                    "url"
+                    ],
+                    "properties": {
+                      "url": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+                },
+                "chef_name": {
+                  "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                      },
+                      "ingredient": {
+                        "type": "string"
+                        },
+                        "seasoning": {
+                          "type": "string"
+                          },
+                          "method": {
+                            "type": "string"
+                            },
+                            "reminder": {
+                              "type": "string"
+                              },
+                              "hits": {
+                                "type": "integer"
+                                },
+                                "created_at": {
+                                  "type": "string"
+                                  },
+                                  "updated_at": {
+                                    "type": "string"
+                                    },
+                                    "creator_id": {
+                                      "type": "integer"
+                                      },
+                                      "updater_id": {
+                                        "type": "integer"
+                                      }
+                                    }
+                                    },
+                                    "is_my_love": {
+                                      "type": "boolean"
+                                      },
+                                      "love_hits": {
+                                        "type": "integer"
+                                      }
+                                    }
+                                  }
+</code></pre><p><strong>Example</strong>:</p><pre><code>{"recipe"=&gt;{"id"=&gt;2, "image"=&gt;{"url"=&gt;"/uploads/recipe/image/2/Photo_on_7-31-14_at_9.35_PM.jpg", "thumb"=&gt;{"url"=&gt;"/uploads/recipe/image/2/thumb_Photo_on_7-31-14_at_9.35_PM.jpg"}, "medium"=&gt;{"url"=&gt;"/uploads/recipe/image/2/medium_Photo_on_7-31-14_at_9.35_PM.jpg"}}, "chef_name"=&gt;"溫國智", "title"=&gt;"素干貝佐番茄沙沙醬", "description"=&gt;"", "ingredient"=&gt;"洋蔥1/2顆(切末)、杏鮑菇3根、牛番茄1顆(切末)、蘆筍100公克(切段)", "seasoning"=&gt;"檸檬淳2大匙、糖少許、辣椒水少許", "method"=&gt;"1. 起一鍋滾水，放入蘆筍煮熟後撈出盛盤鋪底備用\r\n    2.  取一容器，放入牛番茄末、洋蔥末、檸檬淳、糖、辣椒水拌勻成為醬汁備用\r\n    3.  杏鮑菇刻出花刀後放入乾鍋中煎熟後取出放至蘆筍上，淋上醬汁即可\r\n    ", "reminder"=&gt;"", "hits"=&gt;74, "created_at"=&gt;"2015-04-02T08:36:27.538Z", "updated_at"=&gt;"2015-05-07T06:10:57.582Z", "creator_id"=&gt;1, "updater_id"=&gt;1}, "is_my_love"=&gt;false, "love_hits"=&gt;1}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__recipes_2_switch_favorite_json"><span class="parent">/recipes</span>/2/switch_favorite.json</a> <span class="methods"><a href="#_recipes_2_switch_favorite_json_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel__recipes_2_switch_favorite_json" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_recipes_2_switch_favorite_json_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>收藏/取消收藏</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_recipes_2_switch_favorite_json_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/recipes</span>/2/switch_favorite.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>收藏/取消收藏</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_recipes_2_switch_favorite_json_post_request" data-toggle="tab">Request</a></li><li><a href="#_recipes_2_switch_favorite_json_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_recipes_2_switch_favorite_json_post_request"><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum d7a92a68766f635d71007bd8abbbb5b33b29fdd1",
+  "type": "object",
+  "required": [
+  "auth_token"
+  ],
+  "properties": {
+    "auth_token": {
+      "type": "string"
+    }
+  }
+}
+</code></pre><p><strong>Example</strong>:</p><pre><code>{:auth_token=&gt;"9uaW37mztabxnp7GyYxP"}
+</code></pre></div><div class="tab-pane" id="_recipes_2_switch_favorite_json_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum a15e2127145548437173fc17f3e980e3f3dee2d0",
+  "type": "object",
+  "required": [
+  "success"
+  ],
+  "properties": {
+    "success": {
+      "type": "boolean"
+    }
+  }
+}
+</code></pre><p><strong>Example</strong>:</p><pre><code>{"success"=&gt;true}
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="_messages" class="panel-title">問與答</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__messages__json"><span class="parent">/messages</span>/.json</a> <span class="methods"><a href="#_messages__json_get"><span class="badge badge_get">get</span></a> <a href="#_messages__json_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel__messages__json" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_messages__json_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>列表</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#_messages__json_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>發問</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_messages__json_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/messages</span>/.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>列表</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_messages__json_get_request" data-toggle="tab">Request</a></li><li><a href="#_messages__json_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_messages__json_get_request"><h3>Body</h3><p><strong>Type: application/json</strong></p></div><div class="tab-pane" id="_messages__json_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum a73e92c3836f2f0174abb49aeb2f19b1d5983ee1",
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+    "id",
+    "user_id",
+    "title",
+    "description",
+    "created_at",
+    "updated_at"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer"
+        },
+        "user_id": {
+          "type": "integer"
+          },
+          "title": {
+            "type": "string"
+            },
+            "description": {
+              "type": "string"
+              },
+              "created_at": {
+                "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                  },
+                  "comments_count": {
+                  }
+                }
+              }
+            }
+</code></pre><p><strong>Example</strong>:</p><pre><code>[{"id"=&gt;2, "user_id"=&gt;1, "title"=&gt;"第二篇", "description"=&gt;"tettes", "created_at"=&gt;"2015-04-17T10:37:32.187Z", "updated_at"=&gt;"2015-04-17T10:37:32.187Z", "comments_count"=&gt;nil}, {"id"=&gt;3, "user_id"=&gt;1, "title"=&gt;"tetes", "description"=&gt;"sdfsdf", "created_at"=&gt;"2015-05-08T05:18:02.792Z", "updated_at"=&gt;"2015-05-08T05:18:02.792Z", "comments_count"=&gt;nil}, {"id"=&gt;4, "user_id"=&gt;1, "title"=&gt;"測試一下use model association (for @message)", "description"=&gt;"中文", "created_at"=&gt;"2015-05-19T16:48:35.626Z", "updated_at"=&gt;"2015-05-19T16:48:35.626Z", "comments_count"=&gt;nil}, {"id"=&gt;5, "user_id"=&gt;1, "title"=&gt;"motephyr3@gmail.com", "description"=&gt;"12341234", "created_at"=&gt;"2015-05-21T11:03:29.666Z", "updated_at"=&gt;"2015-05-21T11:03:29.666Z", "comments_count"=&gt;nil}, {"id"=&gt;6, "user_id"=&gt;1, "title"=&gt;"新問題", "description"=&gt;"新的描述", "created_at"=&gt;"2015-05-27T09:01:27.937Z", "updated_at"=&gt;"2015-05-27T09:01:27.937Z", "comments_count"=&gt;nil}, {"id"=&gt;7, "user_id"=&gt;1, "title"=&gt;"新問題", "description"=&gt;"新的描述", "created_at"=&gt;"2015-05-27T09:12:31.780Z", "updated_at"=&gt;"2015-05-27T09:12:31.780Z", "comments_count"=&gt;nil}, {"id"=&gt;8, "user_id"=&gt;1, "title"=&gt;"新問題", "description"=&gt;"新的描述", "created_at"=&gt;"2015-05-27T09:13:42.544Z", "updated_at"=&gt;"2015-05-27T09:13:42.544Z", "comments_count"=&gt;nil}, {"id"=&gt;9, "user_id"=&gt;1, "title"=&gt;"新問題", "description"=&gt;"新的描述", "created_at"=&gt;"2015-05-27T09:15:01.988Z", "updated_at"=&gt;"2015-05-27T09:15:01.988Z", "comments_count"=&gt;nil}, {"id"=&gt;10, "user_id"=&gt;1, "title"=&gt;"新問題", "description"=&gt;"新的描述", "created_at"=&gt;"2015-05-27T09:22:25.704Z", "updated_at"=&gt;"2015-05-27T09:22:25.704Z", "comments_count"=&gt;nil}, {"id"=&gt;11, "user_id"=&gt;1, "title"=&gt;"新問題", "description"=&gt;"新的描述", "created_at"=&gt;"2015-05-27T09:42:27.962Z", "updated_at"=&gt;"2015-05-27T09:42:27.962Z", "comments_count"=&gt;nil}, {"id"=&gt;12, "user_id"=&gt;1, "title"=&gt;"新問題", "description"=&gt;"新的描述", "created_at"=&gt;"2015-05-27T09:42:35.928Z", "updated_at"=&gt;"2015-05-27T09:42:35.928Z", "comments_count"=&gt;nil}, {"id"=&gt;13, "user_id"=&gt;1, "title"=&gt;"新問題", "description"=&gt;"新的描述", "created_at"=&gt;"2015-05-27T11:03:25.420Z", "updated_at"=&gt;"2015-05-27T11:03:25.420Z", "comments_count"=&gt;nil}, {"id"=&gt;14, "user_id"=&gt;1, "title"=&gt;"新問題", "description"=&gt;"新的描述", "created_at"=&gt;"2015-05-29T04:59:38.279Z", "updated_at"=&gt;"2015-05-29T04:59:38.279Z", "comments_count"=&gt;nil}, {"id"=&gt;1, "user_id"=&gt;1, "title"=&gt;"第一篇", "description"=&gt;"請問做菜的方式？", "created_at"=&gt;"2015-04-17T09:34:11.084Z", "updated_at"=&gt;"2015-04-17T09:34:11.084Z", "comments_count"=&gt;6}]
+</code></pre></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="_messages__json_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/messages</span>/.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>發問</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_messages__json_post_request" data-toggle="tab">Request</a></li><li><a href="#_messages__json_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_messages__json_post_request"><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum 996c438b8ff38070ab1581f02a6302d092cb791c",
+  "type": "object",
+  "required": [
+  "message",
+  "auth_token"
+  ],
+  "properties": {
+    "message": {
+      "type": "object",
+      "required": [
+      "title",
+      "description"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+        },
+        "auth_token": {
+          "type": "string"
+        }
+      }
+    }
+</code></pre><p><strong>Example</strong>:</p><pre><code>{:message=&gt;{:title=&gt;"新問題", :description=&gt;"新的描述"}, :auth_token=&gt;"9uaW37mztabxnp7GyYxP"}
+</code></pre></div><div class="tab-pane" id="_messages__json_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum a15e2127145548437173fc17f3e980e3f3dee2d0",
+  "type": "object",
+  "required": [
+  "success"
+  ],
+  "properties": {
+    "success": {
+      "type": "boolean"
+    }
+  }
+}
+</code></pre><p><strong>Example</strong>:</p><pre><code>{"success"=&gt;true}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__messages_1_json"><span class="parent">/messages</span>/1.json</a> <span class="methods"><a href="#_messages_1_json_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel__messages_1_json" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_messages_1_json_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>取得單一內容</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_messages_1_json_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/messages</span>/1.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>取得單一內容</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_messages_1_json_get_request" data-toggle="tab">Request</a></li><li><a href="#_messages_1_json_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_messages_1_json_get_request"><h3>Body</h3><p><strong>Type: application/json</strong></p></div><div class="tab-pane" id="_messages_1_json_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum 80dec0f6fcb63cc9f3aa4fdf9424da1d825a4bbd",
+  "type": "object",
+  "required": [
+  "message",
+  "comments"
+  ],
+  "properties": {
+    "message": {
+      "type": "object",
+      "required": [
+      "id",
+      "user_id",
+      "title",
+      "description",
+      "created_at",
+      "updated_at",
+      "comments_count"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer"
+          },
+          "user_id": {
+            "type": "integer"
+            },
+            "title": {
+              "type": "string"
+              },
+              "description": {
+                "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                  },
+                  "updated_at": {
+                    "type": "string"
+                    },
+                    "comments_count": {
+                      "type": "integer"
+                    }
+                  }
+                  },
+                  "comments": {
+                    "type": "array",
+                    "minItems": 1,
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "object",
+                      "required": [
+                      "id",
+                      "title",
+                      "comment",
+                      "commentable_id",
+                      "commentable_type",
+                      "user_id",
+                      "role",
+                      "created_at",
+                      "updated_at"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                          },
+                          "title": {
+                            "type": "string"
+                            },
+                            "comment": {
+                              "type": "string"
+                              },
+                              "commentable_id": {
+                                "type": "integer"
+                                },
+                                "commentable_type": {
+                                  "type": "string"
+                                  },
+                                  "user_id": {
+                                    "type": "integer"
+                                    },
+                                    "role": {
+                                      "type": "string"
+                                      },
+                                      "created_at": {
+                                        "type": "string"
+                                        },
+                                        "updated_at": {
+                                          "type": "string"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+</code></pre><p><strong>Example</strong>:</p><pre><code>{"message"=&gt;{"id"=&gt;1, "user_id"=&gt;1, "title"=&gt;"第一篇", "description"=&gt;"請問做菜的方式？", "created_at"=&gt;"2015-04-17T09:34:11.084Z", "updated_at"=&gt;"2015-04-17T09:34:11.084Z", "comments_count"=&gt;6}, "comments"=&gt;[{"id"=&gt;3, "title"=&gt;"", "comment"=&gt;"testes", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-04-17T10:31:01.086Z", "updated_at"=&gt;"2015-04-17T10:31:01.100Z"}, {"id"=&gt;4, "title"=&gt;"", "comment"=&gt;"asdfasdf", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-04-17T10:31:32.615Z", "updated_at"=&gt;"2015-04-17T10:31:32.628Z"}, {"id"=&gt;5, "title"=&gt;"", "comment"=&gt;"asdfasdfsa", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-04-17T10:37:18.540Z", "updated_at"=&gt;"2015-04-17T10:37:18.553Z"}, {"id"=&gt;9, "title"=&gt;"", "comment"=&gt;"yoyo", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;2, "role"=&gt;"comments", "created_at"=&gt;"2015-04-21T08:48:03.596Z", "updated_at"=&gt;"2015-04-21T08:48:03.611Z"}, {"id"=&gt;13, "title"=&gt;"", "comment"=&gt;"fasdfasd", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-05-19T17:18:46.494Z", "updated_at"=&gt;"2015-05-19T17:18:46.531Z"}, {"id"=&gt;14, "title"=&gt;"", "comment"=&gt;"中中", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-05-19T17:19:00.713Z", "updated_at"=&gt;"2015-05-19T17:19:00.730Z"}, {"id"=&gt;17, "title"=&gt;"", "comment"=&gt;"motephyr3@gmail.com", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-05-21T11:14:00.600Z", "updated_at"=&gt;"2015-05-21T11:14:00.631Z"}, {"id"=&gt;18, "title"=&gt;"", "comment"=&gt;"motephyr3@gmail.com", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-05-21T17:11:59.089Z", "updated_at"=&gt;"2015-05-21T17:11:59.125Z"}, {"id"=&gt;19, "title"=&gt;"", "comment"=&gt;"新的評論!", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-05-27T09:15:02.181Z", "updated_at"=&gt;"2015-05-27T09:15:02.181Z"}, {"id"=&gt;20, "title"=&gt;"", "comment"=&gt;"新的評論!", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-05-27T09:42:28.124Z", "updated_at"=&gt;"2015-05-27T09:42:28.124Z"}, {"id"=&gt;21, "title"=&gt;"", "comment"=&gt;"新的評論!", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-05-27T09:42:36.042Z", "updated_at"=&gt;"2015-05-27T09:42:36.042Z"}, {"id"=&gt;22, "title"=&gt;"", "comment"=&gt;"新的評論!", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-05-27T11:03:25.633Z", "updated_at"=&gt;"2015-05-27T11:03:25.633Z"}, {"id"=&gt;23, "title"=&gt;"", "comment"=&gt;"新的評論!", "commentable_id"=&gt;1, "commentable_type"=&gt;"Message", "user_id"=&gt;1, "role"=&gt;"comments", "created_at"=&gt;"2015-05-29T04:59:38.421Z", "updated_at"=&gt;"2015-05-29T04:59:38.421Z"}]}
+</code></pre></div></div></div></div></div></div></div><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__messages_1_comments_json"><span class="parent">/messages</span>/1/comments.json</a> <span class="methods"><a href="#_messages_1_comments_json_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel__messages_1_comments_json" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_messages_1_comments_json_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>回覆特定問題</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_messages_1_comments_json_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent">/messages</span>/1/comments.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>回覆特定問題</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_messages_1_comments_json_post_request" data-toggle="tab">Request</a></li><li><a href="#_messages_1_comments_json_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_messages_1_comments_json_post_request"><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum 2f0ceb91576fd689868a1ff3ef78141ca1f6618f",
+  "type": "object",
+  "required": [
+  "comment",
+  "auth_token"
+  ],
+  "properties": {
+    "comment": {
+      "type": "object",
+      "required": [
+      "comment"
+      ],
+      "properties": {
+        "comment": {
+          "type": "string"
+        }
+      }
+      },
+      "auth_token": {
+        "type": "string"
+      }
+    }
+  }
+</code></pre><p><strong>Example</strong>:</p><pre><code>{:comment=&gt;{:comment=&gt;"新的評論!"}, :auth_token=&gt;"9uaW37mztabxnp7GyYxP"}
+</code></pre></div><div class="tab-pane" id="_messages_1_comments_json_post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum a15e2127145548437173fc17f3e980e3f3dee2d0",
+  "type": "object",
+  "required": [
+  "success"
+  ],
+  "properties": {
+    "success": {
+      "type": "boolean"
+    }
+  }
+}
+</code></pre><p><strong>Example</strong>:</p><pre><code>{"success"=&gt;true}
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="_app_messages" class="panel-title">APP設定</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel__app_messages__json"><span class="parent">/app_messages</span>/.json</a> <span class="methods"><a href="#_app_messages__json_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel__app_messages__json" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_app_messages__json_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>取得APP設定內容</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_app_messages__json_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/app_messages</span>/.json</h4></div><div class="modal-body"><div class="alert alert-info"><p>取得APP設定內容</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_app_messages__json_get_request" data-toggle="tab">Request</a></li><li><a href="#_app_messages__json_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_app_messages__json_get_request"><h3>Body</h3><p><strong>Type: application/json</strong></p></div><div class="tab-pane" id="_app_messages__json_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>作業成功</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Schema</strong>:</p><pre><code>{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Generated from  with shasum a49943514962d129dd2203a25d04ec95983474b3",
+  "type": "object",
+  "required": [
+  "id",
+  "time_desc",
+  "lottery_desc",
+  "created_at",
+  "updated_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer"
+      },
+      "time_desc": {
+        "type": "string"
+        },
+        "lottery_desc": {
+          "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+            },
+            "updated_at": {
+              "type": "string"
+            }
+          }
+        }
+</code></pre><p><strong>Example</strong>:</p><pre><code>{"id"=&gt;1, "time_desc"=&gt;"test", "lottery_desc"=&gt;"test", "created_at"=&gt;"2015-05-26T03:02:19.633Z", "updated_at"=&gt;"2015-05-26T03:02:32.302Z"}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#_api_v1">User相關功能</a></li><li><a href="#_recipe_videos">影音</a></li><li><a href="#_recipes">食譜</a></li><li><a href="#_messages">問與答</a></li><li><a href="#_app_messages">APP設定</a></li></ul></div></div></div></div></body></html>

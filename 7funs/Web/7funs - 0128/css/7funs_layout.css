@@ -1,0 +1,478 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*===================共用=================*/
+h1, h2, h3, h4, h5, h6, p { color:#231815; letter-spacing:1px; font-family:"nimbus-sans","xingothic-tc-w4","微軟正黑體","Microsoft JhengHei",sans-serif;}
+p{ font-size:15px; _font-size:14px; line-height:24px;}
+a{ text-decoration:none; outline: none; /* for Firefox */  hlbr:expression(this.onFocus=this.blur()); /* for IE */}
+a:hover{ text-decoration:underline;}
+select, input, textarea{ font-family:Helvetica,"Heiti TC","微軟正黑體","Microsoft Sans Serif","Microsoft Sans Serif","Helvetica","Geneva","sans-serif"; font-size:15px;}
+
+body{ background-color:#f4f4f4;}
+.theContents{ width:1280px; margin:0 auto;}
+@media (max-width:1300px){.theContents{ width:95%; margin:0 auto;}}
+@media (max-width:1280px){.theContents{ width:98%; margin:0 auto;}}
+
+.Header_wrap{ width:100%; background-color:#FFF; min-height:77px; box-shadow:0px 0px 5px #999;}
+.Header_wrap .theContents{ position:relative;}
+.Header_wrap h1{ width:200px; font-size:35px; text-align:center; line-height:77px; font-family: 'Sansita One', cursive; position:absolute; left:0; top:0;}
+.Header_wrap h1 a{ width:200px; height:77px; display:block; color:#900;}
+.Header_wrap h1 a span{ color:#F30;}
+.Header_wrap h1 a:hover{ text-decoration:none; opacity:0.8;}
+
+.Header_wrap .UserBox{ padding-top:18px; position:absolute; right:20px; top:0;}
+.Header_wrap .UserBox .user_photo{ float:right; width:45px; height:45px; background:url(../images/default_profile_s.png) center center no-repeat; display:block; border-radius:45px; overflow:hidden; margin-right:10px;}
+.Header_wrap .UserBox .user_photo img{ width:100%;}
+.Header_wrap .UserBox p.name{ float:right; line-height:45px; font-size:15px;}
+.Header_wrap .UserBox p.name a{ color:#7d7d7d;}
+.Header_wrap .none_loginBox{ padding-top:18px; position:absolute; right:20px; top:0;}
+.Header_wrap .none_loginBox p{ float:right; line-height:45px; font-size:15px; color:#d2c4c4;}
+.Header_wrap .none_loginBox p a{ color:#7d7d7d; padding:5px 8px;}
+.Header_wrap .none_loginBox p a.icon_FB{ background:url(../images/login_icon_fb.png) center left no-repeat; padding-left:30px; margin-left:12px;}
+
+@media (max-width:908px){.Header_wrap .UserBox, .Header_wrap .none_loginBox{ display:none;}}
+@media (max-width:750px){.Header_wrap h1 a{ width:120px;}}
+@media (max-width:520px){.Header_wrap h1{ width:100%; position:inherit;}
+.Header_wrap h1 a{ margin:0 auto;}}
+
+/*user tools 登出*/
+.Header_wrap .user_tools{ position:absolute; top:58px; right:18px; z-index:500; padding-top:13px; background:url(../images/icon_k_arr.png) 80% 0 no-repeat;}
+.Header_wrap .user_tools ul{ background: url(../images/br_k2.png) 0 0 repeat; border-radius:5px;}
+.Header_wrap .user_tools ul li{}
+.Header_wrap .user_tools ul li p{ text-align:center; font-size:16px;}
+.Header_wrap .user_tools ul li p a{ display:block; color:#FFF; border-bottom:1px solid #666666; padding:8px 25px;}
+.Header_wrap .user_tools ul li p a:hover{ text-decoration:none; color:#FF0;}
+.Header_wrap .user_tools ul li p a.none_line{ border:none;}
+
+.Header_wrap .SearchBox{ width:250px; margin:0 auto; padding-top:20px;}
+.Header_wrap .SearchBox input{ width:250px; height:37px; background:url(../images/icon_search.png) 8px 2px no-repeat; background-color:#f7f7f7; border:none; text-align:center; font-family:"微軟正黑體"; border-radius:35px; color:#7d7d7d;}
+.Header_wrap .theSideMenu{ display: block; background-color:#666; width: 40px; height: 40px; top:15px; position: absolute; right: 10px;}
+@media (max-width:908px){.Header_wrap .theSideMenu{ display: block;}}
+@media (max-width:520px){.Header_wrap .SearchBox{ padding-top:0px;}}
+/*Center*/
+.CenterBox{ width:100%;}
+.CenterBox .theContents{ padding-bottom:35px;}
+.CenterBox .MenuBox{ width:220px; float:left; overflow:hidden;}
+.CenterBox .MenuBox ul{ padding:15px 23px; overflow:hidden;}
+.CenterBox .MenuBox ul li{ float:left; padding:7px 5px;}
+.CenterBox .MenuBox ul li h3{ font-weight:normal; text-align:center; font-size:20px; line-height:24px;}
+.CenterBox .MenuBox ul li h3 a{ width:77px; height:64px; display:block; padding-top:13px; background-color:#FFF; border-radius:45px; color:#5f5f5f; box-shadow:0px 0px 5px #CCC;}
+.CenterBox .MenuBox ul li h3 a:hover{ background-color:#ff722e; color:#FFF; text-decoration:none;}
+.CenterBox .MenuBox ul li h3.h50{ line-height:50px;}
+.CenterBox .MenuBox ul li h3.btm_in a{ background-color:#ff722e; color:#FFF; text-decoration:none;}
+
+@media (max-width:1300px){.CenterBox .MenuBox{ width:190px;}
+.CenterBox .MenuBox ul{ padding:15px 3%; width:94%;}}
+@media (max-width:1015px){.CenterBox .MenuBox{ width:160px;}
+.CenterBox .MenuBox ul li h3{ font-size:18px; line-height:22px;}
+.CenterBox .MenuBox ul li h3 a{ width:65px; height:55px; padding-top:10px;}
+.CenterBox .MenuBox ul li h3.h50{ line-height:43px;}}
+@media (max-width:750px){.CenterBox .MenuBox{ display:none;}}
+
+.CenterBox .MenuBox .sub_menu { float:left; margin-bottom:10px; display:none;}
+.CenterBox .MenuBox .sub_menu ul{ border-radius:5px; padding:13px 0 0 0;}
+.CenterBox .MenuBox .sub_menu ul li{ padding:0; float:none; background: url(../images/br_k2.png) 0 0 repeat;}
+.CenterBox .MenuBox .sub_menu ul li.bor{ border-radius:5px 5px 0 0;}
+.CenterBox .MenuBox .sub_menu ul li p{ width:100%; text-align:center; font-size:16px;}
+.CenterBox .MenuBox .sub_menu ul li p a{ width:166px; display:block; color:#FFF; padding:8px 0; border-bottom:1px solid #666666; background:url(../images/line_point.gif) 0 bottom repeat-x;}
+.CenterBox .MenuBox .sub_menu ul li p a:hover{ text-decoration:none; color:#FF0;}
+.CenterBox .MenuBox .sub_menu ul li p a.none_line{ border:none;}
+
+.CenterBox .MenuBox .arr_br-r{ background:url(../images/icon_k_arr.png) 85% 0 no-repeat;}
+.CenterBox .MenuBox .arr_br-l{ background:url(../images/icon_k_arr.png) 21% 0 no-repeat;}
+
+/*右邊區塊*/
+.CenterBox .rightBox{ float: left; width:834px}
+@media (max-width:1290px){.CenterBox .rightBox{ width:66%;}}
+@media (max-width:1124px){.CenterBox .rightBox{ width:64.5%;}}
+@media (max-width:1050px){.CenterBox .rightBox{ width:64%;}}
+@media (max-width:1015px){.CenterBox .rightBox{ width:67%;}
+.CenterBox .MenuBox .sub_menu ul li p a{ width:152px;}}
+@media (max-width:925px){.CenterBox .rightBox{ width:66%;}}
+@media (max-width:908px){.CenterBox .rightBox{ width:81.5%;}}
+@media (max-width:910px){.CenterBox .rightBox{ width:80.5%;}}
+@media (max-width:856px){.CenterBox .rightBox{ width:79.5%;}}
+@media (max-width:814px){.CenterBox .rightBox{ width:78.5%;}}
+@media (max-width:780px){.CenterBox .rightBox{ width:76.5%;}}
+@media (max-width:750px){.CenterBox .rightBox{ width:100%;}}
+
+/*@media (max-width:1680px){.CenterBox .rightBox{ float: left; width:1410px;}}
+@media (max-width:1600px){.CenterBox .rightBox{ float: left; width:1330px;}}
+@media (max-width:1400px){.CenterBox .rightBox{ float: left; width:1130px;}}
+@media (max-width:1280px){.CenterBox .rightBox{ float: left; width:1410px;}}
+@media (max-width:1152px){.CenterBox .rightBox{ float: left; width:882px;}}
+@media (max-width:1024px){.CenterBox .rightBox{ float: left; width:754px;}}*/
+/*.CenterBox .rightBox{ float: left; width:1025px;}*/
+
+.CenterBox .top_toole{ width:100%; padding-top:15px;}
+.CenterBox .top_toole p.keywords{ float:left; line-height:30px;}
+.CenterBox .top_toole p.keywords a{ font-size:15px; color:#3b3b3b; margin:0 8px;}
+.CenterBox .top_toole p span{ margin:0 8px; color:#990000;}
+.CenterBox .top_toole p.sort{ float: right; line-height:30px; padding-right:16px;}
+.CenterBox .top_toole p.sort span{ font-size:13px; margin-right:10px;}
+.CenterBox .top_toole p.sort a{ width:80px; padding:5px 12px; background-color:#a98484; color:#FFF;}
+.CenterBox .top_toole p.sort a:hover{ text-decoration:none;}
+.CenterBox .top_toole p.sort a.btm01{ border:1px solid #bcbcbc; border-width:1px 0px 1px 1px; border-radius:45px 0 0 45px;}
+.CenterBox .top_toole p.sort a.btm02{ border:1px solid #bcbcbc; border-width:1px 1px 1px 0px; border-radius:0 45px 45px 0;}
+.CenterBox .top_toole p.sort a.btm_in{ background-color:#FFF; color:#6f3232;}
+
+@media (max-width:1000px){.CenterBox .top_toole{ padding:15px 0 0 0 ;}
+.CenterBox  p.keywords{ width:100%; float:none; padding-bottom:10px; text-align:center;}
+.CenterBox  p.keywords a{ margin:0 8px 0 0;}
+.CenterBox .top_toole p.sort{ width:100%; float:none; text-align: center; padding-right:0px;}}
+@media (max-width:907px){.CenterBox .top_toole br{ display:none;}}
+
+.CenterBox .rightBox .meals{ width:100%; padding-top:15px;}
+.meals .msBox{ float:left; width:47.5%; background-color:#FFF; display:block; border-radius:4px; overflow:hidden; margin:5px 1% 10px 1%; position:relative; box-shadow: 0px 0px 5px #CCC;}
+.meals .msBox .food_photo{ float:left; width:50%; display:block;/* background:url(../images/meals/food_default.jpg) center center no-repeat #FFF;*/}
+.meals .msBox .food_info{ float:left; width:50%;}
+.meals .msBox .food_info p.title{ font-size:20px; font-weight:bold; color:#8D6666; min-height:50px; max-height:56px; overflow:hidden; width:75%; margin:14px auto; margin-bottom:8px; line-height:26px;}
+.meals .msBox .food_info p.chef{ font-size:16px; color:#7D7D7D; width:74%; margin:20px auto 0 auto; padding-top:10px; border-top:1px solid #dfdfe2;}
+.meals .msBox .food_info p.nb{ font-size:16px; color:#7D7D7D; width:74%; margin:0 auto; padding:2px 0;}
+.meals .msBox .food_info p.look{ letter-spacing:0px; text-align:right; padding:5px 10% 0 0 ;}
+.meals .msBox .food_info p.look a{ color:#9D876B; padding-right:23px; background:url(../images/icon_arr.png) right 0px no-repeat;}
+
+.food_photo .bk-Box{ width:50%; position:absolute; left:0; top:28.5%; display:none;}
+.food_photo .bk-Box p.like{ font-size:14px;  line-height:115px; text-align:center;} 
+.food_photo .bk-Box p.like a{width:80px; color:#FFF; height:80px; display:block; border-radius:100px; margin:0 auto; background:url(../images/icon_like.png) center -45px no-repeat; cursor:pointer;}
+.food_photo .bk-Box p.like a:hover{ text-decoration: none;}
+.food_photo .bk-Box p.like a:active{ background:url(../images/icon_like_in.png) center -45px no-repeat; color:#FF7272;}
+.food_photo .bk-Box p.favorites a{ letter-spacing:0px; background:url(../images/icon_like_in.png) center -45px no-repeat; color:#FF7272;}
+
+.bk-Box p.m1{ line-height:50px;}
+.bk-Box p.m2{ padding-top:23%;}
+@media (max-width:1200px){.meals .msBox .food_info p.chef{ margin: 10px auto 0 auto;}}
+@media (max-width:1150px){.meals .msBox .food_info p.chef{ margin: 0px auto 0 auto;}
+.meals .msBox .food_info p.title{margin: 8px auto;}}
+@media (max-width:1100px){.meals .msBox .food_info p.title{ width:78%; margin: 8px auto 3px auto;}
+.meals .msBox .food_info p.chef, .meals .msBox .food_info p.nb{ font-size:14px;}}
+@media (max-width:1050px){.meals .msBox .food_info p.title{ font-size:17px;}
+.meals .msBox .food_info p.chef{ padding-top:3px;}
+.meals .msBox .food_info p.look{ padding: 0 5% 0 0;}}
+@media (max-width:955px){.meals .msBox .food_info p.title{ line-height:22px; min-height: 47px; max-height: 40px;}
+.meals .msBox .food_info p.nb{ padding:0px;}}
+@media (max-width:750px){.meals .msBox .food_info p.title{font-size: 20px; min-height: 50px; max-height: 56px; line-height:26px;}
+.meals .msBox .food_info p.chef{padding-top: 10px;}}
+@media (max-width:645px){.meals .msBox .food_info p.title{font-size:17px;}
+.meals .msBox .food_info p.chef{padding-top:3px;}}
+@media (max-width:614px){.meals .msBox .food_info p.title{line-height:22px; min-height: 47px; max-height: 40px;}}
+@media (max-width:590px){.CenterBox .rightBox .meals{ width:85%; margin:0 auto;}
+.meals .msBox{ width:98%;}
+.meals .msBox .food_info p.title{font-size: 20px; min-height: 50px; max-height: 56px; line-height:26px;margin: 20px auto 15px auto;}
+.meals .msBox .food_info p.chef{padding-top: 10px; font-size: 16px;}}
+@media (max-width:426px){.meals .msBox .food_info p.title{margin: 15px auto 10px auto;}}
+@media (max-width:402px){.meals .msBox .food_info p.title{font-size:17px; min-height: 47px; max-height: 40px; margin: 6px auto 8px auto;}
+.meals .msBox .food_info p.chef{padding-top: 3px; font-size: 16px;}}
+@media (max-width:340px){.meals .msBox .food_info p.title{line-height: 22px;}
+.meals .msBox .food_info p.chef{ font-size:14px;}}
+@media (max-width:320px){.CenterBox .rightBox .meals{ width:90%;}
+.meals .msBox .food_info p.title{ width:84%;}
+.meals .msBox .food_info p.chef{ width:84%;}
+.meals .msBox .food_info p.nb{ width:84%;}}
+
+/*food_right_Q&A*/
+.rightBoxII{ width:17.5%; float:right; padding-top:64px;}
+.rightBoxII .FoodList_QABox{ width:100%; background-color:#FFF; margin-bottom:15px; border-radius:4px; box-shadow: 0px 0px 5px #CCC;}
+.rightBoxII .FoodList_QABox ul.qa{ width:84%; margin:0 auto;}
+.rightBoxII .FoodList_QABox ul.qa h3{ line-height:32px; color:#a98484; font-size:18px; text-align:center;}
+.rightBoxII .FoodList_QABox ul.qa li{ border-bottom:1px solid #e6e0e0; padding:10px 0;}
+.rightBoxII .FoodList_QABox ul.qa li p{ color:#171717; font-size:16px;}
+.rightBoxII .FoodList_QABox ul.qa li p.name{ color:#886767; font-size:14px; font-weight:bold;word-wrap: break-word; word-break: break-all;}
+.rightBoxII .FoodList_QABox ul.qa li p.name span{ font-weight:normal; font-size:11px; color:#979797; padding-left:5px;}
+.rightBoxII .FoodList_QABox ul.qa li p a{color:#171717;}
+.rightBoxII .FoodList_QABox p.more{ text-align:center; font-size:15px; padding:10px 0;}
+.rightBoxII .FoodList_QABox p.more a{ color:#925050; text-decoration:underline;}
+.rightBoxII .FoodList_QABox p.more a:hover{ text-decoration: none;}
+
+.rightBoxII .AdBox{ width:100%;}
+.rightBoxII .AdBox a{ width:100%; display:block; margin-bottom:15px; border-radius:5px; overflow:hidden; box-shadow: 0px 0px 5px #CCC;}
+.rightBoxII .AdBox a:hover{ opacity:0.9;}
+
+@media (max-width:1195px){.rightBoxII{ width:16.5%;}}
+@media (max-width:1010px){.rightBoxII{ width:16%;}
+.rightBoxII .FoodList_QABox ul.qa li p{ font-size:14px;}}
+@media (max-width:978px){.rightBoxII{ width:15.5%;}}
+@media (max-width:950px){.rightBoxII{ width:15%;}}
+@media (max-width:908px){.rightBoxII{ /*float:left; width:22%; padding-top:20px;}*/ display:none;}}
+
+
+/*footer*/
+.Footer_wrap{ width:100%; padding:25px 0; background: url(../images/stardust.png) 0 0 repeat;}
+.Footer_wrap p{ color:#DFDFE2; font-size:13px; text-align:center;}
+.Footer_wrap p a{ color:#DFDFE2; font-size:16px; margin:0 10px;}
+
+.Footer_wrap_FB{ width:100%; padding:25px 0; background: url(../images/stardust.png) 0 0 repeat;}
+.Footer_wrap_FB .theContents{ width:820px;}
+@media (max-width:599px){.Footer_wrap p{ width:98%; margin:0 auto;}}
+/*@media screen and (max-device-width: 1280px) {.Footer_wrap{ position:fixed; bottom:0;}}*/
+
+/*回到上面*/
+/*p.go_top{ position:absolute; right:2%; top:-320px; cursor:pointer; z-index:50; text-indent:-9999px;}
+p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top.png) 0 0 no-repeat;}
+*/
+.hamburger{ display:none;}
+@media (max-width:908px){.hamburger{ display:block;}}
+
+.mobile-nav{ width:350px !important; background-color:#817068;}
+.mobile-nav ul.food_menu{ display:none;}
+.mobile-nav ul.food_menu h4{ font-size:18px; color:#BEBEBE; padding:8px 0; border-bottom:1px solid #947D7D; margin-bottom:10px;}
+.mobile-nav ul.food_menu p{ font-size:16px;}
+.mobile-nav ul.food_menu p a{ color:#FFFFFF; margin-right:22px; line-height:30px;}
+.mobile-nav ul.food_menu li{ padding-bottom:18px;}
+.mobile-nav ul.Oneself{ width:100%;}
+.mobile-nav ul.Oneself li{ border-bottom:1px solid #947D7D;}
+.mobile-nav ul.Oneself li p{ font-size:16px;}
+.mobile-nav ul.Oneself li a{ color:#FFFFFF; width:100%; display:block; padding:20px 0;}
+.mobile-nav ul.Oneself li.user{ padding:10px 0;}
+.mobile-nav ul.Oneself li.user p img{ float:left; width:50px; height:50px; display:block; border-radius:50px;}
+.mobile-nav ul.Oneself li.user p a{ float:left; width:inherit; padding:15px 10px;}
+
+@media (max-width:750px){.mobile-nav ul.food_menu{ display:block;}}
+@media (max-width:450px){.mobile-nav{ width:300px !important;}}
+@media (max-width:420px){.mobile-nav{ width:250px !important;}}
+
+.theUserBox{ width:388px; margin:0 auto; padding:30px 0; min-height:750px;}
+.theUserBox .user_photo{ width:100%; padding-bottom:20px;}
+.theUserBox .user_photo .photo_L{ width:84px; height:84px; margin:0 auto 15px auto; background:url(../images/default_profile_L.png) center center no-repeat; display:block; border-radius:45px; overflow:hidden;}
+.theUserBox .user_photo .photo_L img{ width:100%;}
+.theUserBox .user_photo p.change{ text-align:center; font-size:14px;}
+.theUserBox .user_photo p.change a{ color:#7b7b7b; text-decoration:underline;} 
+.theUserBox .user_photo p.change a:hover{ text-decoration:none;}
+.theUserBox .user_photo p.name{ text-align:center; color:#886767; font-size:16px; font-weight:bold;}
+.theUserBox .user_photo p.time{ font-size:12px; text-align:center; color:#979797;}
+.theUserBox .user_photo p.QA_title{ font-size:20px; color:#171717; font-weight:bold; text-align:center; padding:20px 0 5px 0;}
+.theUserBox .user_photo p.QA_sub_title{ font-size:18px; color:#171717; text-align:center; padding:5px 0;}
+
+.theUserBox .user_photo p.c_yel{ color:#ff722e;}
+
+.theUserBox p{ font-size:16px;}
+.theUserBox p.remind{ text-align:center; padding:5px 0; color:#7b7b7b; font-size:14px;}
+.theUserBox p.error{ text-align:center; color:#F00; padding-bottom:15px;}
+.theUserBox h1.logo{ font-size:35px; text-align:center; color:#900; line-height:77px; font-family: 'Sansita One', cursive; margin-bottom:10px;}
+.theUserBox h1 span{ color:#F30;}
+.theUserBox h3.title{ width:100%; padding:10px 0 20px 0; color:#929292; font-size:20px; text-align:center;}
+
+.theUserBox .FillBox{ width:100%; margin-bottom:12px;}
+.theUserBox .FillBox input{ width:97%; padding:12px 1.5%; font-size:16px; color:#aeaeae; text-align:center; background-color:#FFF; border:none; border-bottom:1px solid #e6e0e0; font-family:"微軟正黑體","Helvetica","Heiti TC";}
+.theUserBox .FillBox input.f_in{ color:#333;}
+.theUserBox .FillBox input.f_ID{ color:#886767; font-size:16px; font-weight:bold;}
+.theUserBox .FillBox textarea.b1{ width:97%; padding:12px 1.5%; min-height:140px; color:#aeaeae; text-align:center; background-color:#FFF; border:none; border-bottom:1px solid #e6e0e0;font-family:"微軟正黑體","Helvetica","Heiti TC";}
+.theUserBox .FillBox textarea.f_in{ color:#333;}
+
+.theUserBox .FillBox p a.btm_c_org{ cursor:pointer; width:100%; font-weight:bold; text-align:center; color:#FFF; padding:11px 0; display:block; background-color:#ff722e; border-radius:4px;}
+.theUserBox .FillBox p a.btm_c_fb{ cursor:pointer; width:100%; font-weight:bold; text-align:center; color:#FFF; padding:11px 0; display:block; background-color:#3b5998; border-radius:4px;}
+.theUserBox .FillBox p a.btm_c_fb span{ background:url(../images/btm_icon_fb.png) no-repeat; padding-left:40px;}
+.theUserBox .FillBox p a:hover{ text-decoration:none; opacity:0.9;}
+.theUserBox .FillBox p input.btm_c_org{ cursor:pointer; font-weight:bold; text-align:center; color:#FFF; padding:11px 0; margin:0 auto; display:block; background-color:#ff722e; border-radius:4px;}
+.theUserBox .FillBox p input.btm_c_org:hover{ opacity:0.9;}
+.theUserBox .FillBox p input.width50{ width:160px;}
+
+.theUserBox .otherBox{ width:100%; padding:12px 0 20px 0; border-bottom:1px solid #dacbcb; margin-bottom:40px;}
+.theUserBox .otherBox .leftB{ float:left;}
+.theUserBox .otherBox .leftB input.b1{ float:left; margin:6px 8px 0 0;}
+.theUserBox .otherBox .leftB p{ float:left; font-size:14px; color:#4e4e4e;}
+
+.theUserBox .otherBox .rightB{ float:right;}
+.theUserBox .otherBox .rightB p{ font-size:14px; color:#c1c1c1;}
+.theUserBox .otherBox .rightB p a{ color:#7b7b7b;}
+.pos_bottom{ position:fixed; bottom:0px;}
+
+@media screen and (max-device-width:599px) {.theUserBox{ padding:0; width:90%;}
+.theUserBox .user_photo{ padding:20px 0;}}
+@media (max-height:600px){.pos_bottom{ position: inherit;}}
+@media (max-height:470px){.theUserBox{ min-height: inherit;}}
+@media (max-width:370px){.theUserBox .otherBox .leftB{ width:100%;}
+.theUserBox .otherBox .leftB input.b1{ margin:6px 8px 20px 38%;}
+.theUserBox .otherBox .rightB{ width:100%;}
+.theUserBox .otherBox .rightB p{ text-align:center;}}
+@media (max-width:340px){.theUserBox{ width:90%;}}
+
+/**QA list**/
+.QABoxList{ width:100%; padding:20px 0 40px 0;}
+.QABoxList .Btm_Question{ position:fixed; top:120px; right:5%;}
+.QABoxList .Btm_Question p{ text-align:center; font-size:16px;}
+.QABoxList .Btm_Question p a{ width:57px; display:block; color:#7e7e7e; padding-top:65px; background:url(../images/btm_q.png) center top no-repeat;}
+.QABoxList .Btm_Question p a:hover{ opacity:0.9; text-decoration:none;}
+@media (max-width:1230px){.QABoxList .Btm_Question{ right:1%;}}
+	
+.QABoxList .theContents{ width:1000px;}
+.QABoxList .Otop p{ color:#585858; font-size:15px;}
+.QABoxList .Otop .t01 p{ margin-left:30px;}
+.QABoxList .ListBox{ background-color:#FFF; border-radius:4px; overflow:hidden; border-bottom:1px solid #e3e2e2;}
+.QABoxList .ListBox .Obox{ border-left:3px solid #FFF;}
+.QABoxList .Obox{ width:99.9%; padding:15px 0; border-top:1px solid #f2efef; display:block;}
+.QABoxList .Obox:hover{ background-color:#fffafa; border-left:3px solid #F60;}
+.QABoxList .Otop{ padding:10px 0; border-top:none; border-left:3px solid #F4F4F4;}
+.QABoxList .Otop:hover{ background:none; border-left:3px solid #F4F4F4;}
+.QABoxList .Obox .tbox{ float:left;}
+.QABoxList .Obox .tbox .user_photo{ margin:0 10px 0 30px; float:left; width:46px; height:46px; display:block; background:url(../images/default_profile_s.png) center center no-repeat; border-radius:40px; overflow:hidden; background-size:cover;}
+.QABoxList .Obox .tbox .user_photo img{ width:100%;}
+.QABoxList .Obox .tbox .titleBox{ float:left; width: 360px; overflow: hidden; max-height: 45px;}
+.QABoxList .Obox .tbox .titleBox .top{ width:100%;}
+.QABoxList .Obox .tbox .titleBox p.hide{ display:none; color:#999;}
+.QABoxList .Obox .tbox .titleBox .top p.name{ float:left; font-size:14px; color:#886767; font-weight:bold;}
+.QABoxList .Obox .tbox .titleBox .top p.time{ float:left; font-size:12px; color:#979797; padding:0 10px;}
+.QABoxList .Obox .tbox .titleBox p.qa_title{ color:#171717; font-size:17px;}
+.QABoxList .Obox .tbox .nb{ color:#ff722e; font-size:22px; padding:10px 0;}
+
+.QABoxList .Obox .t01{ width:50%;}
+.QABoxList .Obox .t02{ width:38%;}
+.QABoxList .Obox .t02 p{ color:#8d8d8d;}
+.QABoxList .Obox .t02 .titleBox .top p.name, .QABoxList .Obox .t02 .titleBox .top p.time, .QABoxList .Obox .t02 .titleBox p.qa_title{color:#8d8d8d;}
+.QABoxList .Obox .t03{ width:12%;}
+.QABoxList .Obox .t03 p{ text-align:center;}
+.QABoxList .Obox .t03 p.hide{ display:none;}
+@media (max-width:1000px){.QABoxList .theContents{ width:95%;}}
+@media (max-width:960px){.QABoxList .Obox .tbox .titleBox{ width:300px;}}
+@media (max-width:872px){.QABoxList .Obox .tbox .titleBox{ width:260px;}}
+@media (max-width:768px){.QABoxList .Obox .tbox .titleBox{ width:240px; max-height:75px;}
+.QABoxList .Obox .tbox .titleBox p.qa_title{ font-size:16px;}}
+@media (max-width:706px){.QABoxList .Obox .tbox .titleBox{ width:220px;}}
+@media (max-width:662px){.QABoxList .Obox .tbox .titleBox{ width:180px;}}
+@media (max-width:599px){.QABoxList .Otop{ display:none;}
+.QABoxList .Obox .tbox{ width:99.9%;}
+.QABoxList .Obox .tbox .user_photo{ float: none; margin:0 auto 10px auto; width:120px; height:120px; border-radius:65px;}
+.QABoxList .Obox .tbox .titleBox { width:90%; max-height: 112px; padding-bottom:20px; text-align:center; float:none; margin:0 auto;}
+.QABoxList .Obox .tbox .titleBox p.qa_title{ font-weight:bold;}
+.QABoxList .Obox .tbox .titleBox .top p.hide{ display: block;}
+.QABoxList .Obox .tbox .titleBox .top p.time{ text-align:center; float: none; display:none;}
+.QABoxList .Obox .tbox .titleBox .top p.name{ text-align:center; float: none;}
+.QABoxList .Obox .tbox .CLEAR{ display:none;}}
+
+/*AskQuestion*/
+.forQA{ width:570px;}
+.forQA .FillBox{ position:relative;}
+.forQA .FillBox p a.btm_c_org{ width:180px; margin:0 auto;}
+.forQA .FillBox p.cancel{ position:absolute; top:10px; right:20%;}
+.forQA .FillBox p.cancel a{color:#838383;}
+.forQA .FillBox p.cancel a:hover{ text-decoration:underline;}
+@media (max-width:600px){.forQA{ width:90%;}
+.forQA .FillBox p.cancel{ right:3%;}}
+
+.forQA .FillBox .user_photo{ padding-bottom:0px; position:absolute; top:0px; left:12px; width:46px; height:46px; display:block; background:url(../images/default_profile_s.png) center center no-repeat; border-radius:40px; overflow:hidden; background-size:cover;}
+.forQA .FillBox .user_photo img{ width:100%;}
+.forQA .titleBox .top{ width:100%;}
+.forQA .titleBox .top p.name{ float:left; font-size:14px; color:#886767; font-weight:bold; padding-left:75px;}
+.forQA .titleBox .top p.time{ float:left; font-size:12px; color:#979797; padding:0 10px;}
+.forQA .titleBox p.qa_title{ color:#595959; font-size:17px; padding:10px 20px 10px 75px; background-color:#FFF;border-bottom: 1px solid #e6e0e0; margin-top:3px;}
+.forQA .titleBox .qa_back{ width:100%; background-color:#FFF;}
+.forQA .titleBox .qa_back textarea{ min-height:26px; width:350px; font-size:17px; color:#aeaeae; margin:10px 0px 10px 75px ; text-align:left; border:none;}
+.forQA .titleBox .qa_back .line_org{ border-left:2px solid #ff722e;}
+.forQA .FillBox p.btm_back{ position:absolute; right:20px; top:50px;}
+.forQA .FillBox p.btm_back a.btm_c_org{ width:88px; padding: 6px 0;}
+.forQA .FillBox p.btm_back input.btm_c_org{ width:88px; padding: 6px 0;}
+
+@media (max-width:600px){.forQA .titleBox .qa_back textarea{ width:300px;}}
+@media screen and (max-device-width: 599px){.forQA .FillBox .user_photo{ padding:0;}}
+@media (max-width:580px){.forQA .titleBox .qa_back textarea{ width:55%;}}
+@media (max-width:526px){.forQA .titleBox .qa_back textarea{ width:50%;}}
+@media (max-width:460px){.forQA .titleBox .qa_back textarea{ width:45%;}}
+
+
+/*頁碼*/ 
+.theContents .PageBox{ width:100%; padding:18px 0; display:block;}
+.theContents .PageBox p{ text-align:right; padding-right:10px;font-family: 'Roboto Slab', serif; font-size:15px;}
+.theContents .PageBox p a{ padding:5px 10px; background-color:#FFF; color:#333333; margin:0px 3px; border:1px solid #e4e4e4;}
+.theContents .PageBox p a:hover{ text-decoration:none; background-color:#e4e4e4;}
+.theContents .PageBox p a.btm_in{ color:#FFF; background-color:#ff5750;}
+.theContents .PageBox p a.pege_arr-l{ background:url(../images/pege_arr_l.png) center center no-repeat; border:none; margin-right:10px;}
+.theContents .PageBox p a.pege_arr-r{ background:url(../images/pege_arr_r.png) center center no-repeat; border:none;}
+.theContents .PageBox p a.pege_arr-l:hover ,.theContents .PageBox p a.pege_arr-r:hover{ opacity:0.8;}
+.theContents .PageBox p a.arr_no, .theContents .PageBox p a.arr_no:hover{ opacity:0.5;}
+
+.theContents .PageBox p a.more{ color:#ff5751; font-weight:bold; font-size:15px;}
+.theContents .PageBox p{ font-family:Helvetica,"Heiti TC","微軟正黑體";}
+.theContents .PageBox p span{ margin:0 5px;}
+.theContents .rightBox .PageBox p{ text-align:center;}
+
+@media (max-width:768px){.theContents .PageBox p{ text-align: center;}}
+
+.myLoveBox{ width:840px; /*min-height:500px;*/}
+.myLoveBox .rightBox{ width:100%; float:none; padding:10px 0 20px 0;}
+.myLoveBox .theUserBox{ min-height:inherit; padding:30px 0 0 0;}
+.myLoveBox .theUserBox p.love_nb{ font-size:20px; padding:5px 0;}
+.myLoveBox .theUserBox p.love_nb span{ color:#e44242; margin:0 5px;}
+.myLoveBox .theUserBox p.Sort{ text-align:center; color:#b6b6b6; font-size:16px;}
+.myLoveBox .theUserBox p.Sort a{color:#A69E9E; margin: 0 10px;}
+.myLoveBox .theUserBox p.Sort a.btm_in{color:#595959;}
+.myLoveBox .theUserBox p.Sort a.btm_in:hover{ text-decoration:none;}
+.myLoveBox .theUserBox p.look_go{ margin:15px 0 210px 0;}
+.myLoveBox .theUserBox p.look_go a{ text-decoration:underline; color:#7b7b7b;}
+.myLoveBox .theUserBox p.look_go a:hover{ text-decoration:none;}
+.myLoveBox .theUserBox p.error{ font-size:20px; font-weight:bold;}
+
+@media (max-width:860px){.myLoveBox{ width:100%;}}
+@media (max-width:499px){.myLoveBox .rightBox{ padding:0;}}
+
+.FoodData{ width:1000px; margin:0 auto;}
+.FoodData .top_toole{ padding:15px 0;}
+.FoodData .rightBoxII{ width:22.4%; padding-top:0px;}
+.FoodData .FDBox{ float:left; width:70%; padding:22px 2.5%; background-color:#FFF; background-color: #FFF; margin-bottom: 15px; border-radius: 4px; box-shadow: 0px 0px 5px #CCC;}
+.FoodData .FDBox .topBox{ width:100%; padding:5px 0; position:relative;}
+.FoodData .FDBox .topBox h2.food_title{ color:#A98484; font-size:26px; width:80%;}
+.FoodData .FDBox .topBox p.day{ font-size:13px; color:#a8a8a8; padding:3px 0;}
+.FoodData .FDBox .topBox p.share{ position:absolute; top:8px; right:0px;}
+.FoodData .FDBox .topBox p.share a{ float:left; width:35px; height:33px; display:block; margin-left:5px;}
+.FoodData .FDBox .topBox p.share a.icon_01{ background:url(../images/share_icon.png) 0 0 no-repeat;}
+.FoodData .FDBox .topBox p.share a.icon_02{ background:url(../images/share_icon.png) -35px 0 no-repeat;}
+.FoodData .FDBox .topBox p.share a.icon_03{ background:url(../images/share_icon.png) -70px 0 no-repeat;}
+
+@media (max-width: 1010px){.FoodData{ width:95%;}}
+@media (max-width: 910px){.FoodData .rightBoxII{ width:22%; display:block;}}
+@media (max-width: 768px){.FoodData .rightBoxII{ display:none;}
+.FoodData .FDBox{ width:95%;}}
+@media (max-width: 599px){.FoodData .FDBox .topBox h2.food_title{ width:75%;}}
+@media (max-width: 499px){.FoodData .FDBox .topBox p.share{ position: static; width:128px; margin:0 auto; padding:8px 0;}
+.FoodData .FDBox .topBox h2.food_title{ width:90%; margin:0 auto; text-align:center;}
+.FoodData .FDBox .topBox p.day{ text-align:center;}}
+
+.FoodData .FDBox .DBox{ width:100%;}
+.FoodData .FDBox .DBox .Lbox{ float:left; width:63.5%; margin-right:4%;}
+.FoodData .FDBox .DBox .Lbox .photo{ width:100%; position:relative;}
+.FoodData .FDBox .DBox .Lbox .photo .bk-Box{ width:100%; position:absolute; left:0; top:36%; display:none;}
+.FoodData .FDBox .DBox .Lbox .photo .bk-Box p.like{ font-size:14px; line-height:115px; text-align:center; margin:0 auto;} 
+.FoodData .FDBox .DBox .Lbox .photo .bk-Box p.like a{ width:80px; height:80px; display:block; margin:0 auto; color:#FFF;  border-radius:100px; background:url(../images/icon_like.png) center -45px no-repeat; cursor:pointer;}
+.FoodData .FDBox .DBox .Lbox .photo .bk-Box p.like a:hover{ text-decoration: none;}
+.FoodData .FDBox .DBox .Lbox .photo .bk-Box p.like a:active{ background:url(../images/icon_like_in.png) center -45px no-repeat; color:#FF7272;}
+.FoodData .FDBox .DBox .Lbox .photo .bk-Box p.favorites{ letter-spacing:0px;}
+.FoodData .FDBox .DBox .Lbox .photo .bk-Box p.favorites a{ background:url(../images/icon_like_in.png) center -45px no-repeat; color:#FF7272;}
+
+.FoodData .FDBox .DBox .Lbox p.see{ padding:10px 0 15px 0; color:#686868;}
+.FoodData .FDBox .DBox .Lbox p.see span{ padding:0 10px 0 28px; background:url(../images/see_like.png) center left no-repeat;}
+.FoodData .FDBox .DBox .Lbox p.see span.like_in {background:url(../images/see_like_in.png) center left no-repeat;}
+.FoodData .FDBox .DBox .Lbox .exhort{ width:90%; padding:15px 5%; background-color:#fffbdb; margin:10px 0 25px 0;}
+.FoodData .FDBox .DBox .Lbox .exhort p{ font-size:15px; color:#5f5f5f; text-align:justify;}
+.FoodData .FDBox .DBox .Lbox .exhort p.note{ font-weight:bold; color:#e15f00; font-size:16px; border-bottom:1px solid #DCCDB4; padding-bottom:10px; margin-bottom:10px;}
+
+.FoodData .FDBox .DBox .Rbox{ float:left; width:32.5%;}
+.FoodData .FDBox .DBox .Rbox ul.MaterialBox{ width:100%; margin-bottom:15px;}
+.FoodData .FDBox .DBox .Rbox ul.MaterialBox li{ float:left; margin:0 8px 5px 0}
+.FoodData .FDBox .DBox .Rbox ul.MaterialBox li p{ border:1px solid #e3e3e3; color:#5f5f5f; padding:3px 7px; display:block; border-radius:6px;}
+.FoodData .FDBox .DBox .Rbox ul.MaterialBox li.title{ width:100%; float:left; padding:5px 0; margin-right:0;}
+.FoodData .FDBox .DBox .Rbox ul.MaterialBox li.title p{ color:#e15f00; font-size:16px; font-weight:bold; padding:0px; border:none;}
+
+.FoodData .FDBox .DBox ul.food_Type{ width:100%; border-top:1px solid #e1e1e1;}
+.FoodData .FDBox .DBox ul.food_Type li{ width:50%; float:left;}
+.FoodData .FDBox .DBox ul.food_Type li p{ width:100%; font-size:16px; display:block; cursor:pointer; font-weight:bold; color:#BCBCBC; text-align:center; padding:12px 0 8px 0; border-bottom:4px solid #ECECEC;}
+.FoodData .FDBox .DBox ul.food_Type li.btm_in p{ border-color:#ff8022; color:#886767;}
+@media (max-width: 499px){.FoodData .FDBox .DBox .Lbox{ width:100%; margin-right:0%;}
+.FoodData .FDBox .DBox .Rbox{ width:100%;}
+.FoodData .FDBox .DBox .Lbox p.see{ text-align:center;}}
+
+.FoodData .FDBox .DBox ul.textBox{ padding:20px 0;}
+.FoodData .FDBox .DBox ul.textBox li{ padding:20px 0}
+.FoodData .FDBox .DBox ul.textBox li p{ float:left; width:90%; color:#5f5f5f; font-size:17px; text-align:justify;}
+.FoodData .FDBox .DBox ul.textBox li p.nb{ width:8%; float:left; text-align:center; padding-top:5px; color:#8f766a; font-size:35px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
+
+.FoodData .FDBox .DBox .videoBox{ width:100%; padding:15px 0;}
+.FoodData .FDBox .DBox .videoBox p.Angle{ display:block; padding-top:15px;}
+.FoodData .FDBox .DBox .videoBox p.Angle a{ float:left; cursor:pointer; border:1px solid #bbbbbb; margin:0 5px; color:#5f5f5f; padding:2px 12px; display:block; border-radius:4px;}
+.FoodData .FDBox .DBox .videoBox p.Angle a:hover{ text-decoration:none; background-color:#fffce5;}
+.FoodData .FDBox .DBox .videoBox p.Angle a.btm_in{ background-color:#FF7272; color:#FFF; border-color:#CCC;}
+.FoodData .FDBox .DBox .videoBox iframe{ width:100%; min-height:400px;}
+
+@media (max-width: 700px){ .FoodData .FDBox .DBox .videoBox iframe{ min-height:360px;}}
+@media (max-width: 600px){ .FoodData .FDBox .DBox .videoBox iframe{ min-height:300px;}}
+@media (max-width: 499px){ .FoodData .FDBox .DBox .videoBox iframe{ min-height:260px;}}
+@media (max-width: 414px){ .FoodData .FDBox .DBox .videoBox iframe{ min-height:220px;}}
+@media (max-width: 320px){ .FoodData .FDBox .DBox .videoBox iframe{ min-height:180px;}}
