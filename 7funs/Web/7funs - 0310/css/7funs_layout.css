@@ -126,7 +126,7 @@ body{ background-color:#f4f4f4;}
 .meals .msBox .food_photo{ float:left; width:50%; display:block;/* background:url(../images/meals/food_default.jpg) center center no-repeat #FFF;*/}
 .meals .msBox .food_info{ float:left; width:50%;}
 .meals .msBox .food_info p.title{ font-size:20px; font-weight:bold; color:#8D6666; min-height:50px; max-height:56px; overflow:hidden; width:75%; margin:14px auto; margin-bottom:8px; line-height:26px;}
-.meals .msBox .food_info p.chef{ font-size:16px; color:#7D7D7D; width:74%; margin:20px auto 0 auto; padding-top:10px; border-top:1px solid #dfdfe2;}
+.meals .msBox .food_info p.chef{ font-size:16px; color:#7D7D7D; width:74%; margin:20px auto 0 auto; padding-top:10px; border-top:1px solid #dfdfe2;overflow: hidden;height: 25px;}
 .meals .msBox .food_info p.nb{ font-size:16px; color:#7D7D7D; width:74%; margin:0 auto; padding:2px 0;}
 .meals .msBox .food_info p.look{ letter-spacing:0px; text-align:right; padding:5px 10% 0 0 ;}
 .meals .msBox .food_info p.look a{ color:#9D876B; padding-right:23px; background:url(../images/icon_arr.png) right 0px no-repeat;}
@@ -247,7 +247,7 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .theUserBox p{ font-size:16px;}
 .theUserBox p.remind{ text-align:center; padding:5px 0; color:#7b7b7b; font-size:14px;}
 .theUserBox p.error{ text-align:center; color:#F00; padding-bottom:15px;}
-.theUserBox h1.logo{ font-size:35px; text-align:center; color:#900; line-height:77px; font-family: 'Sansita One', cursive; margin-bottom:10px;}
+.theUserBox h1.logo{ width:200px; height:77px; margin:0 auto; text-indent:-9999px; margin-bottom:10px; background:url(../images/7funs_logo.png) center center no-repeat; background-size:contain;}
 .theUserBox h1 span{ color:#F30;}
 .theUserBox h3.title{ width:100%; padding:10px 0 20px 0; color:#929292; font-size:20px; text-align:center;}
 
@@ -483,7 +483,7 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .new_index .CenterBox .theContents{ width:1044px;}
 @media (max-width: 1045px){ .new_index .CenterBox .theContents{ width:95%;}}
 
-.new_index .addfixed{ position:fixed; z-index:980;}
+.new_index .addfixed{ position:fixed; z-index:1; top:0px;}
 .new_index .Header_wrap .CLEAR{ display:none;}
 
 .new_index .fixed_top{ background:none; box-shadow:none; min-height:100px;  background: url(../images/br_k_w.png) bottom left repeat-x;}
@@ -507,15 +507,20 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 
 @media ( max-width:1280px) {.banner_info p.info{ width:65%;}
 .banner_info{ padding-top:12%;}
-.banner_info p.t_main{ font-size:58px;}
-.banner_info p{ font-size:30px; line-height:32px;}}
+/*.banner_info p.t_main{ font-size:58px;}
+.banner_info p{ font-size:30px;line-height:32px;}*/ }
 @media ( max-width:1024px) {.banner_info{ padding-top:15%;}}
-@media ( max-width:950px) {.banner_info p.t_main{ font-size:60px;}
-.banner_info p{ font-size:32px; line-height:48px;}}
-@media ( max-width:768px) {.banner_info{ padding-top:13%;}}
+@media ( max-width:950px) {.banner_info p.t_sub{ font-size:38px;}/*.banner_info p.t_main{ font-size:60px;}
+.banner_info p{ font-size:32px; line-height:48px;}*/}
+@media ( max-width:768px) {.banner_info{ padding-top:10%;}.banner_info p.t_sub{ font-size:28px;}}
 @media ( max-width:600px) {.banner_info{ padding-top:16%;}
 .banner_info p.info{ display:none;}
-.banner_info p.t_main{ font-size:74px;}}
+.banner_info p.t_main{ font-size:30px; padding: 16px 0 9px;}
+.new_index .fixed_top{ min-height: 75px; background:#fff;}
+.new_index .fixed_top h1.logo a{ color:#7A7A7A; background: url(../images/7funs_logo.png) center left no-repeat; background-size: 65%;}
+.new_index{ padding-top:75px;}
+.new_index .addfixed{ box-shadow:0px 0px 5px #999;}}
+
 @media ( max-width:550px) {.p_info p{ display:none;}}
 @media screen and (max-device-width: 750px) {.TopHeader{position: inherit; background-color:#000;} .banner_info p.t_main{ font-size:84px;}}
 
@@ -593,7 +598,10 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 /*index-QA*/
 .CenterBox .QABoxList .ListBox{ border-bottom:none; margin:10px 0 15px 0;}
 .CenterBox .QABoxList .Obox .t02{ width:48%;}
-@media (max-width: 588px){ .CenterBox .QABoxList .Obox .t02{ width:90%;}}
+@media (max-width: 588px){ .CenterBox .QABoxList .Obox .t02{ width:100%;}
+.CenterBox .teacherBox .tphoto{ width:50%; padding:0px 25%;}
+.CenterBox .teacherBox .teacherBox{ width: 90%; padding: 10px 5%; min-height:80px;}
+.CenterBox .teacherBox .teacherBox p{ text-align:center;}}
 
 /*index-app*/
 .CenterBox .FoodTool{ padding:55px 0 0 0;}
