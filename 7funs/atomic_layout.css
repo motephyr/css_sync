@@ -1,6 +1,5 @@
 ﻿@charset "utf-8";
 /* CSS Document */
-
 /*===================共用=================*/
 body{ background-color:#000;/* padding-top:87px;*/}
 body.br_w{ background-color:#fff;}
@@ -27,7 +26,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .TopHeader ul.menu li h3 a{ color:#FFF; padding:20px 28px 20px 18px; display:block; cursor:pointer;}
 .TopHeader ul.menu li h3 a:hover{ text-decoration:none; color:#ff1b7a;}
 .TopHeader ul.menu li h3 a.color01{ color:#F06}
- 	
+
 .TopHeader ul.menu li ul.submenu{ position:absolute; left:0; top:60px; z-index:600; background:url(../images/br_k.png) 0 0 repeat; border-top:3px solid #F06; display:none; padding:8px 0;}
 .TopHeader ul.menu li ul.submenu li{ float:none; margin:0; background:none;}
 .TopHeader ul.menu li ul.submenu li p{ text-align:center; font-size:14px; /*line-height:35px;*/}
