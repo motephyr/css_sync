@@ -249,9 +249,9 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .ChangePW .cPW .FR{ float:right;}
 .ChangePW .cPW input{ width:97%; padding:12px 1.5%; font-size:16px; color:#aeaeae; text-align:center; background-color:#FFF; border:1px solid #898989; font-family:"微軟正黑體","Helvetica","Heiti TC";}
 .ChangePW .cPW input.f_in{ color:#333;}
-.ChangePW .#cboxClose{ background:url(../images/controls_k.png) 0 0 no-repeat ; background-size:cover;}
+.ChangePW #cboxClose{ background:url(../images/controls_k.png) 0 0 no-repeat ; background-size:cover;}
 
-			
+
 /*編輯個人資料*/
 .EditPersonal_info{ width:460px; min-height:171px; background-color:#fff; border:1px solid #ff1b7a;}
 .EditPersonal_info .top_photo{ width:100%;}
