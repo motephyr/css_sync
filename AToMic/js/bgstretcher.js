@@ -605,7 +605,7 @@
 		imageHeight:                768,
 		maxWidth:					'auto',
 		maxHeight:					'auto',
-		nextSlideDelay:             3000,
+		nextSlideDelay:             5000,
 		slideShowSpeed:             'normal',
 		slideShow:                  true,
 		transitionEffect:			'fade', // none, fade, simpleSlide, superSlide

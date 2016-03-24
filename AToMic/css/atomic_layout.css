@@ -2,7 +2,7 @@
 /* CSS Document */
 
 /*===================共用=================*/
-body{ background-color:#000;/* padding-top:87px;*/}
+body{ background-color:#000;}
 body.br_w{ background-color:#fff;}
 
 h1, h2, h3, h4, h5, h6, p { color:#333333; font-family:"nimbus-sans","xingothic-tc-w4","微軟正黑體","Microsoft JhengHei",sans-serif;}
@@ -15,26 +15,27 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 
 .theContents { width: 1000px; margin: 0px auto;}
 
-.TopHeader{ width:100%; position:fixed; top:0; z-index:9999; border-bottom:1px solid #ff1b7a; background:url(../images/br_k.png) 0 0 repeat;}
-.TopHeader h1.logo{ float:left; padding:12px;}
-.TopHeader h1.logo a{ width:250px; height:63px; display:block; background:url(../images/logo.png) center center no-repeat; text-indent:-9999px; background-size: cover;}
+.logoBox{ position: relative; display:block;}
+.TopHeader{ width:100%; position:fixed; top:0; z-index:9999; border-bottom:1px solid #965682; background:url(../images/br_k.png) 0 0 repeat;}
+.TopHeader h1.logo{ left:100px; top:15px; display:none; position:absolute;}
+.TopHeader h1.logo a{ width:280px; height:58px; display:block; background:url(../images/logo.png) center center no-repeat; text-indent:-9999px; background-size: cover;}
 .TopHeader h1.logo a:hover{ opacity:0.9;}
 
 .TopHeader ul.menu{ float:right;}
 .TopHeader ul.menu li{ float:left; margin:0 6.5px; position:relative; background:url(../images/line_point.png) right center no-repeat;}
 .TopHeader ul.menu li.none_br{ background:none;}
 .TopHeader ul.menu li h3{ font-size:15px; /*line-height:40px;*/}
-.TopHeader ul.menu li h3 a{ color:#FFF; padding:15px 28px 15px 18px; display:block; cursor:pointer;}
+.TopHeader ul.menu li h3 a{ color:#FFF; padding:10px 28px 10px 18px; display:block; cursor:pointer;}
 .TopHeader ul.menu li h3 a:hover{ text-decoration:none; color:#ff1b7a;}
 .TopHeader ul.menu li h3 a.color01{ color:#F06}
 .TopHeader ul.menu li h4{ font-size:15px; /*line-height:40px;*/}
-.TopHeader ul.menu li h4 a{ color:#FFF; padding:15px 28px 15px 18px; display:block; cursor:pointer;}
+.TopHeader ul.menu li h4 a{ color:#FFF; padding:10px 28px 10px 18px; display:block; cursor:pointer;}
 
-.TopHeader ul.menu li.userIDBox{ padding:15px 0px 12px;}
+.TopHeader ul.menu li.userIDBox{ padding:10px 0px 10px;}
 .TopHeader ul.menu li.userIDBox p.userID{ float:left; color:#fff;}
 .TopHeader ul.menu li.userIDBox .userPhoto { float:left; width:22px; height:22px; margin:0 6px;}
 
-.TopHeader ul.menu li ul.submenu{ position:absolute; left:0; top:50px; z-index:600; background:url(../images/br_k.png) 0 0 repeat; border-top:3px solid #F06; display:none; padding:8px 0;}
+.TopHeader ul.menu li ul.submenu{ position:absolute; left:0; top:42px; z-index:600; background:url(../images/br_k.png) 0 0 repeat; border-top:3px solid #965682; display:none; padding:8px 0;}
 .TopHeader ul.menu li ul.submenu li{ float:none; margin:0; background:none;}
 .TopHeader ul.menu li ul.submenu li p{ text-align:center; font-size:14px; /*line-height:35px;*/}
 .TopHeader ul.menu li ul.submenu li p a{ padding:6px 10px; color:#FFF; display:block;}
@@ -47,15 +48,22 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .menu_central .theContents{ width:880px;}
 
 @media ( max-width:1280px) {.TopHeader .theContents { /* width: 100%;*/ }
-.TopHeader ul.menu li h3 a{ padding:13px 28px 13px 18px;}
-.TopHeader ul.menu li ul.submenu{ top:49px;}}
-@media ( max-width:1080px) {.TopHeader ul.menu li ul.sm_p00{ left:-17px;}
-.TopHeader ul.menu li ul.sm_p01{ left:8px;}
-.TopHeader ul.menu li ul.sm_p02{ left:-20px;}
-.TopHeader ul.menu li ul.sm_p03{ left:-27px;}}
+.addlogo ul.menu li h3 a{ padding:10px 18px 10px 10px;}
+.addlogo ul.menu li ul.sm_p01 { left: 9px; width:108px;}
+.addlogo ul.menu li ul.sm_p00, .addlogo ul.menu li ul.sm_p02{ width:95px;}
+.addlogo ul.menu li ul.sm_p03{ width:100px; left: -18px;}}
+@media ( max-width:1200px) {.addlogo ul.menu li ul.sm_p00{ left:-11px;}
+.addlogo ul.menu li h3 a{ padding:10px 10px 10px 0px;}
+.addlogo ul.menu li ul.sm_p00, .addlogo ul.menu li ul.sm_p02{width:85px;}
+.addlogo ul.menu li ul.sm_p02{ width:90px;}}
+@media ( max-width:1080px) {.addlogo ul.menu li ul.sm_p00{ left:-17px;}
+.addlogo ul.menu li ul.sm_p01{ left:8px;}
+.addlogo ul.menu li ul.sm_p02{ left:-20px;}
+.addlogo ul.menu li ul.sm_p03{ left:-27px;}}
+@media ( max-width:1020px) {.TopHeader ul.menu li{ margin: 0 4px;}}
 @media ( max-width:1000px) {.theContents { width: 95%;}}
-@media ( max-width:880px) {.menu_central .theContents{ width:100%;}
-.TopHeader ul.menu li h3 a{ padding:13px 18px 13px 8px;}}
+@media ( max-width:880px) {.menu_central .theContents{ width:100%;}}
+@media ( max-width:830px) {.TopHeader{ display:none;}}
 @media ( max-width:750px) {.menu_central .theContents{ display:none;}}
 
 .MiddleBox{ width:100%;}
@@ -185,21 +193,21 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .ComingsoonBox p.Number_Members span{ padding:0 5px;}
 
 .ComingsoonBox .OpenBetaBox{ width:430px; margin:0 auto 40px auto;}
+.ComingsoonBox .plz_login{ width:624px; margin:40px auto; padding-top:24%;}
 
 .font-size100{ font-size:120px; color:#FFF; margin:0 auto;text-align:center; text-shadow:0px 0px 10px #000; font-family: Lato, 'Apple LiGothic', 'Microsoft YaHei', 'Microsoft JhengHei', sans-serif;}
+.hamburger{ display:none;}
 
-@media ( max-height:1000px) {.ComingsoonBox h1{ margin:100px auto 20px auto;}
+@media (max-height:1000px) {.ComingsoonBox h1{ margin:100px auto 20px auto;}
 .ComingsoonBox p{ margin:50px 0 20px 0;}
 .font-size100{ font-size:70px;}}
-
-
-.hamburger{ display:none;}
 @media (max-width:768px){.font-size100{ width:90%; font-size:80px;}}
-@media (max-width:750px){.hamburger{ display:block;}}
+@media (max-width:830px){.hamburger{ display:block;}}
+@media (max-width:640px){.ComingsoonBox .plz_login{ width:80%; padding-top:50%;}}
 @media (max-width:520px){.ComingsoonBox h1{ width:300px; height:180px;}
 .ComingsoonBox p{ font-size:24px;}
 .font-size100{ font-size:50px;}}
-@media ( max-height:440px) {.ComingsoonBox .OpenBetaBox{ width:80%;}}
+@media (max-height:440px){.ComingsoonBox .OpenBetaBox{ width:80%;}}
 
 .mobile-nav{ width:325px !important; background-color:#533748; z-index:999;}
 .mobile-nav ul.food_menu{ display:none;}
@@ -276,3 +284,20 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .br_img01 .inside{ margin:150px 0 20px 0;}
 .br_img01 .inside .both{ width:90%; margin:0 auto;}
 .br_img01 .inside .both p{ text-align:center;}
+.br_img02{ background:url(../images/br_a02.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+
+
+.addlogo{ background: url(../images/br_header.png) 0 -13px repeat-x; height:110px; border:none;}
+.addlogo .theContents{ width:1480px;}
+.addlogo h1.logo{ display: block;}
+.br_pinkline{ position: fixed; top:-15px; width:100%; height:110px; background:url(../images/br_header2.png) center bottom no-repeat;}
+
+@media (max-width:1480px){.addlogo .theContents{ width:100%;}
+.br_pinkline{ background:url(../images/br_header2_L.png) -218px  bottom no-repeat;}
+.TopHeader h1.logo{ left:72px;}}
+@media (max-width:980px){.addlogo{ width:880px;}
+.addlogo h1.logo{ display:none;}
+.addlogo ul.menu li{  margin:0 6.5px;}
+.addlogo ul.menu li h3 a { padding: 10px 18px 10px 10px;}
+.addlogo .br_pinkline{background: url(../images/br_header2_M.png) 0 bottom repeat-x;}}
+
