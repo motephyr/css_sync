@@ -495,7 +495,7 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .new_index .addfixed .UserBox{ position:inherit; float:right;}
 .new_index .addfixed .none_loginBox{ position:inherit; float:right; padding-right:15px;}
 
-.banner_info{ position:absolute; z-index:1; width:100%; padding-top:11%;}
+.banner_info{ position:absolute; z-index:0; width:100%; padding-top:11%;}
 .banner_info p{ text-align:center; color:#FFF; font-weight: bold; font-size:26px; float: inherit; text-shadow:0 0 5px #0C0C0C;}
 .banner_info p.t_sub{ padding:10px; font-size:42px;}
 .banner_info p.t_sub span{ border:3px solid #FFF; padding:5px 45px; border-radius:55px;}
@@ -510,10 +510,9 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 /*.banner_info p.t_main{ font-size:58px;}
 .banner_info p{ font-size:30px;line-height:32px;}*/ }
 @media ( max-width:1024px) {.banner_info{ padding-top:15%;}}
-@media ( max-width:950px) {.banner_info p.t_sub{ font-size:38px;}/*.banner_info p.t_main{ font-size:60px;}
-.banner_info p{ font-size:32px; line-height:48px;}*/}
-@media ( max-width:768px) {.banner_info{ padding-top:10%;}.banner_info p.t_sub{ font-size:28px;}}
-@media ( max-width:600px) {.banner_info{ padding-top:16%;}
+@media ( max-width:950px) {.banner_info p.t_sub{ font-size:38px;}}
+@media ( max-width:768px) {.banner_info{ padding-top:10%;}.banner_info p.t_sub{ font-size:24px;}}
+@media ( max-width:600px) {/*.banner_info{ padding-top:16%;}*/
 .banner_info p.info{ display:none;}
 .banner_info p.t_main{ font-size:30px; padding: 16px 0 9px;}
 .new_index .fixed_top{ min-height: 75px; background:#fff;}
@@ -522,7 +521,8 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .new_index .addfixed{ box-shadow:0px 0px 5px #999;}}
 
 @media ( max-width:550px) {.p_info p{ display:none;}}
-@media screen and (max-device-width: 750px) {.TopHeader{position: inherit; background-color:#000;} .banner_info p.t_main{ font-size:84px;}}
+@media screen and (max-device-width: 750px) {.TopHeader{position: inherit; background-color:#000;} 
+.banner_info p.t_main{ font-size:22px;}}
 
 .br_00{ background-color:#f7f7f7; border:1px solid #ebebeb; border-width:1px 0 1px 0;}
 .br_01{ background:url(../images/cream_pixels.png) 0 0 repeat; border-bottom:1px solid #f4f4f4;}
@@ -563,7 +563,8 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 
 .CenterBox .FoodListBox .aFbox .cuisineBox{ width:100%; padding-top:55px; min-height:42px; position:absolute; bottom:0px; background:url(../images/br_gradients.png) center top repeat-x;}
 .CenterBox .FoodListBox .aFbox .cuisineBox p.name{ color:#fff; font-size:20px; line-height:30px; letter-spacing:0px; font-weight:bold; padding-left:18px; text-shadow:0px 0px 5px #3b3b3b}
-@media (max-width: 768px){.CenterBox .FoodListBox .aFbox .cuisineBox p.name{ height:30px; overflow:hidden; width:68%; display:block;}}
+@media (max-width: 768px){.CenterBox .FoodListBox .aFbox .cuisineBox p.name{ height:30px; overflow:hidden; width:68%; display:block;}
+.CenterBox .FoodList_top{ padding-top:20px;}}
 @media (max-width: 599px){.CenterBox .FoodListBox .aFbox{ width:47.6%;}}
 
 .CenterBox .FoodListBox .aFbox .like{ position:absolute; bottom:12px; right:15px; z-index:0; width:30px; height:30px; cursor:pointer; display:block; background:url(../images/food_like.png) center center no-repeat; background-size: cover;}
