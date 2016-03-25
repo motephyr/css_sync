@@ -606,7 +606,7 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 
 /*index-app*/
 .CenterBox .FoodTool{ padding:55px 0 0 0;}
-.CenterBox .FoodTool .img_App{ float:left; width:27%; padding-left:1.5%;}
+.CenterBox .FoodTool .img_App{ float:left; width:25.2%; padding-left:1.5%;}
 .CenterBox .FoodTool .App_info{ float:right; width:65%; padding:75px 0 20px 0;}
 .CenterBox .FoodTool .App_info p { color:#171717; line-height:28px; padding-bottom:20px;}
 .CenterBox .FoodTool .App_info p.title{ color:#3c4549; font-size:34px; font-weight: bold;}
