@@ -175,6 +175,9 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 
 .theUserBox .otherBox .rightB{ float:right;}
 .theUserBox .otherBox .rightB p{ font-size:14px; padding-bottom:0px;}
+.thanks_sign{ margin-top:10%;}
+.thanks_sign p.sign_ok{ font-size:22px; text-align:center; color:#00a700; padding-bottom:15px;}
+.thanks_sign p.sign_ok span{ font-size:11px;}
 
 @media ( max-width:420px) {.theUserBox{ width:90%;}}
 
