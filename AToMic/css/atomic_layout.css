@@ -17,7 +17,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 
 .logoBox{ position: relative; display:block;}
 .TopHeader{ width:100%; position:fixed; top:0; z-index:9999; border-bottom:1px solid #965682; background:url(../images/br_k.png) 0 0 repeat;}
-.TopHeader h1.logo{ left:100px; top:15px; display:none; position:absolute;}
+.TopHeader h1.logo{ left:84px; top:15px; display:none; position:absolute;}
 .TopHeader h1.logo a{ width:280px; height:58px; display:block; background:url(../images/logo.png) center center no-repeat; text-indent:-9999px; background-size: cover;}
 .TopHeader h1.logo a:hover{ opacity:0.9;}
 
@@ -31,7 +31,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .TopHeader ul.menu li h4{ font-size:15px; /*line-height:40px;*/}
 .TopHeader ul.menu li h4 a{ color:#FFF; padding:10px 28px 10px 18px; display:block; cursor:pointer;}
 
-.TopHeader ul.menu li.userIDBox{ padding:10px 0px 10px;}
+.TopHeader ul.menu li.userIDBox{ padding:10px 5px 10px;}
 .TopHeader ul.menu li.userIDBox p.userID{ float:left; color:#fff;}
 .TopHeader ul.menu li.userIDBox .userPhoto { float:left; width:22px; height:22px; margin:0 6px;}
 
@@ -86,43 +86,90 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 */
 .inside{/* border-top:1px solid #E4E4E4;*/}
 .inside .theContents{ padding:40px 0 60px 0; background:url(../images/br_k.png) 0 0 repeat;}
-.inside .both{ width:100%;}
-.inside h2.h2_title{ color:#e61e5a; letter-spacing:-1px; font-size:36px; font-family: Lato, 'Apple LiGothic', 'Microsoft YaHei', 'Microsoft JhengHei', sans-serif; font-weight: 900; padding-bottom:20px;}
-.inside h2.h2_title span{ letter-spacing:0px; font-family: 'Oswald', sans-serif; font-weight:700; font-size:15px;}
-.inside .both .LBox{ float:left; width:35%; padding:11px 5% 0 0;}
-.inside .both .RBox{ float:left; width:60%;}
-.inside .both .RBox p.info{ font-size:14px; line-height:26px; color:#fff;}
+.MiddleBox .both{ width:100%;}
+
+.MiddleBox h2.h2_title{ color:#fff; letter-spacing:-1px; font-size:30px; text-align:center; font-family: Lato, 'Apple LiGothic', 'Microsoft YaHei', 'Microsoft JhengHei', sans-serif; font-weight: 900; padding-bottom:30px;}
+.MiddleBox h2.h2_title span{ padding:5px 8px; background-color:#ff1b7a;}
+.MiddleBox h3.h3_title{ text-align:center; color:#ff1b7a; font-size:24px;font-family: Lato, 'Apple LiGothic', 'Microsoft YaHei', 'Microsoft JhengHei', sans-serif; font-weight: 900; padding-top:12px;}
+.MiddleBox h3.h3_title span.icon_l{ padding-left:45px; background:url(../images/title/img_h2_flower.png) left center no-repeat;}
+.MiddleBox h3.h3_title span.icon_r{ padding-left:45px; background:url(../images/title/img_h2_flower.png) right center no-repeat;}
+.MiddleBox p.h3_title_sub{ text-align:center; color:#ff1b7a; font-size:15px;font-family:"Helvetica","Heiti TC"; line-height:24px;}
+
+.MiddleBox p.info{ width:91%; margin:0 auto; font-size:14px; text-align:center; line-height:22px; color:#fff; padding:8px 0 15px;}
+.MiddleBox p.info span.pgreen{ color:#00ffbe;}
+.MiddleBox p.info span.pgreen a{ color:#00ffbe;}
+.MiddleBox p.info span.p_eng{ color:#a0a0a0; line-height:18px;}
+.MiddleBox p.info a.c_g{ color:#00ffcb;}
+
+.MiddleBox p.color_gray{ color:#b5b5b6; padding-top:15px;}
+.MiddleBox p.big{ font-size:18px; line-height:24px; color:#fff; font-weight:bold;}
+.MiddleBox p.big{ font-size:18px; line-height:24px; color:#fff; font-weight:bold;}
+.MiddleBox p.p_advantage{ width:465px; text-align:justify; line-height:24px; padding:15px 0;}
+.MiddleBox p.p_advantage span{ color:#ffff00;}
+.MiddleBox p.p_green1000{ color:#00ffc7;font-size:18px; line-height:24px;font-weight:bold;}
+.MiddleBox p.big_pink{ padding:15px 0 5px; font-size:36px; letter-spacing:2px; text-align:center; color:#ff1b7a;font-family: Lato, 'Apple LiGothic', 'Microsoft YaHei', 'Microsoft JhengHei', sans-serif; font-weight:900;}
+
+.MiddleBox .img_h2_title{ width:560px; margin:0 auto;}
+.MiddleBox .about_photo{ width:91%; margin:0 auto; padding-bottom:20px;}
+
+.MiddleBox .both .LBox{ float:left; width:35%; padding:11px 5% 0 0;}
+.MiddleBox .both .RBox{ float:left; width:60%;} 
+.google_doc_Box{ width:100%; margin:0 auto; padding-top:25px;}
 
 .leader h2.h2_title{ text-align:center;}
+@media ( max-width:740px) {.MiddleBox p.big_pink{ width:94%; margin:0 auto; font-size:30px;}}
+@media ( max-width:680px) {.MiddleBox p.big_pink{ font-size:28px;}}
+@media ( max-width:565px) {.MiddleBox .img_h2_title{ width:94%;}
+.MiddleBox h3.h3_title{ font-size:21px;	}}
+@media ( max-width:350px) {.MiddleBox h2.h2_title{ font-size:18px;}}
+
 .leader .both{ width:860px; margin:0 auto;}
 .leader .both .leaderBox{ width:30%; float:left; padding:10px 1.53% 20px 1.53%;}
 .leader .both .leaderBox .photo{ width:83%; margin:0 auto; padding:10px 0;}
-.leader .both .leaderBox p{ text-align:center;}
+.leader .both .leaderBox p{ text-align:center; color:#fff;}
 .leader .both .leaderBox p.name{ font-size:18px; min-height:60px;}
 .leader .both .leaderBox p.name span.p_eng{ font-size:15px; line-height:24px;}
 .leader .both .leaderBox p.name span.ss{ font-size:14px; line-height:24px;}
 .leader .both .leaderBox .info{ min-height:145px;}
-.leader .both .leaderBox .info p{ color:#666; font-size:14px; line-height:22px;}
+.leader .both .leaderBox .info p{ font-size:14px; line-height:22px;}
 .leader .both .leaderBox .info a.icon_FB{ width:25px; height:25px; display:block; margin:8px auto; background:url(../images/icon_sFB.png) center center no-repeat;}
 
-.inside .both .RBox .RankBox{ width:100%; margin:20px 0; border-top:1px solid #9C9C9C;}
-.inside .both .RBox .RankBox p{ padding:10px;}
-.inside .both .RBox .RankBox table tr.title p{ font-size:17px; font-weight:bold; padding:20px 10px;}
+@media ( max-width:599px) {.leader .both .leaderBox{ width:46%;}}
+@media ( max-width:420px) {.leader .both .leaderBox .info{ min-height:100px;}}
+@media ( max-width:320px) {.MiddleBox h3.h3_title{ font-size:15px;}}
 
-.inside .both .RBox .WarriorBox{ width:100%;}
-.inside .both .RBox .WarriorBox p{ padding:10px;}
-.inside .both .RBox .WarriorBox p.icon_up{ width:20px; background:url(../images/warrior/icon_up.png) center left no-repeat; padding-left:20px; font-size:13px;}
-.inside .both .RBox .WarriorBox p.icon_down{ width:20px; background:url(../images/warrior/icon_down.png) center left no-repeat; padding-left:20px; font-size:13px;}
-.inside .both .RBox .WarriorBox p.icon_no{ width:25px; display:block; height:20px; background:url(../images/warrior/icon_00.png) center left no-repeat; padding:0;}
-.inside .both .RBox .WarriorBox p.ss{ font-size:13px;}
-.inside .both .RBox .WarriorBox table{ border:1px solid #b9b9b9; border-width:0 1px 1px 0;}
-.inside .both .RBox .WarriorBox table tr td{ border:1px solid #b9b9b9; border-width:1px 0 0 1px;}
-.inside .both .RBox .WarriorBox table img{ margin:4px 0 0 3px;}
+.inside .RankBox{ width:650px; margin:20px auto; }
+.inside .RankBox p{ padding:15px 5px; color:#fff;}
+.inside .RankBox table tr.title td{ border-bottom:none;}
+.inside .RankBox table tr.title p{ font-size:17px; font-weight:bold; padding:20px 10px;}
+.inside .RankBox table tr td{ border-bottom:1px solid #fff;}
+.inside .noline{ width:450px; margin-left:30%;}
+.inside .noline table tr td{ border-bottom:none;}
+@media ( max-width:720px) {.inside .noline{ margin-left:22%;}}
+@media ( max-width:650px) {.inside .RankBox{ width:96%;}
+.inside .noline{ width:450px; margin-left:auto;}}
+@media ( max-width:455px) {.inside .noline{ width:96%; margin-left:auto;}}
 
-.inside .both .RBox .WarriorBox .award{ width:50%; float:left; padding-bottom:20px;}
+.inside .WarriorBox{ width:90%; margin:0 auto;}
+.inside .WarriorBox p{ padding:10px; color:#fff;}
+.inside .WarriorBox p.icon_up{ width:20px; background:url(../images/warrior/icon_up.png) center left no-repeat; padding-left:20px; font-size:13px;}
+.inside .WarriorBox p.icon_down{ width:20px; background:url(../images/warrior/icon_down.png) center left no-repeat; padding-left:20px; font-size:13px;}
+.inside .WarriorBox p.icon_no{ width:25px; display:block; height:20px; background:url(../images/warrior/icon_00.png) center left no-repeat; padding:0;}
+.inside .WarriorBox p.ss{ font-size:13px;}
+.inside .WarriorBox p.color_g{ color:#00ff78;}
+.inside .WarriorBox p.color_y{ color:#ffff00;}
 
-.inside p.pageBox{ text-align:center; padding:15px 0; color:#B0B0B0;}
-.inside p.pageBox a{ color:#333; padding:0 5px;}
+.inside .WarriorBox table tr td{ border-bottom:1px solid #fff;}
+.inside .WarriorBox table img{ margin:4px 0 0 3px;}
+
+.inside .WarriorBox .award{ width:33%; float:left; padding-bottom:20px;}
+.inside .WarriorBox .award50{ width:50%; float:left; padding-bottom:20px;}
+
+@media ( max-width:599px) {.inside .WarriorBox .award{ padding-bottom:0;}
+.inside .WarriorBox .award{ width:50%; padding-bottom:0;}}
+
+.inside p.pageBox{ text-align:center; padding:30px 0 5px; color:#fff;}
+.inside p.pageBox a{ color:#fff; padding:0 5px;}
 
 .play_photo{ width:100%;}
 .play_photo .pBox{ width:100%;}
@@ -283,12 +330,48 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .user_info_pop .top_photo .user_info .user_rank p.name{ color:#fff;}
 
 /*背景*/
-.br_img01{ background:url(../images/br_02.jpg) center top no-repeat #000; background-attachment: fixed; }
+.br_img01{ background:url(../images/br_02.jpg) center top no-repeat #000; background-attachment: fixed;}
 .br_img01 .inside{ margin:150px 0 20px 0;}
 .br_img01 .inside .both{ width:90%; margin:0 auto;}
 .br_img01 .inside .both p{ text-align:center;}
 .br_img02{ background:url(../images/br_a02.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img03{ background:url(../images/br_a03.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img04{ background:url(../images/br_a04.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover; padding:150px 0 20px 0;}
+.br_img05{ background:url(../images/br_a05.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img05 .inside{ margin:150px 0 20px 0;}
+.br_img06{ background:url(../images/br_a06.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img06 .inside{ margin:150px 0 40px 0;}
+.br_img06 .inside .theContents{ padding: 40px 0 0px 0;}
+.br_img06 .inside .theContents{ padding:40px 0 60px 0; background:url(../images/br_k2.png) 0 0 repeat;}
 
+.br_img07{ background:url(../images/br_a07.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img07 .inside{ margin:150px 0 40px 0;}
+.br_img07 .inside .theContents{ padding: 40px 0 0px 0;}
+.br_img07 .pic_history{ width:609px; margin:0 auto; padding-top:30px;}
+.br_img07{ background:url(../images/br_a07.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img07 .inside{ margin:150px 0 40px 0;}
+.br_img07 .inside .theContents{ padding: 40px 0 0px 0;}
+.br_img07 .pic_history{ width:609px; margin:0 auto; padding-top:30px;}
+.br_img08{ background:url(../images/br_a08.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img08 .inside{ margin:150px 0 40px 0;}
+.br_img08 .inside .theContents{ padding: 40px 0 0px 0;}
+.br_img09{ background:url(../images/br_a09.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img09 .inside{ margin:150px 0 40px 0;}
+.br_img09 .inside .theContents{ padding: 40px 0 40px 0; min-height:400px;}
+.br_img10{ background:url(../images/br_a10.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img10 .inside{ margin:150px 0 40px 0;}
+.br_img10 .inside .theContents{ padding: 40px 0 40px 0;}
+.br_img10 .MiddleBox .img_h2_title{ width:720px;}
+.br_img11{ background:url(../images/br_a11.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img11 .inside{ margin:150px 0 40px 0;}
+.br_img11 .inside .theContents{ padding: 40px 0 40px 0;}
+.br_img12{ background:url(../images/br_a12.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img12 .inside{ margin:150px 0 40px 0;}
+.br_img12 .inside .theContents{ padding: 40px 0 40px 0;}
+.br_img12 .MiddleBox h3.h3_title{ padding-top:30px; font-size:36px; letter-spacing:2px;}
+.br_img13{ background:url(../images/br_a13.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img13 .inside{ margin:150px 0 40px 0;}
+.br_img13 .inside .theContents{ padding: 40px 0 40px 0;}
 
 .addlogo{ background: url(../images/br_header.png) 0 -13px repeat-x; height:110px; border:none;}
 .addlogo .theContents{ width:1480px;}
@@ -298,9 +381,44 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 @media (max-width:1480px){.addlogo .theContents{ width:100%;}
 .br_pinkline{ background:url(../images/br_header2_L.png) -218px  bottom no-repeat;}
 .TopHeader h1.logo{ left:72px;}}
-@media (max-width:980px){.addlogo{ width:880px;}
+
+@media (max-width:980px){/*.addlogo{ width:880px;}*/
 .addlogo h1.logo{ display:none;}
 .addlogo ul.menu li{  margin:0 6.5px;}
 .addlogo ul.menu li h3 a { padding: 10px 18px 10px 10px;}
 .addlogo .br_pinkline{background: url(../images/br_header2_M.png) 0 bottom repeat-x;}}
 
+@media (max-width:830px){.br_img01 .inside, .br_img05 .inside, .br_img06 .inside, .br_img07 .inside, .br_img08 .inside, .br_img09 .inside,
+ .br_img10 .inside, .br_img11 .inside, .br_img12 .inside{ margin:70px 0 20px 0;}
+.br_img04{ padding:70px 0 20px 0}]}
+@media (max-width:750px){.br_img10 .MiddleBox .img_h2_title{ width:94%;}}
+@media (max-width:630px){.br_img07 .pic_history{ width:90%}}
+
+/*帝國名人堂*/
+.celebrity{ margin:150px 0 20px 0;}
+
+/*攻略大補帖*/
+.StrategyGuideBox{ width:430px; margin:0 auto; padding:15px 0;}
+.StrategyGuideBox p.btm_SG{ float:left; margin:10px 15px; text-align:center; font-size:22px; line-height:24px;font-family: Lato, 'Apple LiGothic', 'Microsoft YaHei', 'Microsoft JhengHei', sans-serif;}
+.StrategyGuideBox p.btm_SG span { font-size:15px; font-family:'Microsoft JhengHei'; font-weight:bold;}
+.StrategyGuideBox p.btm_SG a{ width:178px; height:55px; color:#ff1b7a; display:block; background:url(../images/btn_br_-strategy.jpg) center center no-repeat; padding-top:9px;}
+.StrategyGuideBox p.btm_SG a.nolink{ color:#898989;}
+.StrategyGuideBox p.btm_SG a:hover{ opacity:.9; text-decoration:none;}
+.StrategyGuideBox p.btm_SG a.nolink:hover{ opacity:1;}
+.SG3{ width:635px;}
+
+/*教學影片區*/
+.t_videosBox{ width:100%; padding:25px 0;}
+.t_videosBox .vBoxs{ width:30%; float:left; margin:0 1.5% 20px 1.5%;}
+.t_videosBox .vBoxs iframe{ border:1px solid #f80500;}
+.t_videosBox .vBoxs p{ text-align:center; padding:10px 0; color:#fff;}
+.videos_STEP{ width:80%; margin:15px auto;}
+.videos_STEP iframe{ height:430px;}
+
+.newStartBox{ width:350px; margin:0 auto; padding:15px 0;}
+.newStartBox p.btm{ float:left; width:45%; margin:10px 2%; text-align:center; font-size:18px; line-height:24px; color:#fff; font-family: Lato, 'Apple LiGothic', 'Microsoft YaHei', 'Microsoft JhengHei', sans-serif;}
+.newStartBox p.btm a{ width:100%; padding:5px 0; font-size:16px; color:#fff; display:block; background-color:#ff1b7a; margin:10px 0;}
+.newStartBox p.btm a:hover{ opacity:.9; text-decoration:none;}
+
+@media (max-width:599px){.t_videosBox .vBoxs{ width:46.5%}.videos_STEP iframe{ height:200px;}}
+@media (max-width:399px){.t_videosBox .vBoxs{ width:96.5%} .newStartBox{ width:90%;}}
