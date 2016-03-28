@@ -35,7 +35,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .TopHeader ul.menu li.userIDBox p.userID{ float:left; color:#fff;}
 .TopHeader ul.menu li.userIDBox .userPhoto { float:left; width:22px; height:22px; margin:0 6px;}
 
-.TopHeader ul.menu li ul.submenu{ position:absolute; left:0; top:42px; z-index:600; background:url(../images/br_k.png) 0 0 repeat; border-top:3px solid #965682; display:none; padding:8px 0;}
+.TopHeader ul.menu li ul.submenu{ position:absolute; left:0; top:40px; z-index:600; background:url(../images/br_k.png) 0 0 repeat; border-top:3px solid #965682; display:none; padding:8px 0;}
 .TopHeader ul.menu li ul.submenu li{ float:none; margin:0; background:none;}
 .TopHeader ul.menu li ul.submenu li p{ text-align:center; font-size:14px; /*line-height:35px;*/}
 .TopHeader ul.menu li ul.submenu li p a{ padding:6px 10px; color:#FFF; display:block;}
@@ -362,7 +362,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .br_img10 .inside{ margin:150px 0 40px 0;}
 .br_img10 .inside .theContents{ padding: 40px 0 40px 0;}
 .br_img10 .MiddleBox .img_h2_title{ width:720px;}
-.br_img11{ background:url(../images/br_a11.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img11{ background:url(../images/br_a11.jpg) center top repeat-y #000; background-attachment: fixed; background-size:cover;}
 .br_img11 .inside{ margin:150px 0 40px 0;}
 .br_img11 .inside .theContents{ padding: 40px 0 40px 0;}
 .br_img12{ background:url(../images/br_a12.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
@@ -401,11 +401,14 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .StrategyGuideBox{ width:430px; margin:0 auto; padding:15px 0;}
 .StrategyGuideBox p.btm_SG{ float:left; margin:10px 15px; text-align:center; font-size:22px; line-height:24px;font-family: Lato, 'Apple LiGothic', 'Microsoft YaHei', 'Microsoft JhengHei', sans-serif;}
 .StrategyGuideBox p.btm_SG span { font-size:15px; font-family:'Microsoft JhengHei'; font-weight:bold;}
-.StrategyGuideBox p.btm_SG a{ width:178px; height:55px; color:#ff1b7a; display:block; background:url(../images/btn_br_-strategy.jpg) center center no-repeat; padding-top:9px;}
+.StrategyGuideBox p.btm_SG a{ width:178px; height:55px; color:#ff1b7a; background-size:cover; display:block; background:url(../images/btn_br_-strategy.jpg) center center no-repeat; padding-top:9px;}
 .StrategyGuideBox p.btm_SG a.nolink{ color:#898989;}
 .StrategyGuideBox p.btm_SG a:hover{ opacity:.9; text-decoration:none;}
 .StrategyGuideBox p.btm_SG a.nolink:hover{ opacity:1;}
 .SG3{ width:635px;}
+@media (max-width:430px){.StrategyGuideBox{ width:178px;}}
+@media (max-width:650px){.SG3{ width:178px;}
+.StrategyGuideBox p.btm_SG { margin: 10px 0px;}}
 
 /*教學影片區*/
 .t_videosBox{ width:100%; padding:25px 0;}
