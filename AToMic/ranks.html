@@ -270,7 +270,7 @@
                   <tr>
                     <td align="center"><p class="color_y">2</p></td>
                     <td align="center">&nbsp;<!--<img src="images/ranks/rank_02.png" width="43" height="34" />--></td>
-                    <td align="center"><p>N/A</p></td>
+                    <td align="center"><p><a class='logout inline' href=".user_info_pop">劉駿</a></p></td>
                     <td align="center"><p>&nbsp;</p></td>
                     <td>&nbsp;</td>
                     <td align="center"><p>&nbsp;</p></td>
@@ -524,7 +524,51 @@
  	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 	<script src="js/jvmobilemenu/jv-jquery-mobile-menu-min.js"></script>
 	<script src="js/script-right.js"></script>   
+<!--顯示個人資料pop-->
+<div style='display:none; z-index:999;'>
+<article class="theUserBox EditPersonal_info user_info_pop">
+	<div class="top_photo">
+    	<div class="user_photo"><img src="images/edit_user_img_default.jpg" width="100%" alt="AToMic 預設頭像"/></div>
+        <div class="user_info">
+        	<div class="user_rank">
+            	<p class="name">劉駿</p>
+                <div class="icon_rank"><img src="images/ranks/rank_02.png" width="100%" alt=""/></div>
+                <br class="CLEAR" />
+            </div>
+            <p>五星上將</p>
+        </div>
+        <br class="CLEAR" />
+    </div>
+    <p class="self_info">異度魔界的創始魔皇，毀滅之神，<br />
+有著睥睨人世間的威嚴，<br />
+藉聖魔元胎與神柱之能量，再臨人間苦境。<br />
+無感無情，孤高自許，厭惡凡人的爭權奪利和自相殘殺，<br />
+欲血洗神州大地…。<br />
+123411513181748<br />
+1823788<br />
+<br />
+上古梟雄，曾斬殺魔神邪天御武，<br />
+建立天都，君臨天下，但卻也帶來另一個暴政及屠戮，<br />
+最後被刀無后以影神刀所殺。<br />
+<br />
+孰料羅喉死前恨意強烈，致使力量不散，<br />
+寄宿於戒璽之上，控制闇影魑首，破解星宿大陣，<br />
+讓自己重新復生，再度君臨天下。<br />
+uawndughwidhii hhawdhh dhawhd<br />
+dhiahhfhwd hcc<br />
+<br />
+You Should Be Here!</p>
+</article>
+</div>
+<!-- pop up -->
+<script src="js/jquery.colorbox.js"></script>
 
+<script>
+	$(document).ready(function(){
+		$(".iframe").colorbox({iframe:true, width:"610px", height:"80%"});
+		$(".inline").colorbox({inline:true});
+	});
+</script> 
 </body>
 </html>
 

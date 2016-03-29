@@ -152,6 +152,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 
 .inside .WarriorBox{ width:90%; margin:0 auto;}
 .inside .WarriorBox p{ padding:10px; color:#fff;}
+.inside .WarriorBox p a{ color:#fff; cursor:pointer;}
 .inside .WarriorBox p.icon_up{ width:20px; background:url(../images/warrior/icon_up.png) center left no-repeat; padding-left:20px; font-size:13px;}
 .inside .WarriorBox p.icon_down{ width:20px; background:url(../images/warrior/icon_down.png) center left no-repeat; padding-left:20px; font-size:13px;}
 .inside .WarriorBox p.icon_no{ width:25px; display:block; height:20px; background:url(../images/warrior/icon_00.png) center left no-repeat; padding:0;}
