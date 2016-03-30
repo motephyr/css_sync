@@ -385,6 +385,8 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .theContents .rightBox .PageBox p{ text-align:center;}
 
 @media (max-width:768px){.theContents .PageBox p{ text-align: center;}}
+@media (max-width:599px){.theContents .PageBox p{ font-size:13px;}.theContents .PageBox p a{ padding: 5px 6px; margin:0 2px;} }
+@media (max-width:399px){.theContents .PageBox p{ font-size:12px; }.theContents .PageBox p a{padding: 5px; margin:0px;} }
 
 .myLoveBox{ width:840px; /*min-height:500px;*/}
 .myLoveBox .rightBox{ width:100%; float:none; padding:10px 0 20px 0;}
