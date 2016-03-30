@@ -245,6 +245,10 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 
 .ComingsoonBox .OpenBetaBox{ width:430px; margin:0 auto 40px auto;}
 .ComingsoonBox .plz_login{ width:624px; margin:40px auto; padding-top:24%;}
+.ComingsoonBox .p_comingsoon{ width:470px; margin:18% auto 40px auto; padding:20px 0; background:url(../images/br_k.png) 0 0 repeat;}
+.ComingsoonBox .p_comingsoon h4{ text-align:center; color:#fff; font-size:40px;}
+.ComingsoonBox .p_comingsoon p{ font-size:18px; margin:15px 0; font-weight:normal; letter-spacing:0;}
+.ComingsoonBox .p_comingsoon p a{ color:#fff;}
 
 .font-size100{ font-size:120px; color:#FFF; margin:0 auto;text-align:center; text-shadow:0px 0px 10px #000; font-family: Lato, 'Apple LiGothic', 'Microsoft YaHei', 'Microsoft JhengHei', sans-serif;}
 .hamburger{ display:none;}
@@ -258,7 +262,12 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 @media (max-width:520px){.ComingsoonBox h1{ width:300px; height:180px;}
 .ComingsoonBox p{ font-size:24px;}
 .font-size100{ font-size:50px;}}
-@media (max-height:440px){.ComingsoonBox .OpenBetaBox{ width:80%;}}
+@media (max-width:440px){.ComingsoonBox .OpenBetaBox{ width:80%;}
+.ComingsoonBox .p_comingsoon{ width:86%; padding:20px 2%;}}
+
+@media (max-width:768px) and (max-height:1024px){.ComingsoonBox .p_comingsoon{ margin-top:36%;}}
+@media (max-width:499px) and (max-height:699px){.ComingsoonBox .p_comingsoon h4{ font-size:25px;}
+.ComingsoonBox .p_comingsoon p{ font-size:13px;}}
 
 .mobile-nav{ width:325px !important; background-color:#533748; z-index:999;}
 .mobile-nav ul.food_menu{ display:none;}
@@ -373,6 +382,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .br_img13{ background:url(../images/br_a13.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
 .br_img13 .inside{ margin:150px 0 40px 0;}
 .br_img13 .inside .theContents{ padding: 40px 0 40px 0;}
+.br_img14{ background:url(../images/br_a14.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
 
 .addlogo{ background: url(../images/br_header.png) 0 -13px repeat-x; height:110px; border:none;}
 .addlogo .theContents{ width:1480px;}
