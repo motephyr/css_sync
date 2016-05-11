@@ -352,7 +352,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .br_img06{ background:url(../images/br_a06.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
 .br_img06 .inside{ margin:150px 0 40px 0;}
 .br_img06 .inside .theContents{ padding: 40px 0 0px 0;}
-.br_img06 .inside .theContents{ padding:40px 0 60px 0; background:url(../images/br_k2.png) 0 0 repeat;}
+.br_img06 .inside .theContents{ padding:40px 0 0px 0; background:url(../images/br_k2.png) 0 0 repeat;}
 
 .br_img07{ background:url(../images/br_a07.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
 .br_img07 .inside{ margin:150px 0 40px 0;}
@@ -383,6 +383,9 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .br_img13 .inside{ margin:150px 0 40px 0;}
 .br_img13 .inside .theContents{ padding: 40px 0 40px 0;}
 .br_img14{ background:url(../images/br_a14.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+
+.br_img15{ background:url(../images/br_a15.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img15 .inside{ margin:150px 0 20px 0;}
 
 .addlogo{ background: url(../images/br_header.png) 0 -13px repeat-x; height:110px; border:none;}
 .addlogo .theContents{ width:1480px;}
@@ -436,3 +439,82 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 
 @media (max-width:599px){.t_videosBox .vBoxs{ width:46.5%}.videos_STEP iframe{ height:200px;}}
 @media (max-width:399px){.t_videosBox .vBoxs{ width:96.5%} .newStartBox{ width:90%;}}
+
+
+.MiddleBox .medalBox{ width: 100%; padding-bottom: 20px;}
+.MiddleBox .medalBox p.btm{ text-align: center; line-height: 38px; font-size: 16px; font-weight: bold;}
+.MiddleBox .medalBox p.btm a{ width: 86px; display: block; margin: 10px auto; background-color: #ff1b7a; color: #fff;}
+.MiddleBox .medalBox p.btm a:hover{ text-decoration: none; opacity: .9; }
+.MiddleBox .medalBox .p_eng{ font-size: 14px; }
+
+.MiddleBox .medalBox p.btm_w a{  background-color: #fff; color: #888;}
+.MiddleBox .medalBox p.btm_w a:hover{ opacity: 1; }
+
+.MiddleBox .medalBox .micon{ width: 260px; height: 260px; display: block; margin: 0 auto;}
+.MiddleBox .medalBox .m01{background:url(../images/medal/m_01.png) center center no-repeat; background-size: contain;}
+.MiddleBox .medalBox .m02{background:url(../images/medal/m_02.png) center center no-repeat; background-size: contain;}
+.MiddleBox .medalBox .m03{background:url(../images/medal/m_03.png) center center no-repeat; background-size: contain;}
+.MiddleBox .medalBox .m04{background:url(../images/medal/m_04.png) center center no-repeat; background-size: contain;}
+.MiddleBox .medalBox .m05{background:url(../images/medal/m_05.png) center center no-repeat; background-size: contain;}
+.MiddleBox .medalBox .m06{background:url(../images/medal/m_06.png) center center no-repeat; background-size: contain;}
+
+.MiddleBox .medalBox .m_title{ width: 280px; height: 86px; display: block; margin: 0 auto; text-indent: -9999px;}
+.MiddleBox .medalBox .m_t01{background:url(../images/medal/m_title_01.png) center center no-repeat; background-size: cover;}
+.MiddleBox .medalBox .m_t02{background:url(../images/medal/m_title_02.png) center center no-repeat; background-size: cover;}
+.MiddleBox .medalBox .m_t03{background:url(../images/medal/m_title_03.png) center center no-repeat; background-size: cover;}
+.MiddleBox .medalBox .m_t04{background:url(../images/medal/m_title_04.png) center center no-repeat; background-size: cover;}
+.MiddleBox .medalBox .m_t05{background:url(../images/medal/m_title_05.png) center center no-repeat; background-size: cover;}
+.MiddleBox .medalBox .m_t06{background:url(../images/medal/m_title_06.png) center center no-repeat; background-size: cover;}
+
+/*popup*/
+.MedalBox_pop{ width:1523px; min-height: 744px; background: url(../images/medal/br_pop_pc.jpg) center top no-repeat #000; box-shadow: 0px 0px 15px #333;}
+.MedalBox_pop h3.title{ width: 315px; height: 90px; display: block; margin: 0px auto 10px auto; text-indent: -9999px;}
+.MedalBox_pop h3.t01{ background:url(../images/medal/pop_top_title_01.png) center center no-repeat; background-size: cover;}
+.MedalBox_pop h3.t02{ background:url(../images/medal/pop_top_title_02.png) center center no-repeat; background-size: cover;}
+.MedalBox_pop h3.t03{ background:url(../images/medal/pop_top_title_03.png) center center no-repeat; background-size: cover;}
+.MedalBox_pop h3.t04{ background:url(../images/medal/pop_top_title_04.png) center center no-repeat; background-size: cover;}
+.MedalBox_pop h3.t05{ background:url(../images/medal/pop_top_title_05.png) center center no-repeat; background-size: cover;}
+.MedalBox_pop h3.t06{ background:url(../images/medal/pop_top_title_06.png) center center no-repeat; background-size: cover;}
+
+.MedalBox_pop .ListBox{ width: 800px; margin: 0 auto; }
+.MedalBox_pop .ListBox p{ color: #fff; text-align: center; font-size: 13px; line-height: 18px;}
+.MedalBox_pop .ListBox .top_title p{ font-size: 15px; font-weight: bold;}
+.MedalBox_pop .ListBox .lbox{ width: 100%; border-bottom: 1px solid #666;}
+.MedalBox_pop .ListBox .lbox .tb{ float: left; padding: 10px 1%}
+.MedalBox_pop .ListBox .lbox .tb p.task_name{ color: #ffff00;}
+.MedalBox_pop .ListBox .lbox .tb1{ width: 12%;}
+.MedalBox_pop .ListBox .lbox .tb2{ width: 12%;}
+.MedalBox_pop .ListBox .lbox .tb3{ width: 44%;}
+.MedalBox_pop .ListBox .lbox .tb4{ width: 12%;}
+.MedalBox_pop .ListBox .lbox .tb5{ width: 10%;}
+.MedalBox_pop .ListBox .lbox p span.mob{ display: none; }
+
+.MedalBox_pop .ListBox .lbox .tb .p_green{ color:#00ffb4;display: block;}
+.MedalBox_pop .ListBox .wrap{display: block;}
+.MedalBox_pop .ListBox .p_gary{ color: #999; display: block;}
+.MedalBox_pop .ListBox .p_bottom{ padding: 15px 0; }
+.MedalBox_pop .ListBox p.red_none{ color: #ff0000; font-size: 24px; font-weight: bold; line-height: 450px; }
+.MedalBox_pop .ListBox .pages{ color: #999;}
+.MedalBox_pop .ListBox .pages a{ color: #999;}
+.MedalBox_pop .ListBox .pages a.btm_in{ color: #fff; }
+
+@media (max-width:1550px){.MedalBox_pop{ width:1300px;}}
+@media (max-width:1350px){.MedalBox_pop{ width:1000px; background: url(../images/medal/br_pop_pc.jpg) 22% top no-repeat #000;}
+	.MedalBox_pop .ListBox{ padding-left: 190px; padding-right: 10px; margin: 0;}}
+@media (max-width:1030px){.MedalBox_pop{ width:100%;background:none; background-color: #00011f; min-height: initial;}
+	.MedalBox_pop .ListBox{ width: 95%; padding: 0 0 20px 0; margin: 0px auto;}}
+
+@media (max-width:899px){.MedalBox_pop h3.title{ width: 200px; }
+	.MedalBox_pop .ListBox .top_title{ display: none; }
+	.MedalBox_pop .ListBox .lbox{ width: 90%; margin: 0 auto; padding: 15px 0; }
+	.MedalBox_pop .ListBox .lbox p{ text-align: left; }
+	.MedalBox_pop .ListBox .lbox p.task_name{ font-size: 16px;}
+	.MedalBox_pop .ListBox .lbox p span.mob{ display: inline; }
+	.MedalBox_pop .ListBox .wrap, .MedalBox_pop .ListBox .lbox .tb .p_green, .MedalBox_pop .ListBox .p_gary{ display: inline; }
+	.MedalBox_pop .ListBox .lbox .tb{ float: none; width: 100%; padding: 5px 0; }
+	.MedalBox_pop .ListBox p.red_none{ line-height: 150px; }
+	.MedalBox_pop .ListBox .lbox .tb5 p{ color: #FF1B7A; }
+	.MedalBox_pop .ListBox p{ text-align: center; }}
+@media (max-width:400px){.MedalBox_pop{ width:340px;}}
+@media (max-width:345px){.MedalBox_pop{ width:290px;}}
+@media (max-width:295px){.MedalBox_pop{ width:270px;}}
