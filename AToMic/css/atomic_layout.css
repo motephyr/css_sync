@@ -119,6 +119,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .leader h2.h2_title{ text-align:center;}
 @media ( max-width:740px) {.MiddleBox p.big_pink{ width:94%; margin:0 auto; font-size:30px;}}
 @media ( max-width:680px) {.MiddleBox p.big_pink{ font-size:28px;}}
+@media ( max-width:620px) {.MiddleBox h2.h2_title{ font-size:26px; padding: 15px 0;}}
 @media ( max-width:565px) {.MiddleBox .img_h2_title{ width:94%;}
 .MiddleBox h3.h3_title{ font-size:21px;	}}
 @media ( max-width:350px) {.MiddleBox h2.h2_title{ font-size:18px;}}
@@ -386,6 +387,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 
 .br_img15{ background:url(../images/br_a15.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
 .br_img15 .inside{ margin:150px 0 20px 0;}
+.br_img15 .MiddleBox .img_h2_title{ width:700px;}
 
 .addlogo{ background: url(../images/br_header.png) 0 -13px repeat-x; height:110px; border:none;}
 .addlogo .theContents{ width:1480px;}
@@ -405,7 +407,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 @media (max-width:830px){.br_img01 .inside, .br_img05 .inside, .br_img06 .inside, .br_img07 .inside, .br_img08 .inside, .br_img09 .inside,
  .br_img10 .inside, .br_img11 .inside, .br_img12 .inside{ margin:70px 0 20px 0;}
 .br_img04{ padding:70px 0 20px 0}]}
-@media (max-width:750px){.br_img10 .MiddleBox .img_h2_title{ width:94%;}}
+@media (max-width:750px){.br_img10 .MiddleBox .img_h2_title, .br_img15 .MiddleBox .img_h2_title{ width:94%;}}
 @media (max-width:630px){.br_img07 .pic_history{ width:90%}}
 
 /*帝國名人堂*/
@@ -469,12 +471,12 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 /*popup*/
 .MedalBox_pop{ width:1523px; min-height: 744px; background: url(../images/medal/br_pop_pc.jpg) center top no-repeat #000; box-shadow: 0px 0px 15px #333;}
 .MedalBox_pop h3.title{ width: 315px; height: 90px; display: block; margin: 0px auto 10px auto; text-indent: -9999px;}
-.MedalBox_pop h3.t01{ background:url(../images/medal/pop_top_title_01.png) center center no-repeat; background-size: cover;}
-.MedalBox_pop h3.t02{ background:url(../images/medal/pop_top_title_02.png) center center no-repeat; background-size: cover;}
-.MedalBox_pop h3.t03{ background:url(../images/medal/pop_top_title_03.png) center center no-repeat; background-size: cover;}
-.MedalBox_pop h3.t04{ background:url(../images/medal/pop_top_title_04.png) center center no-repeat; background-size: cover;}
-.MedalBox_pop h3.t05{ background:url(../images/medal/pop_top_title_05.png) center center no-repeat; background-size: cover;}
-.MedalBox_pop h3.t06{ background:url(../images/medal/pop_top_title_06.png) center center no-repeat; background-size: cover;}
+.MedalBox_pop h3.t01{ background:url(../images/medal/pop_top_title_01.png) center center no-repeat; background-size: contain;}
+.MedalBox_pop h3.t02{ background:url(../images/medal/pop_top_title_02.png) center center no-repeat; background-size: contain;}
+.MedalBox_pop h3.t03{ background:url(../images/medal/pop_top_title_03.png) center center no-repeat; background-size: contain;}
+.MedalBox_pop h3.t04{ background:url(../images/medal/pop_top_title_04.png) center center no-repeat; background-size: contain;}
+.MedalBox_pop h3.t05{ background:url(../images/medal/pop_top_title_05.png) center center no-repeat; background-size: contain;}
+.MedalBox_pop h3.t06{ background:url(../images/medal/pop_top_title_06.png) center center no-repeat; background-size: contain;}
 
 .MedalBox_pop .ListBox{ width: 800px; margin: 0 auto; }
 .MedalBox_pop .ListBox p{ color: #fff; text-align: center; font-size: 13px; line-height: 18px;}
@@ -490,6 +492,8 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .MedalBox_pop .ListBox .lbox p span.mob{ display: none; }
 
 .MedalBox_pop .ListBox .lbox .tb .p_green{ color:#00ffb4;display: block;}
+.MedalBox_pop .ListBox .lbox .tb5 p{ color: #FF1B7A; }
+.MedalBox_pop .ListBox .top_title .tb5 p{ color: #fff;}
 .MedalBox_pop .ListBox .wrap{display: block;}
 .MedalBox_pop .ListBox .p_gary{ color: #999; display: block;}
 .MedalBox_pop .ListBox .p_bottom{ padding: 15px 0; }
@@ -504,7 +508,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 @media (max-width:1030px){.MedalBox_pop{ width:100%;background:none; background-color: #00011f; min-height: initial;}
 	.MedalBox_pop .ListBox{ width: 95%; padding: 0 0 20px 0; margin: 0px auto;}}
 
-@media (max-width:899px){.MedalBox_pop h3.title{ width: 200px; }
+@media (max-width:899px){.MedalBox_pop h3.title{ width: 250px; }
 	.MedalBox_pop .ListBox .top_title{ display: none; }
 	.MedalBox_pop .ListBox .lbox{ width: 90%; margin: 0 auto; padding: 15px 0; }
 	.MedalBox_pop .ListBox .lbox p{ text-align: left; }
@@ -513,7 +517,6 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 	.MedalBox_pop .ListBox .wrap, .MedalBox_pop .ListBox .lbox .tb .p_green, .MedalBox_pop .ListBox .p_gary{ display: inline; }
 	.MedalBox_pop .ListBox .lbox .tb{ float: none; width: 100%; padding: 5px 0; }
 	.MedalBox_pop .ListBox p.red_none{ line-height: 150px; }
-	.MedalBox_pop .ListBox .lbox .tb5 p{ color: #FF1B7A; }
 	.MedalBox_pop .ListBox p{ text-align: center; }}
 @media (max-width:400px){.MedalBox_pop{ width:340px;}}
 @media (max-width:345px){.MedalBox_pop{ width:290px;}}
