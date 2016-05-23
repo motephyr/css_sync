@@ -388,6 +388,9 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 .br_img15{ background:url(../images/br_a15.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
 .br_img15 .inside{ margin:150px 0 20px 0;}
 .br_img15 .MiddleBox .img_h2_title{ width:700px;}
+.br_img16{ background:url(../images/br_a16.jpg) center top no-repeat #000; background-attachment: fixed; background-size:cover;}
+.br_img16 .inside{ margin:150px 0 20px 0;}
+.br_img16 .MiddleBox .img_h2_title{ width:560px;}
 
 .addlogo{ background: url(../images/br_header.png) 0 -13px repeat-x; height:110px; border:none;}
 .addlogo .theContents{ width:1480px;}
@@ -407,7 +410,7 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 @media (max-width:830px){.br_img01 .inside, .br_img05 .inside, .br_img06 .inside, .br_img07 .inside, .br_img08 .inside, .br_img09 .inside,
  .br_img10 .inside, .br_img11 .inside, .br_img12 .inside{ margin:70px 0 20px 0;}
 .br_img04{ padding:70px 0 20px 0}]}
-@media (max-width:750px){.br_img10 .MiddleBox .img_h2_title, .br_img15 .MiddleBox .img_h2_title{ width:94%;}}
+@media (max-width:750px){.br_img10 .MiddleBox .img_h2_title, .br_img15 .MiddleBox .img_h2_title, .br_img16 .MiddleBox .img_h2_title{ width:94%;}}
 @media (max-width:630px){.br_img07 .pic_history{ width:90%}}
 
 /*帝國名人堂*/
@@ -521,3 +524,42 @@ select, input, textarea{ font-family:"微軟正黑體",Helvetica,"Heiti TC","Mic
 @media (max-width:400px){.MedalBox_pop{ width:340px;}}
 @media (max-width:345px){.MedalBox_pop{ width:290px;}}
 @media (max-width:295px){.MedalBox_pop{ width:270px;}}
+
+.MiddleBox ul.btm_pink_both{ width: 500px; margin: 0 auto; padding: 20px 0;}
+.MiddleBox ul.btm_pink_both li{ float: left; width: 45%; padding: 8px 2.5%;}
+.MiddleBox ul.btm_pink_both li p{ font-size: 15px; text-align: center;}
+.MiddleBox ul.btm_pink_both li p a{ width: 100%; padding: 16px 0; display: block; cursor: pointer; color: #ff1b7a; background-color: #fff;}
+.MiddleBox ul.btm_pink_both li p a:hover{ color: #fff; background-color: #ff1b7a; text-decoration: none;}
+
+.MiddleBox .QA_sessionBox{ width: 97%; margin: 0 auto;}
+.MiddleBox .QA_sessionBox ul.top_btm{ width:650px; margin:0 auto; }
+.MiddleBox .QA_sessionBox ul.top_btm li{ width: 23%; padding: 0 1%; float: left; }
+.MiddleBox .QA_sessionBox ul.top_btm li a{ width: 92%; color: #e50065; display: block; padding: 6px 4% 10px 4%; background-color:#fff; }
+.MiddleBox .QA_sessionBox ul.top_btm li a:hover{ text-decoration: none; }
+.MiddleBox .QA_sessionBox ul.top_btm li p{ text-align: center; font-size: 20px; color: #e50065; }
+.MiddleBox .QA_sessionBox ul.top_btm li p span{ font-size: 12px;  display: block;}
+.MiddleBox .QA_sessionBox ul.top_btm li p.btm_in a{color: #fff; background-color: #e50065;}
+
+.MiddleBox .QA_sessionBox .both { width: 100%;  padding: 40px 0; }
+.MiddleBox .QA_sessionBox .both ul.qBox{ width: 47%; float: left; margin: 0 1.5%; }
+.MiddleBox .QA_sessionBox .both ul.qBox li{ padding-bottom: 30px; }
+.MiddleBox .QA_sessionBox .both ul.qBox li h5{ font-size: 16px; color: #e50065; padding-bottom: 5px;}
+.MiddleBox .QA_sessionBox .both ul.qBox li h5 span.red{ color: #ff0000;}
+.MiddleBox .QA_sessionBox .both ul.qBox li p{ color: #fff; font-size: 13px; line-height: 24px; text-align: justify;word-break: break-all;}
+.MiddleBox .QA_sessionBox .both ul.qBox li p a{ color: #40fed6; }
+.MiddleBox .QA_sessionBox .both ul.qBox li p span.p_eng{ color: #9fa0a0; }
+.MiddleBox .QA_sessionBox .both ul.qBox li p span.green{ color: #40fed6; }
+
+.MiddleBox .QA_sessionBox .both ul.qBox li ul.wv10{ width: 100%;}
+.MiddleBox .QA_sessionBox .both ul.qBox li ul.wv10 li{ float: left; width: 50%; padding: 0;}
+
+.MiddleBox .live_channelBox{ width: 90%; margin: 0 auto;  padding-top: 40px;}
+.MiddleBox .live_channelBox iframe{ width:100%; height:500px;}
+
+@media (max-width:699px){.MiddleBox .QA_sessionBox ul.top_btm{ width:90%; }}
+@media (max-width:605px){.MiddleBox ul.btm_pink_both{ width: 95%;}}
+@media (max-width:599px){.MiddleBox .QA_sessionBox ul.top_btm li{ width: 48%; padding-bottom: 10px;}
+	.MiddleBox .QA_sessionBox .both ul.qBox{ width: 97%; }
+	.MiddleBox .QA_sessionBox .both{ padding: 20px 0 0 0; }}
+@media (max-width:499px){.MiddleBox ul.btm_pink_both{ width: 80%;} .MiddleBox ul.btm_pink_both li{ width: 95%;}}
+
