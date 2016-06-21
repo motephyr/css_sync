@@ -1,9 +1,9 @@
 ﻿/*===================共用=================*/
-h1, h2, h3, h4, h5, h6, p { color:#231815; letter-spacing:1px; font-family:"nimbus-sans","xingothic-tc-w4","微軟正黑體","Microsoft JhengHei",sans-serif;}
+h1, h2, h3, h4, h5, h6, p { color:#231815; font-family: 'Bitter',"微軟正黑體","Microsoft JhengHei", serif; -webkit-font-smoothing: antialiased;}
 p{ font-size:15px; _font-size:14px; line-height:24px;}
 a{ text-decoration:none; outline: none; /* for Firefox */  hlbr:expression(this.onFocus=this.blur()); /* for IE */}
 a:hover{ text-decoration:underline;}
-select, input, textarea{ font-family:Helvetica,"Heiti TC","微軟正黑體","Microsoft Sans Serif","Microsoft Sans Serif","Helvetica","Geneva","sans-serif"; font-size:15px;}
+select, input, textarea{ font-family: 'Bitter',"微軟正黑體","Microsoft JhengHei", serif; -webkit-font-smoothing: antialiased; font-size:15px;}
 *:link, *:visited, *:hover, *:active, *:focus , * { -o-transition: color .20s linear, background-color .20s linear, border-color .20s linear; -webkit-transition: color .20s linear, background-color .20s linear, border-color .20s linear; -moz-transition: color .20s linear, background-color .20s linear, border-color .20s linear; transition: color .20s linear, background-color .20s linear, border-color .20s linear; }
 
 body{ background-color:#f4f4f4;}
@@ -14,7 +14,7 @@ body{ background-color:#f4f4f4;}
 .Header_wrap{ width:100%; background-color:#FFF; min-height:77px; box-shadow:0px 0px 5px #999;}
 .Header_wrap .theContents{ position:relative;}
 .Header_wrap h1{ width:200px; font-size:18px; text-align:center; letter-spacing:0px; line-height:77px; position:absolute; left:0; top:0;}
-.Header_wrap h1 a{ width:200px; padding-left:118px; height:77px; display:block; color:#666;  background:url(../images/7funs_logo.png) center left no-repeat; background-size:65%; opacity:1; -moz-opacity:1; filter:alpha(opacity=100); -webkit-transition:all .5s ease-in-out; -moz-transition:all .5s ease-in-out; -o-transition:all .5s ease-in-out; -ms-transition:all .5s ease-in-out;}
+.Header_wrap h1 a{ width:200px; padding-left:84px; height:77px; display:block; color:#666;  background:url(../images/7funs_logo.png) center left no-repeat; background-size:contain; opacity:1; -moz-opacity:1; filter:alpha(opacity=100); -webkit-transition:all .5s ease-in-out; -moz-transition:all .5s ease-in-out; -o-transition:all .5s ease-in-out; -ms-transition:all .5s ease-in-out;}
 /*.Header_wrap h1 a span{ color:#F30;}*/
 .Header_wrap h1 a:hover{ text-decoration:none;  opacity:.8; -moz-opacity:.8; filter:alpha(opacity=80); -webkit-transition:all .5s ease-in-out; -moz-transition:all .5s ease-in-out; -o-transition:all .5s ease-in-out; -ms-transition:all .5s ease-in-out;}
 
@@ -29,7 +29,7 @@ body{ background-color:#f4f4f4;}
 .Header_wrap .none_loginBox p a.icon_FB{ background:url(../images/login_icon_fb.png) center left no-repeat; padding-left:30px; margin-left:12px;}
 
 @media (max-width:908px){.Header_wrap .UserBox, .Header_wrap .none_loginBox{ display:none;}}
-@media (max-width:750px){.Header_wrap h1 a{ width:120px;}}
+@media (max-width:750px){.Header_wrap h1 a{ width:180px;}}
 @media (max-width:520px){.Header_wrap h1{ width:100%; position:inherit;}
 .Header_wrap h1 a{ margin:0 auto;}}
 
@@ -125,8 +125,7 @@ body{ background-color:#f4f4f4;}
 .meals .msBox{ float:left; width:47.5%; background-color:#FFF; display:block; border-radius:4px; overflow:hidden; margin:5px 1% 10px 1%; position:relative; box-shadow: 0px 0px 5px #CCC;}
 .meals .msBox .food_photo{ float:left; width:50%; display:block;/* background:url(../images/meals/food_default.jpg) center center no-repeat #FFF;*/}
 .meals .msBox .food_info{ float:left; width:50%;}
-.meals .msBox .food_info p.title{ font-size:20px; font-weight:bold; color:#8D6666; min-height:50px; max-height:56px; overflow:hidden; width:75%; margin:14px auto; margin-bottom:8px; line-height:26px;}
-.meals .msBox .food_info p.title a{ color:#8D6666; }
+.meals .msBox .food_info p.title{ font-size:18px; font-weight:bold; color:#8D6666; min-height:50px; max-height:56px; overflow:hidden; width:75%; margin:14px auto; margin-bottom:8px; line-height:26px;}
 .meals .msBox .food_info p.chef{ font-size:16px; color:#7D7D7D; width:74%; margin:20px auto 0 auto; padding-top:10px; border-top:1px solid #dfdfe2;overflow: hidden;height: 25px;}
 .meals .msBox .food_info p.nb{ font-size:16px; color:#7D7D7D; width:74%; margin:0 auto; padding:2px 0;}
 .meals .msBox .food_info p.look{ letter-spacing:0px; text-align:right; padding:5px 10% 0 0 ;}
@@ -176,7 +175,7 @@ body{ background-color:#f4f4f4;}
 .rightBoxII .FoodList_QABox ul.qa{ width:84%; margin:0 auto;}
 .rightBoxII .FoodList_QABox ul.qa h3{ line-height:32px; color:#a98484; font-size:18px; text-align:center;}
 .rightBoxII .FoodList_QABox ul.qa li{ border-bottom:1px solid #e6e0e0; padding:10px 0;}
-.rightBoxII .FoodList_QABox ul.qa li p{ color:#171717; font-size:16px;}
+.rightBoxII .FoodList_QABox ul.qa li p{ color:#171717; font-size:14px;}
 .rightBoxII .FoodList_QABox ul.qa li p.name{ color:#886767; font-size:14px; font-weight:bold;word-wrap: break-word; word-break: break-all;}
 .rightBoxII .FoodList_QABox ul.qa li p.name span{ font-weight:normal; font-size:11px; color:#979797; padding-left:5px;}
 .rightBoxII .FoodList_QABox ul.qa li p a{color:#171717; max-height: 46px; overflow: hidden; display: block;}
@@ -197,9 +196,9 @@ body{ background-color:#f4f4f4;}
 
 
 /*footer*/
-.Footer_wrap{ width:100%; padding:40px 0 50px 0; background: url(../images/stardust.png) 0 0 repeat;}
-.Footer_wrap p{ color:#DFDFE2; font-size:13px; text-align:center; font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; }
-.Footer_wrap p a{ color:#DFDFE2; font-size:16px; margin:0 10px;}
+.Footer_wrap{ width:100%; padding:30px 0 40px 0; background: url(../images/stardust.png) 0 0 repeat;}
+.Footer_wrap p{ color:#DFDFE2; font-size:12px; text-align:center; }
+.Footer_wrap p a{ color:#DFDFE2; font-size:15px; margin:0 10px;}
 
 .Footer_wrap_FB{ width:100%; padding:25px 0; background: url(../images/stardust.png) 0 0 repeat;}
 .Footer_wrap_FB .theContents{ width:820px;}
@@ -312,7 +311,7 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .QABoxList .Obox .tbox .titleBox p.hide{ display:none; color:#999;}
 .QABoxList .Obox .tbox .titleBox .top p.name{ float:left; font-size:14px; color:#886767; font-weight:bold;}
 .QABoxList .Obox .tbox .titleBox .top p.time{ float:left; font-size:12px; color:#979797; padding:0 10px;}
-.QABoxList .Obox .tbox .titleBox p.qa_title{ color:#171717; font-size:17px;}
+.QABoxList .Obox .tbox .titleBox p.qa_title{ color:#171717; font-size:16px;}
 .QABoxList .Obox .tbox .nb{ color:#ff722e; font-size:22px; padding:10px 0;}
 
 .QABoxList .Obox .t01{ width:50%;}
@@ -354,7 +353,7 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .forQA .titleBox .top{ width:100%;}
 .forQA .titleBox .top p.name{ float:left; font-size:14px; color:#886767; font-weight:bold; padding-left:75px;}
 .forQA .titleBox .top p.time{ float:left; font-size:12px; color:#979797; padding:0 10px;}
-.forQA .titleBox p.qa_title{ color:#595959; font-size:17px; padding:10px 20px 10px 75px; background-color:#FFF;border-bottom: 1px solid #e6e0e0; margin-top:3px;}
+.forQA .titleBox p.qa_title{ color:#595959; font-size:16px; padding:10px 20px 10px 75px; background-color:#FFF;border-bottom: 1px solid #e6e0e0; margin-top:3px;}
 .forQA .titleBox .qa_back{ width:100%; background-color:#FFF;}
 .forQA .titleBox .qa_back textarea{ min-height:26px; width:350px; font-size:17px; color:#aeaeae; margin:10px 0px 10px 75px ; text-align:left; border:none;}
 .forQA .titleBox .qa_back .line_org{ border-left:2px solid #ff722e;}
@@ -490,54 +489,54 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .new_index .Header_wrap .CLEAR{ display:none;}
 
 .new_index .fixed_top{ background:none; box-shadow:none; min-height:100px;  background: url(../images/br_k_w.png) bottom left repeat-x;}
-.new_index .fixed_top h1.logo a{ color:#fff; background:url(../images/7funs_logo_index.png) center left no-repeat; background-size:65%; }
-.new_index .fixed_top .none_loginBox p{ font-size:18px; font-weight:bold;}
+.new_index .fixed_top h1.logo a{ color:#fff; background:url(../images/7funs_logo_index.png) center left no-repeat; background-size: contain; }
+.new_index .fixed_top .none_loginBox p{ font-size:16px; font-weight:bold;}
 .new_index .fixed_top .none_loginBox p a{ color:#fff; padding: 5px 12px;}
 .new_index .fixed_top .UserBox p.name a{ color:#fff;}
 .new_index .fixed_top .SearchBox{ display:none;}
 .new_index .addfixed .UserBox{ position:inherit; float:right;}
 .new_index .addfixed .none_loginBox{ position:inherit; float:right; padding-right:15px;}
 
-.banner_info{ position:absolute; z-index:0; width:100%; padding-top:11%;}
-.banner_info p{ text-align:center; color:#FFF; font-weight: bold; font-size:26px; float: inherit; text-shadow:0 0 5px #0C0C0C;}
-.banner_info p.t_sub{ padding:10px; font-size:42px;}
+.banner_info{ position:absolute; z-index:100; width:100%; padding-top:8%;}
+.banner_info p{ text-align:center; color:#FFF; font-weight: bold; font-size:26px; float: inherit; text-shadow:0 0 12px #0C0C0C;}
+.banner_info p.t_sub{ padding:10px; font-size:30px;}
 .banner_info p.t_sub span{ border:3px solid #FFF; padding:5px 45px; border-radius:55px;}
-.banner_info p.t_main{ font-size:38px; padding:35px 0 32px 0; }
+.banner_info p.t_main{ font-size:35px; padding:35px 0 32px 0; }
 .banner_info p.info{ width:50%; margin:0 auto; line-height:30px;}
 .banner_info p.info:hover{ text-decoration:underline;}
 
 .navigator{ bottom:125px;}
 
 @media ( max-width:1280px) {.banner_info p.info{ width:65%;}
-.banner_info{ padding-top:12%;}
+.banner_info{ padding-top:7%;}
 /*.banner_info p.t_main{ font-size:58px;}
 .banner_info p{ font-size:30px;line-height:32px;}*/ }
-@media ( max-width:1024px) {.banner_info{ padding-top:15%;}}
+@media ( max-width:1024px) {.banner_info{ padding-top:6%;}}
 @media ( max-width:950px) {.banner_info p.t_sub{ font-size:38px;}}
 @media ( max-width:768px) {.banner_info{ padding-top:10%;}.banner_info p.t_sub{ font-size:24px;}}
 @media ( max-width:600px) {/*.banner_info{ padding-top:16%;}*/
 .banner_info p.info{ display:none;}
 .banner_info p.t_main{ font-size:30px; padding: 16px 0 9px;}
 .new_index .fixed_top{ min-height: 75px; background:#fff;}
-.new_index .fixed_top h1.logo a{ color:#7A7A7A; background: url(../images/7funs_logo.png) center left no-repeat; background-size: 65%;}
+.new_index .fixed_top h1.logo a{ color:#7A7A7A; background: url(../images/7funs_logo.png) center left no-repeat; background-size: contain;}
 .new_index{ padding-top:75px;}
 .new_index .addfixed{ box-shadow:0px 0px 5px #999;}}
 
 @media ( max-width:550px) {.p_info p{ display:none;}}
-@media screen and (max-device-width: 750px) {.TopHeader{position: inherit; background-color:#000;}
+@media screen and (max-device-width: 750px) {.TopHeader{position: inherit; background-color:#000;} 
 .banner_info p.t_main{ font-size:22px;}}
 
 .br_00{ background-color:#f7f7f7; border:1px solid #ebebeb; border-width:1px 0 1px 0;}
 .br_01{ background:url(../images/cream_pixels.png) 0 0 repeat; border-bottom:1px solid #f4f4f4;}
 
 .new_index .CenterBox{ position:relative;}
-.new_index .indexSearchBox{ width:100%; position:absolute; min-height:104px; top:-104px; background:url(../images/br_k.png) 0 0 repeat;}
+.new_index .indexSearchBox{ width:100%; position:absolute; min-height:100px; top:-100px; background:url(../images/br_k.png) 0 0 repeat;}
 .new_index .indexSearchBox .theContents{ width:720px; padding:18px 0px 0px 0px;}
 
-.new_index .indexSearchBox .aSearchBox{ width:100%; height:47px; display:block; overflow:hidden; border-radius:6px;}
-.new_index .indexSearchBox .aSearchBox input{ float:left; width:83%; height:47px; border:none; font-size:20px; color:#82888a; padding-left:2%;}
-.new_index .indexSearchBox .aSearchBox p.btm_search{ float:left; width:15%; height:47px; font-size:20px; line-height:47px; text-align:center;}
-.new_index .indexSearchBox .aSearchBox p.btm_search a{ width:100%; height:47px; display:block; background-color:#ff5a5f; color:#fff;}
+.new_index .indexSearchBox .aSearchBox{ width:100%; height:45px; display:block; overflow:hidden; border-radius:4px;}
+.new_index .indexSearchBox .aSearchBox input{ float:left; width:83%; height:45px; line-height:45px; border:none; font-size:18px; color:#82888a; padding-left:2%;}
+.new_index .indexSearchBox .aSearchBox p.btm_search{ float:left; width:15%; height:47px; font-size:18px; line-height:45px; text-align:center;}
+.new_index .indexSearchBox .aSearchBox p.btm_search a{ width:100%; height:45px; display:block; background-color:#ff5a5f; color:#fff;}
 .new_index .indexSearchBox .aSearchBox p.btm_search a:hover{ text-decoration:none; background-color:#ff474d;}
 
 .new_index .indexSearchBox p.hotKeywords{ font-size:14px; color:#fff; padding:5px;}
@@ -565,7 +564,7 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .CenterBox .FoodListBox .aFbox:hover .Cuisine img{ width:100%; opacity:.6; -moz-opacity:.6; filter:alpha(opacity=60); -webkit-transition:all .5s ease-in-out; -moz-transition:all .5s ease-in-out; -o-transition:all .5s ease-in-out; -ms-transition:all .5s ease-in-out;}
 
 .CenterBox .FoodListBox .aFbox .cuisineBox{ width:100%; padding-top:55px; min-height:42px; position:absolute; bottom:0px; background:url(../images/br_gradients.png) center top repeat-x;}
-.CenterBox .FoodListBox .aFbox .cuisineBox p.name{ color:#fff; font-size:20px; line-height:30px; letter-spacing:0px; font-weight:bold; padding-left:18px; text-shadow:0px 0px 5px #3b3b3b}
+.CenterBox .FoodListBox .aFbox .cuisineBox p.name{ color:#fff; font-size:18px; line-height:30px; letter-spacing:0px; font-weight:bold; padding-left:18px; text-shadow:0px 0px 5px #3b3b3b}
 @media (max-width: 768px){.CenterBox .FoodListBox .aFbox .cuisineBox p.name{ height:30px; overflow:hidden; width:68%; display:block;}
 .CenterBox .FoodList_top{ padding-top:20px;}}
 @media (max-width: 599px){.CenterBox .FoodListBox .aFbox{ width:47.6%;}}
@@ -580,7 +579,7 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 
 /*熱門食譜搜尋 top20*/
 .CenterBox .HotTop20{ width:100%; padding:30px 0 10px 0;}
-.CenterBox .HotTop20 p.title{ width:26%; padding-left:1%; float:left; color:#3c4549; font-size:34px; letter-spacing:-2px; font-weight:bold;}
+.CenterBox .HotTop20 p.title{ width:26%; padding-left:1%; float:left; color:#3c4549; font-size:32px; letter-spacing:-2px; font-weight:bold;}
 .CenterBox .HotTop20 ul.hot20{ width:73%; float:left;}
 .CenterBox .HotTop20 ul.hot20 li{ width:25%; float:left;}
 .CenterBox .HotTop20 ul.hot20 li p{ width:100%; font-size:15px; color:#b7b9c2; padding-bottom:5px;}
@@ -606,13 +605,13 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .CenterBox .teacherBox .tphoto{ width:50%; padding:0px 25%;}
 .CenterBox .teacherBox .teacherBox{ width: 90%; padding: 10px 5%; min-height:80px;}
 .CenterBox .teacherBox .teacherBox p{ text-align:center;}}
-
+@media (max-width: 499px){.CenterBox .teacherBox .teacherBox{ min-height:96px;}}
 /*index-app*/
 .CenterBox .FoodTool{ padding:55px 0 0 0;}
 .CenterBox .FoodTool .img_App{ float:left; width:25.2%; padding-left:1.5%;}
 .CenterBox .FoodTool .App_info{ float:right; width:65%; padding:75px 0 20px 0;}
 .CenterBox .FoodTool .App_info p { color:#171717; line-height:28px; padding-bottom:20px;}
-.CenterBox .FoodTool .App_info p.title{ color:#3c4549; font-size:34px; font-weight: bold;}
+.CenterBox .FoodTool .App_info p.title{ color:#3c4549; font-size:30px; font-weight: bold;}
 
 .CenterBox .FoodTool .App_info .downloadApp p{ float:left; margin-right:12px; text-indent:-9999px;}
 .CenterBox .FoodTool .App_info .downloadApp a{ width:139px; height:45px; display:block;opacity:1; -moz-opacity:1; filter:alpha(opacity=100); -webkit-transition:all .5s ease-in-out; -moz-transition:all .5s ease-in-out; -o-transition:all .5s ease-in-out; -ms-transition:all .5s ease-in-out;}
@@ -632,7 +631,7 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .PrivacyBox .top_toole p.keywords a{ margin:0 8px 0 0;}
 .PrivacyBox .PBox{ width:100%;}
 .PrivacyBox .PBox h4, .PrivacyBox .PBox p{ text-align:justify; letter-spacing:0px;}
-.PrivacyBox .PBox h4.title{ font-size:24px; color:#B47575; font-weight:normal; line-height:24px; padding:40px 0 15px 0; text-shadow:1px 1px 0px #fff;}
+.PrivacyBox .PBox h4.title{ font-size:20px; color:#B47575; font-weight: bold; line-height:24px; padding:40px 0 15px 0; text-shadow:1px 1px 0px #fff;}
 
 .PrivacyBox .PBox p{ color:#928A8A; margin-bottom:25px;}
 .PrivacyBox .PBox p.sub_title{ color:#886767; font-size:16px;margin-bottom:15px;}
@@ -664,3 +663,29 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 @media (max-width: 1320px){.page_arr-l{ left:2%;}.page_arr-r{ right:2%;}}
 @media (max-width: 1190px){.page_arr-l{ left:0%;}.page_arr-r{ right:0%;}}
 @media (max-width: 1024px){.page_arr{ display:none;}.page_arr_s{ display: block; }}
+
+
+.announcementBox{ width:100%; padding-top:25px;}
+.announcementBox .listBox{ width:90%; padding:20px 5%; background-color:#fcf1e7; position: relative;}
+.announcementBox .listBox .info{ width:100%;}
+.announcementBox .listBox .info p{ float:left; width:85%; font-size:15px; font-weight:bold;}
+.announcementBox .listBox .info p.day{ width:8%; margin-right:3%; color:#ff5a5f; text-align:center; border:1px solid #ff5a5f; border-radius:4px;}
+.announcementBox .listBox .info p.day span{ font-size:18px;}
+.announcementBox .listBox .info p a{ color:#333;}
+.announcementBox .listBox .info p a:hover{ color:#666; text-decoration:none;}
+.announcementBox .listBox .see_more{ position:absolute; width:inherit; bottom: 10px; font-size: 13px;}
+.announcementBox .listBox .see_more a{ color:#09C; font-weight:bold; text-decoration:underline;}
+.announcementBox .listBox .see_more a:hover{ text-decoration:none;}
+
+.announcementBox h3.top_title{font-size: 20px; color: #886767; text-align:center; padding-bottom:20px;}
+
+.announcementBox ul.listBox{ background-color:#FFF;}
+.announcementBox ul.listBox li{ border-bottom:1px solid #e6e0e0; padding:35px 0;}
+.announcementBox ul.listBox .info p{ color:#555;}
+.announcementBox ul.listBox .info p.day{ border:none;}
+.announcementBox ul.listBox .info p a{ color:#ff722e;}
+.announcementBox ul.listBox .info p a:hover{ text-decoration:underline; color:#ff722e;}
+@media (max-width: 900px){.announcementBox .listBox .info p{ width:80%;}
+	.announcementBox .listBox .info p.day{ width:13%;}}
+@media (max-width: 599px){.announcementBox .listBox .info p{ width:100%;}
+	.announcementBox .listBox .info p.day{ width:100%; text-align:center; padding-bottom:15px;}}
