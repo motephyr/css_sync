@@ -27,6 +27,21 @@
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/menu.js"></script>
 
+<!--Scrollbar style-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+<script src="js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    (function($){
+        $(window).load(function(){
+        $(".the_ScrollbarBox").mCustomScrollbar({
+          theme:"dark",
+        });
+    });
+})(jQuery);
+</script>
+
+
 </head>
 
 <body style="height:100vh; " class="page br_img05">
@@ -270,7 +285,7 @@
                   <tr>
                     <td align="center"><p class="color_y">2</p></td>
                     <td align="center">&nbsp;<!--<img src="images/ranks/rank_02.png" width="43" height="34" />--></td>
-                    <td align="center"><p><a class='logout inline' href=".user_info_pop">劉駿</a></p></td>
+                    <td align="center"><p><a class='logout inline' href=".go_user">劉駿(樣子看我)</a></p></td>
                     <td align="center"><p>&nbsp;</p></td>
                     <td>&nbsp;</td>
                     <td align="center"><p>&nbsp;</p></td>
@@ -279,7 +294,7 @@
                   <tr>
                     <td align="center"><p class="color_y">3</p></td>
                     <td align="center">&nbsp;</td>
-                    <td align="center"><p>N/A</p></td>
+                    <td align="center"><p><a class='logout inline' href=".go_task">已達成任務(樣子看我)</a></p></td>
                     <td align="center"><p>&nbsp;</p></td>
                     <td>&nbsp;</td>
                     <td align="center"><p>&nbsp;</p></td>
@@ -288,7 +303,7 @@
                   <tr>
                     <td align="center"><p class="color_g">4</p></td>
                     <td align="center">&nbsp;</td>
-                    <td align="center"><p>N/A</p></td>
+                    <td align="center"><p><a class='logout inline' href=".go_reward">已領取獎勵(樣子看我)</a></p></td>
                     <td align="center"><p>&nbsp;</p></td>
                     <td>&nbsp;</td>
                     <td align="center"><p>&nbsp;</p></td>
@@ -523,19 +538,26 @@
 	<!---menu-->
  	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 	<script src="js/jvmobilemenu/jv-jquery-mobile-menu-min.js"></script>
-	<script src="js/script-right.js"></script>   
+	<script src="js/script-right.js"></script> 
+
+
+
 <!--顯示個人資料pop-->
 <div style='display:none; z-index:999;'>
-<article class="theUserBox EditPersonal_info user_info_pop">
+<article class="theUserBox EditPersonal_info user_info_pop go_user">
 	<div class="top_photo">
     	<div class="user_photo"><img src="images/edit_user_img_default.jpg" width="100%" alt="AToMic 預設頭像"/></div>
         <div class="user_info">
         	<div class="user_rank">
-            	<p class="name">劉駿</p>
+            	<p class="name"><a class='color_01 inline' href=".go_user">劉駿</a></p>
                 <div class="icon_rank"><img src="images/ranks/rank_02.png" width="100%" alt=""/></div>
                 <br class="CLEAR" />
             </div>
             <p>五星上將</p>
+            <div class="btn_data">
+                <p><a class='color_01 inline' href=".go_task">已達成任務</a></p>
+                <p><a class='color_02 inline' href=".go_reward">已領取獎勵</a></p>
+            </div>
         </div>
         <br class="CLEAR" />
     </div>
@@ -560,6 +582,89 @@ dhiahhfhwd hcc<br />
 You Should Be Here!</p>
 </article>
 </div>
+
+<div style='display:none; z-index:999;'>
+<article class="theUserBox EditPersonal_info user_info_pop go_task br_nonelogo"><!--已達成任務-->
+  <div class="top_photo">
+      <div class="user_photo"><img src="images/edit_user_img_default.jpg" width="100%" alt="AToMic 預設頭像"/></div>
+        <div class="user_info">
+          <div class="user_rank">
+              <p class="name"><a class='color_01 inline' href=".go_user">劉駿</a></p><!--點ID回來自己的簡介-->
+                <div class="icon_rank"><img src="images/ranks/rank_02.png" width="100%" alt=""/></div>
+                <br class="CLEAR" />
+            </div>
+            <p>五星上將</p>
+            <div class="btn_data">
+                <p class="btm_in"><a class='color_01 inline' href=".go_task">已達成任務</a></p>
+                <p><a class='color_02 inline' href=".go_reward">已領取獎勵</a></p>
+            </div>
+        </div>
+        <br class="CLEAR" />
+    </div>
+    <div class="awards_listBox">
+      <ul class="type"><!--切換更換下面list_name的內容-->
+        <li><p class="btm_in"><a href="#">能力勳章</a></p></li>
+        <li><p><a href="#">毅力勳章</a></p></li>
+        <li><p><a href="#">創造力勳章</a></p></li>
+        <li><p><a href="#">影響力勳章</a></p></li>
+        <li><p><a href="#">奉獻力勳章</a></p></li>
+        <div class="CLEAR"/>
+      </ul>
+      <ul class="list_name the_ScrollbarBox"><!--超過一個範圍就加the_ScrollbarBox-->
+        <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+        <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+        <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+        <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+        <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+        <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+        <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+        <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+        <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+        <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+        <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+        <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+        <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+        <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+        <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+        <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+        <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+        <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+        <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+        <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+        <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+        <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+      </ul>
+    </div>
+</article>
+</div>
+
+<div style='display:none; z-index:999;'><!--br_nonelogo = 內容底圖沒有壓logo-->
+<article class="theUserBox EditPersonal_info user_info_pop go_reward br_nonelogo"><!--已領取獎勵-->
+  <div class="top_photo">
+      <div class="user_photo"><img src="images/edit_user_img_default.jpg" width="100%" alt="AToMic 預設頭像"/></div>
+        <div class="user_info">
+          <div class="user_rank">
+              <p class="name"><a class='color_01 inline' href=".go_user">劉駿</a></p>
+                <div class="icon_rank"><img src="images/ranks/rank_02.png" width="100%" alt=""/></div>
+                <br class="CLEAR" />
+            </div>
+            <p>五星上將</p>
+            <div class="btn_data">
+                <p><a class='color_01 inline' href=".go_task">已達成任務</a></p>
+                <p class="btm_in"><a class='color_02 inline' href=".go_reward">已領取獎勵</a></p>
+            </div>
+        </div>
+        <br class="CLEAR" />
+    </div>
+    <div class="awards_listBox">
+      <ul class="list_name">
+        <li><p>已領取 <span>〔三等士官新星〕</span> 獎勵！</p></li>
+      </ul>
+    </div>
+</article>
+</div>
+
+
 <!-- pop up -->
 <script src="js/jquery.colorbox.js"></script>
 

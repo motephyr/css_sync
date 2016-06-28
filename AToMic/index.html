@@ -114,7 +114,8 @@
             	<div class="userPhoto"><img src="images/user_00.jpg" width="100%" alt=""/></div>
                 <p class="userID">ETaKer</p>
             	<ul class="submenu sm_p00">
-                	<li><p><a class='logout inline' href=".EditPersonal_info">編輯個人資料</a></p></li>
+                	<li><p><a class='logout inline' href=".go_edit">編輯我的資料</a></p></li>
+                    <li><p><a class='logout inline' href=".go_task">任務成就進度</a></p></li>
                     <li><p><a class='logout inline' href=".ChangePW">修改密碼</a></p></li>
                     <li><p><a href="index_loginout.html">登出</a></p></li>
                 </ul>
@@ -155,7 +156,7 @@
 
 <!--修改個人資料pop-->
 <div style='display:none; z-index:999;'>
-<article class="theUserBox EditPersonal_info">
+<article class="theUserBox EditPersonal_info go_edit">
 	<div class="top_photo">
     	<div class="user_photo"><img src="images/edit_user_img_default.jpg" width="100%" alt="AToMic 預設頭像"/></div>
         <div class="user_info">
@@ -176,6 +177,47 @@
 		<input class="" type="text" />
     </div>
     <div class="FillBox"><p><a class="btm_c_org" href="#">儲存設定</a></p></div>
+</article>
+</div>
+
+
+<div style='display:none; z-index:999;'>
+<article class="theUserBox EditPersonal_info user_info_pop go_task br_nonelogo"><!--已達成任務-->
+    <div class="awards_listBox">
+        <ul class="top_menu_awards">
+            <li><p class="btm_in"><a class='title_c_01'>任務進度</a></p></li>
+            <li><p><a class='title_c_02 inline' href=".go_reward">成就進度</a></p></li>
+            <div class="CLEAR"></div>
+        </ul>
+
+        <ul class="type">
+            <li><p class="btm_in"><a href="#">能力勳章</a></p></li>
+            <li><p><a href="#">毅力勳章</a></p></li>
+            <li><p><a href="#">創造力勳章</a></p></li>
+            <li><p><a href="#">影響力勳章</a></p></li>
+            <li><p><a href="#">奉獻力勳章</a></p></li>
+            <div class="CLEAR"/>
+        </ul>
+        <ul class="list_name">
+            <li><p>已達成 <span>〔中等防禦技〕</span> +200 Exp！</p></li>
+            <li><p>已達成 <span>〔基礎防禦技〕</span> +100 Exp！</p></li>
+        </ul>
+    </div>
+</article>
+</div>
+
+<div style='display:none; z-index:999;'>
+<article class="theUserBox EditPersonal_info user_info_pop go_reward br_nonelogo"><!--已領取獎勵-->
+    <div class="awards_listBox">
+        <ul class="top_menu_awards">
+            <li><p class="btm_in"><a class='title_c_01 inline' href=".go_task">任務進度</a></p></li>
+            <li><p><a class='title_c_02 inline' href=".go_reward">成就進度</a></p></li>
+            <div class="CLEAR"></div>
+        </ul>
+        <ul class="list_name">
+            <li><p>已領取 <span>〔三等士官新星〕</span> 獎勵！</p></li>
+        </ul>
+    </div>
 </article>
 </div>
 
