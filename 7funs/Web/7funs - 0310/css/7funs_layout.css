@@ -668,9 +668,11 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .announcementBox{ width:100%; padding-top:25px;}
 .announcementBox .listBox{ width:90%; padding:20px 5%; background-color:#fcf1e7; position: relative;}
 .announcementBox .listBox .info{ width:100%;}
-.announcementBox .listBox .info p{ float:left; width:85%; font-size:15px; font-weight:bold;}
-.announcementBox .listBox .info p.day{ width:8%; margin-right:3%; color:#ff5a5f; text-align:center; border:1px solid #ff5a5f; border-radius:4px;}
+.announcementBox .listBox .info p{ font-size:15px; font-weight:bold;}
+.announcementBox .listBox .info p.day{ float:left; width:8%; margin-right:3%; color:#ff5a5f; text-align:center; border:1px solid #ff5a5f; border-radius:4px;}
 .announcementBox .listBox .info p.day span{ font-size:18px;}
+.announcementBox .listBox .info .newsdata{ float:left; width:85%;}
+
 .announcementBox .listBox .info p a{ color:#333;}
 .announcementBox .listBox .info p a:hover{ color:#666; text-decoration:none;}
 .announcementBox .listBox .see_more{ position:absolute; width:inherit; bottom: 10px; font-size: 13px;}
@@ -685,7 +687,7 @@ p.go_top a{ width:60px; height:60px; display:block; background:url(../images/top
 .announcementBox ul.listBox .info p.day{ border:none;}
 .announcementBox ul.listBox .info p a{ color:#ff722e;}
 .announcementBox ul.listBox .info p a:hover{ text-decoration:underline; color:#ff722e;}
-@media (max-width: 900px){.announcementBox .listBox .info p{ width:80%;}
+@media (max-width: 900px){.announcementBox .listBox .info .newsdata{ width:80%;}
 	.announcementBox .listBox .info p.day{ width:13%;}}
-@media (max-width: 599px){.announcementBox .listBox .info p{ width:100%;}
-	.announcementBox .listBox .info p.day{ width:100%; text-align:center; padding-bottom:15px;}}
+@media (max-width: 599px){.announcementBox .listBox .info .newsdata{ width:100%;}
+	.announcementBox .listBox .info p.day{ width:100%; text-align:center; padding:6px 0; margin-bottom: 15px;}}
