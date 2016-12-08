@@ -128,8 +128,10 @@ body{ background-color:#f4f4f4;}
 .meals .msBox .food_info p.title{ font-size:18px; font-weight:bold; color:#8D6666; min-height:50px; max-height:56px; overflow:hidden; width:75%; margin:14px auto; margin-bottom:8px; line-height:26px;}
 .meals .msBox .food_info p.chef{ font-size:16px; color:#7D7D7D; width:74%; margin:20px auto 0 auto; padding-top:10px; border-top:1px solid #dfdfe2;overflow: hidden;height: 25px;}
 .meals .msBox .food_info p.nb{ font-size:16px; color:#7D7D7D; width:74%; margin:0 auto; padding:2px 0;}
-.meals .msBox .food_info p.look{ letter-spacing:0px; text-align:right; padding:5px 10% 0 0 ;}
-.meals .msBox .food_info p.look a{ color:#9D876B; padding-right:23px; background:url(../images/icon_arr.png) right 0px no-repeat;}
+.meals .msBox .food_info p.look{ width: 90%; letter-spacing:0px; text-align:right; padding:5px 10% 0 0 ; position: relative;}
+.meals .msBox .food_info p.look a{ cursor: pointer; color:#9D876B; padding-right:23px; background:url(../images/icon_arr.png) right 0px no-repeat;}
+.meals .msBox .food_info p.look .p_collect{ width: 18px; height: 18px; display: block; padding-right: 0; position:absolute; left: 12%; background: url(../images/see_like.png) center center no-repeat; background-size: contain;}
+.meals .msBox .food_info p.look .p_love{ background-image: url(../images/see_like_in.png) ; }
 
 .food_photo .bk-Box{ width:50%; position:absolute; left:0; top:28.5%; display:none;}
 .food_photo .bk-Box p.like{ font-size:14px;  line-height:115px; text-align:center;}
@@ -149,7 +151,8 @@ body{ background-color:#f4f4f4;}
 .meals .msBox .food_info p.chef{ padding-top:3px;}
 .meals .msBox .food_info p.look{ padding: 0 5% 0 0;}}
 @media (max-width:955px){.meals .msBox .food_info p.title{ line-height:22px; min-height: 47px; max-height: 40px;}
-.meals .msBox .food_info p.nb{ padding:0px;}}
+.meals .msBox .food_info p.nb{ padding:0px;}
+.meals .msBox .food_info p.look a{padding-right: 17px;}}
 @media (max-width:750px){.meals .msBox .food_info p.title{font-size: 20px; min-height: 50px; max-height: 56px; line-height:26px;}
 .meals .msBox .food_info p.chef{padding-top: 10px;}}
 @media (max-width:645px){.meals .msBox .food_info p.title{font-size:17px;}
