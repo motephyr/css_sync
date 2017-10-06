@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*--DCW by PC login, registe,r forget PW--*/
+.ContentsBox { width: 100%; max-width: 1200px; margin: 0 auto; }
+.dcw_PC_LoginBox{ width: 100%; min-height: 100vh !important; display: block; background: url(../images/bg_login.jpg) center right no-repeat; background-size: cover;}
+.dcw_PC_LoginBox .ContentsBox{ float: right; width: 40vw; max-width: 568px; min-width: 380px; height:100%; min-height: 100vh; background-color: #fff; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center }
+.dcw_PC_LoginBox .infoBox{ width: 300px; padding: 2vh 0; }
+.dcw_PC_LoginBox h1.logo{ text-indent: -9999px;}
+.dcw_PC_LoginBox h1.logo a{ margin: 0 auto;  width: 98px; height: 26px; display: block; background: url(../images/DCW_logo.png) center center no-repeat;  background-size: contain;}
+.dcw_PC_LoginBox h2.title{text-align: center; font-size: 26px; padding: 5vh 0;}
+
+.dcw_PC_LoginBox .enterBox{ width: 100%; margin: 0 auto; }
+.dcw_PC_LoginBox .enterBox .FBox{ width: 100%; border-bottom:1px solid #cdcfd1; }
+
+.dcw_PC_LoginBox .enterBox .FBox input{ width: calc(100% - 45px) ; display: block; margin: 0 auto; padding: 3px 10px 3px 35px; line-height: 45px; color:#333; font-size: 16px; border: none; background: none;}
+.dcw_PC_LoginBox .enterBox .FBox input::placeholder{ color: #757575; }
+.dcw_PC_LoginBox .enterBox .FBox ::-webkit-input-placeholder { color: #757575;}
+.dcw_PC_LoginBox .enterBox .FBox :-moz-placeholder { color: #757575; opacity: 1;}
+.dcw_PC_LoginBox .enterBox .FBox ::-moz-placeholder { color: #757575; opacity: 1;}
+.dcw_PC_LoginBox .enterBox .FBox :-ms-input-placeholder { color: #757575;}
+.dcw_PC_LoginBox .enterBox .FBox ::-ms-input-placeholder { color: #757575;}
+
+.dcw_PC_LoginBox .enterBox .FBox input.id{background: url(../images/icon_user.png) left center no-repeat; }
+.dcw_PC_LoginBox .enterBox .FBox input.pw{background: url(../images/icon_pw.png) left center no-repeat; }
+.dcw_PC_LoginBox .enterBox .FBox input.phone{background: url(../images/icon_phone.png) left center no-repeat; }
+.dcw_PC_LoginBox .enterBox .FBox input.code{background: url(../images/icon_code.png) left center no-repeat; }
+
+.dcw_PC_LoginBox .enterBox .ok_go{ cursor: pointer; width: 100%; margin: 4vh 0 1vh 0; line-height: 46px; height: 46px; display: block; background-color: #ea5413; font-size: 18px; color: #fff; text-align: center;}
+.dcw_PC_LoginBox .enterBox .ok_go:hover{ opacity: .8; }
+
+.dcw_PC_LoginBox .enterBox p.forget{ text-align: right; padding-top: 10px;}
+.dcw_PC_LoginBox .enterBox p.forget a{ color: #666666; }
+.dcw_PC_LoginBox .enterBox p.register{ color: #757575; padding-top: 50px;}
+.dcw_PC_LoginBox .enterBox p.register a{ color: #fa800a; background:url(../images/icon_arr_org.png) right center no-repeat; padding-right: 25px; }
+.dcw_PC_LoginBox .enterBox p a:hover{text-decoration: underline;}
+
+.dcw_PC_LoginBox .enterBox .icon_unseen, .dcw_PC_LoginBox .enterBox .take_verification{position: relative;}
+.dcw_PC_LoginBox .enterBox .icon_unseen::after{ content: "";position: absolute; right: 0; top: 0; display: block; width: 25px; height: 45px; background: url(../images/icon_unseen.png) center center no-repeat; }
+.dcw_PC_LoginBox .enterBox .take_verification p.verification{ position: absolute; right: 0; top: 0; font-size: 13px; font-weight: bold; line-height: 50px; }
+.dcw_PC_LoginBox .enterBox .take_verification p.verification a{ color: #fa800a;}
+
+.dcw_PC_LoginBox .enterBox .agreeBox{ padding-top: 10px;}
+.dcw_PC_LoginBox .enterBox .agreeBox label { color: #666666; font-size: 14px;}
+.dcw_PC_LoginBox .enterBox .agreeBox input{ width: 28px; margin: 0; padding: 0; margin-top: 6px;}
