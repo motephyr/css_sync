@@ -28,5 +28,11 @@ $(function(){
     return false;
     });
 
+    //商品下拉選擇的按鈕
+    $(".btn_select").click(function(){
+        $(this).find("ul.item").stop(true, true).fadeToggle(0);
+    return false;
+    });
+
 });
 

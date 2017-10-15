@@ -2,7 +2,7 @@
 <htm>
 <head>
 <meta charset="UTF-8">
-<title>DCW - 分类 bicycle</title>
+<title>DCW - 购物车</title>
 <meta name='description' content=""/>
 <meta name='keywords' content=""/>
 <meta property="og:image" content="images/share_pic.jpg"/>
@@ -17,10 +17,8 @@
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/master.css">
 <link rel="stylesheet" href="css/style.css">
-
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/menu_js.js"></script>
-
 
 </head>
 
@@ -31,15 +29,21 @@
         <h1 class="logo"><a href="index.html">DCW</a></h1>
         <nav class="top_menu">
             <ul>
-                <li><h3><a class="btn_in" href="#">首页</a></h3></li>
+                <li><h3><a href="#">首页</a></h3></li>
                 <li><h3><a href="#" class="menu_classify_01">分类</a></h3></li>
                 <li><h3><a href="#" class="menu_classify_02">客制化单车</a></h3></li>
                 <li><h3><a href="#" class="menu_classify_03">婴儿车</a></h3></li>
-                <li><h3><a href="event.html">活动专区</a></h3></li>
+                <li><h3><a class="btn_in" href="event.html">活动专区</a></h3></li>
             </ul>
         </nav>
         <a class="shopping_car" href="#"><span>1</span></a>
-        <p class="user_notlogin"><a href="#">登录</a><a href="#">注册</a></p>
+        <div class="userBox">
+            <p class="the_id">1823544718235447</p>
+            <ul class="sub_menu">
+                <li><p><a href="#">我的订单</a></p></li>
+                <li><p><a href="#">退出登录</a></p></li>
+            </ul>
+        </div>
         <div class="searchBox">
             <a class="icon_search"></a>
         </div>
@@ -132,64 +136,111 @@
     </div>
 </section>
 
-<content class="main_content">
+<content class="main_content br_c01">
     <section class="ContentsBox">
-        <div class="bannerBox"><img src="images/banner_bicycle_01.jpg" alt="客制化青少年款" width="100%"></div>
-        <ul class="top_styleBox">
-            <li><p><a href="#">全部</a></p></li>
-            <li><p class="btn_in"><a href="#">客制化单车</a></p></li>
-            <li><p><a href="#">超级英雄</a></p></li>
-            <li><p><a href="#">客制化婴儿车</a></p></li>
-            <li><p><a href="#">潮流装备</a></p></li>
-            <li><p><a href="#">大牌尖货</a></p></li>
-        </ul>
-        <ul class="goodslist clearfix">
-                    <li><a href="#">
-                            <img src="images/bicycle/01.jpg" width="100%" alt="">
-                            <div class="infoBox">
-                                <h3 class="name">蒙牛植朴专属单车</h3>
-                                <p class="info">简洁轻便，自由配色，彰显个性...</p>
-                                <p class="money"><span>¥698</span> 起</p>
-                            </div>
-                        </a>
+        <div class="shopping_cart_one">
+            <h3 class="top_title">购物车(3)</h3>
+            <ul class="cart_list for_border cart_title clearfix">
+                <li class="the_select">
+                    <input id="credit_card" class="checkbox_org" type="checkbox">
+                    <label for="credit_card"><p>全选</p></label>
+                </li>
+                <li class="product_photo"></li>
+                <li class="name"><p>商品</p></li>
+                <li class="money"><p>单价(元）</p></li>
+                <li class="quantity"><p>数量</p></li>
+                <li class="subtotal"><p>小计(元）</p></li>
+                <li class="operating"><p>操作</p></li>
+            </ul>
+            <div class="for_border">
+                <ul class="cart_list the_centre clearfix">
+                    <li class="the_select">
+                        <input id="" class="checkbox_org" type="checkbox">
+                        <label for="">&nbsp</label>
                     </li>
-                    <li><a href="#">
-                            <img src="images/bicycle/02.jpg" width="100%" alt="">
-                            <div class="infoBox">
-                                <h3 class="name">客制化男款</h3>
-                                <p class="info">简洁轻便，自由配色，彰显个性...</p>
-                                <p class="money"><span>¥1598</span> 起</p>
-                            </div>
-                        </a>
+                    <li class="product_photo"><img src="images/shoppingCart_goods_01.jpg" width="100%" alt=""></li>
+                    <li class="name">
+                        <div class="info">
+                            <p class="p_org">植朴专属单车</p>
+                            <table class="product_details" border="0" width="100%">
+                              <tbody>
+                                <tr>
+                                    <td width="50%"><p>车架：牛奶白</p></td>
+                                    <td width="50%"><p>坐垫：黑</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>前轮：黑</p></td>
+                                    <td><p>后轮：黑</p></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>  
                     </li>
-                    <li><a href="#">
-                            <img src="images/bicycle/03.jpg" width="100%" alt="">
-                            <div class="infoBox">
-                                <h3 class="name">客制化女款</h3>
-                                <p class="info">简洁轻便，自由配色，彰显个性...</p>
-                                <p class="money"><span>¥1598</span> 起</p>
-                            </div>
-                        </a>
+                    <li class="money"><p>¥1598</p></li>
+                    <li class="quantity">
+                        <div class="quantity_select clearfix">
+                            <a class="minus"></a>
+                            <input type="text" value="1">
+                            <a class="plus"></a>
+                        </div>
                     </li>
-                    <li><a href="#">
-                            <img src="images/bicycle/04.jpg" width="100%" alt="">
-                            <div class="infoBox">
-                                <h3 class="name">HOII遮阳伞</h3>
-                                <p class="info">简洁轻便，自由配色，彰显个性...</p>
-                                <p class="money"><span>¥1598</span> 起</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li><a href="#">
-                            <img src="images/bicycle/05.jpg" width="100%" alt="">
-                            <div class="infoBox">
-                                <h3 class="name">HOII遮阳伞</h3>
-                                <p class="info">简洁轻便，自由配色，彰显个性...</p>
-                                <p class="money"><span>¥698</span> 起</p>
-                            </div>
-                        </a>
-                    </li>
+                    <li class="subtotal"><p>¥1598</p></li>
+                    <li class="operating"><a class="btn_delete"></a></li>
                 </ul>
+                <ul class="cart_list the_centre clearfix">
+                    <li class="the_select">
+                        <input id="" class="checkbox_org" type="checkbox">
+                        <label for="">&nbsp</label>
+                    </li>
+                    <li class="product_photo"><img src="images/shoppingCart_goods_01.jpg" width="100%" alt=""></li>
+                    <li class="name">
+                        <div class="info">
+                            <p class="p_org">植朴专属单车</p>
+                        </div>  
+                    </li>
+                    <li class="money"><p>¥1598</p></li>
+                    <li class="quantity">
+                        <div class="quantity_select clearfix">
+                            <a class="minus"></a>
+                            <input type="text" value="1">
+                            <a class="plus"></a>
+                        </div>
+                    </li>
+                    <li class="subtotal"><p>¥1598</p></li>
+                    <li class="operating"><a class="btn_delete"></a></li>
+                </ul>
+                <ul class="cart_list the_centre clearfix">
+                    <li class="the_select">
+                        <input id="" class="checkbox_org" type="checkbox">
+                        <label for="">&nbsp</label>
+                    </li>
+                    <li class="product_photo"><img src="images/shoppingCart_goods_01.jpg" width="100%" alt=""></li>
+                    <li class="name">
+                        <div class="info">
+                            <p class="p_org">植朴专属单车</p>
+                        </div>  
+                    </li>
+                    <li class="money"><p>¥1598</p></li>
+                    <li class="quantity">
+                        <div class="quantity_select clearfix">
+                            <a class="minus"></a>
+                            <input type="text" value="1">
+                            <a class="plus"></a>
+                        </div>
+                    </li>
+                    <li class="subtotal"><p>¥1598</p></li>
+                    <li class="operating"><a class="btn_delete"></a></li>
+                </ul>
+            </div>
+            <ul class="cart_list for_border cart_total clearfix">
+                <li class="the_select">
+                    <input id="" class="checkbox_org" type="checkbox">
+                    <label for=""><p>全选</p></label>
+                </li>
+                <li class="name"><p><a href="#">删除选中的商品</a> 共3件商品， 已选择 <span class="p_org">3</span> 件</p></li>
+                <li class="operating"><p>总价（不含运费:  <span class="p_org">¥1598</span> <a class="btn_org" href="shopping_cart_02.html">去结算</a></p></li>
+            </ul>
+        </div>
     </section>
 </content>
 
