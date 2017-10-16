@@ -163,8 +163,8 @@
 
 .shopping_cart_one .for_border{border:1px solid #eaeaea; border-width: 1px 1px 0 1px; margin-bottom: 18px;}
 
-.shopping_cart_one ul.cart_list{ width: 100%; background-color: #fff; border-bottom: 1px solid #eaeaea;}
-.shopping_cart_one ul.cart_list li{ width: 100%; float: left; display: block; padding: 10px; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center}
+.shopping_cart_one ul.cart_list{ width: 100%; width: calc(100% - 2px); background-color: #fff; border-bottom: 1px solid #eaeaea;}
+.shopping_cart_one ul.cart_list li{ width: 100%; width: calc(100% - 20px); float: left; display: block; padding: 10px; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center}
 .shopping_cart_one ul.cart_list li.the_select{ max-width: 82px; padding-left: 35px;}
 .shopping_cart_one ul.cart_list li.product_photo{ max-width: 120px; margin-right: 2%;}
 .shopping_cart_one ul.cart_list li.name{ max-width: 310px;}
@@ -299,7 +299,36 @@ input.checkbox_org[type=radio]:not(old):checked + label{ background-position : 0
 :root .pop_info .styled-select select{ width:120%\9\0 !important; background: transparent\9\0 !important;}
 :root .pop_info .styled-select select option{ background-color:#fff\9\0; padding:5px 0\9\0;}
 
+/*my Shopping Cart*/
+.myShoppingCart ul.cart_list li.not_flexCenter{ min-height: inherit; display: inherit; -webkit-align-items: inherit; align-items: inherit; -webkit-justify-content: inherit; justify-content: inherit;}
+.myShoppingCart ul.cart_list li.product_info{ width: 42%; border-right:1px solid #eaeaea; }
+.myShoppingCart ul.cart_list li.receive_add{ width: 25%; text-align: center;}
+.myShoppingCart ul.cart_list li.receive_add p{ line-height: 22px; }
+.myShoppingCart ul.cart_list li.operating{ max-width: 140px; }
 
+.myShoppingCart ul.cart_title li.product_info p{  width:calc(100% - 20px); padding-left: 10px; text-align: left;}
+
+.myShoppingCart ul.the_centre li.order_number{ width: calc(100% - 50px); padding: 15px 25px; border-bottom:1px solid #eaeaea; min-height: inherit;}
+.myShoppingCart ul.the_centre li.order_number p{ float: left; }
+.myShoppingCart ul.the_centre li.order_number p span{margin-right: 40px;}
+.myShoppingCart ul.the_centre li.order_number p.red{ float: right; color: #f41919;}
+.myShoppingCart ul.the_centre li.order_number p.green{ color: #29a29a; }
+
+.myShoppingCart ul.cart_list li .name {width: 100%; border-top:1px solid #eaeaea;}
+.myShoppingCart ul.cart_list li .aBox{ width: 100%; }
+.myShoppingCart ul.cart_list li .no_line{border: none;}
+
+.myShoppingCart ul.cart_list li .product_photo{ float: left; max-width: 120px; max-height: 120px; padding-right: 10px;}
+.myShoppingCart ul.cart_list li .info{float: left; width:calc(100% - 130px); min-height: 120px; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center;}
+.myShoppingCart ul.cart_list li .info .p_org{padding-bottom: 10px;}
+
+.myShoppingCart ul.cart_list li.subtotal p {text-align: center;}
+.myShoppingCart ul.cart_list li.subtotal p span{ color: #999999;}
+
+.myShoppingCart ul.the_centre li.operating p.goPay{ width: 100%; text-align: center;}
+.myShoppingCart ul.the_centre li.operating p.goPay a.btn_green{ width: 100%; margin: 0 auto; background-color: #29a29a; color: #fff; height: 32px; line-height: 32px; display: block; max-width: 108px; }
+.myShoppingCart ul.the_centre li.operating p.goPay a.cancel{ color: #666666; display: block; padding-top:10px; }
+.myShoppingCart ul.the_centre li.operating p.goPay a.cancel:hover{text-decoration: underline;}
 
 @media (max-width:1200px){
 	.main_content .ContentsBox{ max-width: 90%; }
@@ -310,6 +339,7 @@ input.checkbox_org[type=radio]:not(old):checked + label{ background-position : 0
 	.shopping_cart_one ul.cart_list li.money, .shopping_cart_one ul.cart_list li.subtotal{ max-width: 78px; }
 	.shopping_cart_one ul.cart_total li.name{ max-width: fit-content; }
 	.shopping_cart_one ul.cart_total li.operating{max-width: inherit;}
+	.myShoppingCart ul.cart_list li.operating{max-width: 140px;}
 }
 @media (max-width:1024px){
 	.main_content ul.goodslist li{ width: calc(100% / 3);
@@ -318,6 +348,9 @@ input.checkbox_org[type=radio]:not(old):checked + label{ background-position : 0
 	.shopping_cart_one ul.cart_list li.money, .shopping_cart_one ul.cart_list li.subtotal{max-width: 64px;}
 	.shopping_cart_one ul.cart_list li.operating{max-width: 45px;}
 	.shopping_cart_one ul.cart_total li.operating{max-width: inherit;}
+	.myShoppingCart ul.cart_list li.operating{max-width: 100px;}
+	.myShoppingCart ul.cart_list li.receive_add{width: 24%;}
+	.myShoppingCart ul.cart_list li.product_info{ width: 38%; }
 }
 
 
