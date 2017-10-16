@@ -87,7 +87,7 @@
 .product_single .goodPhoto ul.s_photo a{ width: 97px; height: 97px; display: block; border: 3px solid transparent; }
 .product_single .goodPhoto ul.s_photo a.btn_in{ border-color:#fa800a; }
 .product_single .goodPhoto ul.s_photo a img{max-width: 97px;}
-.product_single .goodPhoto .L_photo{ float: left; width:100%; max-width: 630px; }
+.product_single .goodPhoto .L_photo{ float: left; width:100%; max-width: 630px; width: calc(100% - 155px);}
 
 .product_single .product_info_car{ width: 100%; max-width: 350px; float: right; padding: 10px 0; }
 .product_single .product_info_car h2.name{ text-align: center; font-size: 28px; color: #333333; font-weight: bold; }
@@ -268,6 +268,37 @@ input.checkbox_org[type=radio]:not(old):checked + label{ background-position : 0
 .shopping_cart_three .go_pay p{ display: inline-block; padding: 0 15px; }
 .shopping_cart_three .buy_button{ display: inline-block; width: 152px; height: 45px; border-radius: 2px; margin-top: 15px; color: #fff; line-height: 45px; font-size: 14px; background-color: #ec5834; cursor: pointer;}
 .shopping_cart_three .buy_button:hover{opacity: .9;}
+
+.pop_info{ width: 100%; width: 755px; }
+.pop_info h3{ padding: 15px 0; text-align: center; font-size: 18px; font-weight: bold; border-bottom: 1px solid #eeeeee;}
+.pop_info .MainBox {padding: 28px;}
+
+.pop_info .fillBox{ width: 100%; padding-bottom: 25px; }
+.pop_info .fillBox label{ float: left; width: 100%; max-width: 125px; text-align: center; }
+.pop_info .fillBox label p{line-height: 36px;}
+.pop_info .fillBox label p span{ color: #00c3f4; }
+.pop_info input{ float: left; width: 25%; padding: 0 10px; border:1px solid #eeeeee; background-color: #fff; height: 36px; line-height: 36px; font-size: 14px; color: #333;}
+.pop_info input:focus{ border-color: #c0c0c0; }
+.pop_info input::placeholder{ color: #aeaeae; border-color: #c0c0c0; }
+.pop_info input.w75{ width: 71%; }
+
+.pop_info .btn_box{text-align: center;}
+.pop_info button{ display: inline-block; cursor: pointer; width: 100px; border-radius: 2px; height: 36px; text-align: center; font-size: 14px; margin: 0 5px; }
+.pop_info button.ok{ background-color: #f44219; color: #fff; }
+.pop_info button.no{ background-color: #eeeeee; color: #9b9b9b; }
+.pop_info button:hover{ opacity: .9; }
+
+.pop_info .styled-select { float: left; width:100%; max-width: 120px; margin-right: 10px; min-width: 90px; height:36px; border: 1px solid #eeeeee; color: #8a8a8a; overflow: hidden; background: url(../images/icon_triangle.png) right center no-repeat #fff;}
+.pop_info .styled-select select { width:100%; *width:120%; _width:120%; color: #8a8a8a; background: transparent; line-height:1; border: 0;font-size: 14px; height:36px; padding: 0 5px; -webkit-appearance: none; }
+.pop_info .styled-select select option{ background-color:#fff;}
+.pop_info select {-moz-appearance: none;  text-indent: 0.01px; text-overflow: '';}
+*::-ms-backdrop, .pop_info .styled-select{ width:79%\0; background: url(../images/icon_triangle.png) right center no-repeat transparent\0; background-size: contain;}
+*::-ms-backdrop, .pop_info .styled-select select{ width:125%\0; background: transparent\0;}
+*::-ms-backdrop, .pop_info .styled-select select option{ background-color:#fff\0; padding:5px 0\0;}
+:root .pop_info .styled-select{ width:\9\0; background: url(../images/icon_triangle.png) right center no-repeat transparent\9\0 !important; background-size: contain;}
+:root .pop_info .styled-select select{ width:120%\9\0 !important; background: transparent\9\0 !important;}
+:root .pop_info .styled-select select option{ background-color:#fff\9\0; padding:5px 0\9\0;}
+
 
 
 @media (max-width:1200px){
