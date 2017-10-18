@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/*.header{ height:119px; border-bottom:1px solid #eee; background:#fff; width:100%; position:absolute; left:0; top:0; z-index:5}*/
+
+
+.main_content{ width: 100%; padding-top: 97px; min-height: calc(100vh - 395px); display: block;}
+
+.contents{ width:100%; margin:0 auto; position:relative; /*left:0; top:0; bottom:0;*/ min-width:1200px; min-height:720px; overflow:visible}
+.contents .absltCon{ width:1000px; position:absolute; left:50%; margin-left:-500px; top:50px; height:560px;}
+.leftDIY{ width:665px; position:absolute; left:0; top:0; height:100%}
+.leftDIY .lDInCon{ position:absolute; left:0; top:50%; width:100%; overflow:visible!important; margin-top:-270px}
+
+.leftDIY .searchZoom{ height:30px; overflow:hidden; position:relative; left:0; top:0; z-index:5; margin-top:10px; background:url(../images/gradientLine.png) no-repeat center;}
+.leftDIY .searchZoom div{ overflow:hidden; zoom:1; margin:0 auto; width:60px; padding-left:0px}
+.leftDIY .searchZoom span{ display:block; height:30px; line-height:30px; float:left; color:#969696; font-size:12px;}
+.leftDIY .searchZoom a{ display:block; width:20px; height:30px; float:right; cursor:pointer; overflow:hidden}
+.leftDIY .searchZoom .zoomIn{ background:url(../images/zoomInBtn.png) no-repeat center;margin-right: 10px;}
+.leftDIY .searchZoom .zoomOut{ background:url(../images/zoomOutBtn.png) no-repeat center}
+
+.leftDIY .defaultRow{ font-size:0; padding:22px 0 40px 0; overflow:hidden; zoom:1; border-bottom:1px solid #bfbfbf}
+.leftDIY .defaultRow a{ display:inline-block; *display:inline; zoom:1; margin:0 20px; cursor:pointer}
+.leftDIY .defaultRow a img{}
+
+.bikeContainer{ width:542px; height:309px; position:relative; left:0; top:0; background:url(../images/shadow.png) no-repeat 0 bottom; margin:0 auto}
+.bikeContainer .inCon{ position:absolute; left:0; top:0; width:542px; height:309px; z-index:1}
+.bikeContainer img{ display:block; position:absolute; left:0; top:0}
+.bikeContainer .frontTyre{ position:absolute; left:336px; top:94px}
+.bikeContainer .backTyre{ position:absolute; left:43px; top:94px}
+.bikeContainer .frame{ position:absolute; left:134px; top:45px}
+.bikeContainer .cushion{ position:absolute; left:163px; top:4px}
+.bikeContainer .handle{ position:absolute; left:358px; top:0}
+.bikeContainer .backTyrePattern{ position:absolute; left:64px; top:114px}
+.bikeContainer .frontPieces{ width:148px; height:148px; overflow:hidden; position:absolute; left:357px; top:114px}
+.bikeContainer .frontPieces img{ display:block; width:48px; height:22px;}
+.bikeContainer .backPieces{ width:148px; height:148px; overflow:hidden; position:absolute; left:64px; top:114px}
+.bikeContainer .backPieces img{ display:block; width:48px; height:22px;}
+
+.picScroll-left{ width:685px; margin:0 auto; overflow:hidden; position:relative; left:0; top:0;}
+.picScroll-left .hd{ height:75px; position:absolute; left:0; width:100%; top:50%; margin-top:-38px; z-index:1; overflow:hidden}
+.picScroll-left .hd .prev,.picScroll-left .hd .next{ display:block; width:26px; height:75px; position:absolute; left:0; top:0;  overflow:hidden; cursor:pointer; background:url(../images/glBtn.png) no-repeat 0 0}
+.picScroll-left .hd .next{ left:auto; right:0; background:url(../images/grBtn.png) no-repeat 0 0}
+.picScroll-left .bd{ position:relative; left:0; top:0; width:542px; margin:0 auto; z-index:2}
+.picScroll-left .bd ul{ overflow:hidden; zoom:1; }
+.picScroll-left .bd ul li{ width:542px; height:309px; float:left; _display:inline; overflow:hidden; text-align:center}
+.picScroll-left .bd ul li .linkImg{ display:block; width:542px; height:309px}
+.picScroll-left .bd ul li .linkImg img{ display:block; width:542px; height:309px}
+
+.goods2 .bikeContainer{ height:364px}
+.goods2 .inCon{ height:364px}
+.goods2 .frame2{ left:95px; top:105px}
+.goods2 .fender{ left:14px; top:174px}
+.goods2 .chainCover{ left:136px; top:218px}
+.goods2 .PedalCircle{ left:211px; top:227px}
+.goods2 .PedalHandle{ left:230px; top:248px}
+.goods2 .picScroll-left .bd ul li,.goods2 .picScroll-left .picScroll-left .bd ul li .linkImg,.goods2 .picScroll-left .picScroll-left .bd ul li .linkImg img{ height:364px}
+
+
+.goods3 .bikeContainer{ height:326px}
+.goods3 .inCon{ height:326px}
+.goods3 .frame3{ left:0; top:0}
+.goods3 .tranglePattern{ left:227px; top:70px}
+.goods3 .picScroll-left .bd ul li,.goods2 .picScroll-left .picScroll-left .bd ul li .linkImg,.goods3 .picScroll-left .picScroll-left .bd ul li .linkImg img{ height:326px}
+
+.bikeContainer svg{ position:absolute; left:0; top:0; z-index:5}
+.bikeContainer path{ cursor:pointer}
+
+.bikeContainer .Spoke1{ position:absolute; left:0; top:0; transform:translate(10px, 40px) rotate(-148deg); -webkit-transform:translate(10px, 40px) rotate(-148deg); -moz-transform:translate(10px, 40px) rotate(-148deg); -ms-transform:translate(10px, 40px) rotate(-148deg); -o-transform:translate(10px, 40px) rotate(-148deg);}
+.bikeContainer .Spoke2{ position:absolute; left:0; top:0; transform:translate(72px, 25px) rotate(121deg); -webkit-transform:translate(72px, 25px) rotate(121deg); -moz-transform:translate(72px, 25px) rotate(121deg); -ms-transform:translate(72px, 25px) rotate(121deg); -o-transform:translate(72px, 25px) rotate(121deg);}
+.bikeContainer .Spoke3{ position:absolute; left:0; top:0; transform:translate(91px, 79px) rotate(24deg); -webkit-transform:translate(91px, 79px) rotate(24deg); -moz-transform:ttranslate(91px, 79px) rotate(24deg); -ms-transform:translate(91px, 79px) rotate(24deg); -o-transform:translate(91px, 79px) rotate(24deg);}
+.bikeContainer .Spoke4{ position:absolute; left:0; top:0; transform:translate(26px, 98px) rotate(306deg); -webkit-transform:translate(26px, 98px) rotate(306deg); -moz-transform:translate(26px, 98px) rotate(306deg); -ms-transform:translate(26px, 98px) rotate(306deg); -o-transform:translate(26px, 98px) rotate(306deg);}
+.bikeContainer .Spoke5{ position:absolute; left:0; top:0; transform:translate(10px, 40px) rotate(-148deg); -webkit-transform:translate(28px, 24px) rotate(-306deg); -moz-transform:translate(28px, 24px) rotate(-306deg); -ms-transform:translate(28px, 24px) rotate(-306deg); -o-transform:translate(28px, 24px) rotate(-306deg);}
+.bikeContainer .Spoke6{ position:absolute; left:0; top:0; transform:translate(88px, 40px) rotate(144deg); -webkit-transform:translate(88px, 40px) rotate(144deg); -moz-transform:translate(88px, 40px) rotate(144deg); -ms-transform:translate(88px, 40px) rotate(144deg); -o-transform:translate(88px, 40px) rotate(144deg);}
+.bikeContainer .Spoke7{ position:absolute; left:0; top:0; transform:translate(79px, 96px) rotate(53deg); -webkit-transform:translate(79px, 96px) rotate(53deg); -moz-transform:ttranslate(79px, 96px) rotate(53deg); -ms-transform:translate(79px, 96px) rotate(53deg); -o-transform:translate(79px, 96px) rotate(53deg);}
+.bikeContainer .Spoke8{ position:absolute; left:0; top:0; transform:translate(14px, 88px) rotate(-39deg); -webkit-transform:translate(14px, 88px) rotate(-39deg); -moz-transform:translate(14px, 88px) rotate(-39deg); -ms-transform:translate(14px, 88px) rotate(-39deg); -o-transform:translate(14px, 88px) rotate(-39deg);}
+
+.backTyrePatternInner{ position:relative; left:0; top:0; z-index:5}
+
+.opacitys{ opacity:.7; filter:alpha(opacity = 70)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rightDiyCon{ width:300px; position:absolute; right:0; top:0; bottom:0; z-index:10; background:#fff; border-left:1px solid #dcdcdc; border-right:1px solid #dcdcdc}
+.rightDiyCon .rDCInCon{ width:100%; position:absolute; left:0; top:50%; padding-bottom:12px; margin-top:-280px}
+.rightDiyCon .rDCTop{ width:260px; overflow:hidden; margin:0 auto}
+.rightDiyCon .rDCTop .t1{ display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; height:28px; line-height:28px; font-size:16px; text-align:left}
+.rightDiyCon .rDCTop .prsPf{ overflow:hidden; zoom:1}
+.rightDiyCon .rDCTop .prs{ display:block; float:left; height:28px; text-align:left; line-height:28px; font-weight:bold; color:#f05a27; font-size:16px; width:85px; overflow:hidden}
+.rightDiyCon .rDCTop .pf{ display:block; float:left; height:28px; text-align:left; line-height:28px; color:#f05a27; font-size:18px; overflow:hidden}
+.rightDiyCon .rDCTop .btnRow{ overflow:hidden; zoom:1; border-radius:4px; border:1px solid #eee; margin:10px 0 0 0}
+.rightDiyCon .rDCTop .btnRow a{ display:block; height:28px; line-height:28px; color:#969696; font-size:14px; text-align:center; cursor:pointer; float:left; width:50%}
+.rightDiyCon .rDCTop .btnRow .nextBtn{ margin-left:-1px; border-left:1px solid #eee}
+.rightDiyCon .rDCTop .btnRow .dis{ color:#ddd; cursor:default}
+
+.rightDiyCon .scrollCon{ height:390px; width:100%; position:relative; left:0; top:0; border-top:1px solid #eee; border-bottom:1px solid #eee; margin:18px 0 0 0}
+
+.rightDiyCon .subTips{ display:none; position:absolute; bottom:0; width:100%; overflow:hidden; background:#fff; box-shadow:0 0 2px #666; z-index:10}
+.rightDiyCon .subTips .sTIn{ padding:18px; overflow:hidden}
+.rightDiyCon .subTips .closeBtn{ display:block; height:20px; line-height:20px; width:20px; position:absolute; right:5px; top:5px; font-size:16px; color:#333; cursor:pointer; text-align:center; z-index:2; font-style:normal}
+.rightDiyCon .subTips .erT{ display:block; height:22px; line-height:22px; text-align:left; font-size:14px; color:#333}
+.rightDiyCon .subTips .erC{ padding:10px 0 0 0; overflow:hidden}
+.rightDiyCon .subTips .erC a{ display:block; height:24px; line-height:24px; text-decoration:underline; font-size:14px; color:#990000; text-align:left; cursor:pointer}
+
+.rightDiyCon .menus{ width:34px; overflow:hidden; position:absolute; left:-35px; top:-1px; border:1px solid #cbcbcb; border-right:0; border-top-left-radius:4px; border-bottom-left-radius:4px; background:url(../images/whiteOptBg.png) repeat; height:100%; overflow:hidden;}
+.rightDiyCon .menus a{ display:block; height:42px; line-height:42px; width:34px; overflow:hidden; border-top-left-radius:5px; border-bottom-left-radius:5px; cursor:pointer; padding:1px 0 1px 1px; width:34px; margin-left:-1px; color:#b6b2b2}
+.rightDiyCon .menus a:after{ content:'•'; font-size:20px; text-align:center}
+.rightDiyCon .menus .done{ background:url(../images/doneIcon.png) no-repeat center; border:0; padding:1px 0 1px 1px; margin-left:0}
+.rightDiyCon .menus .done:after{ text-indent:-1000px; content:''}
+.rightDiyCon .menus .cur{ color:#333; background-color:#fff; border:1px solid #dcdcdc; border-right:0; padding:0}
+.rightDiyCon .menus a:hover{ color:#333}
+
+.rightDiyCon .tabCon{ overflow:hidden; zoom:1}
+.rightDiyCon .mod{ display:none; overflow:hidden; width:100%}
+.rightDiyCon .inFirTit{ display:block; height:40px; line-height:40px; font-size:16px; color:#575757; text-align:left; padding:0 0 5px 0; border-bottom:1px dashed #dcdcdc}
+.rightDiyCon .inSecT{ overflow:hidden; zoom:1; padding:5px 10px 0 0}
+.rightDiyCon .inSecT .lt{ display:block; height:16px; line-height:16px; float:left; font-size:12px; color:#969696}
+.rightDiyCon .inSecT .selectTips{ display:block; height:16px; line-height:16px; float:right; font-size:12px; color:#969696}
+.rightDiyCon .mod .inCs{ overflow:hidden; width:100%}
+.rightDiyCon .mod .fltC{ overflow:hidden; zoom:1; width:290px}
+.rightDiyCon .mod .fltC a{ display:block; width:68px; height:68px; overflow:hidden; border:1px solid #000; float:left; margin:5px 20px 15px 0; cursor:pointer; position:relative; left:0; top:0}
+.rightDiyCon .mod .fltC a img{ display:block; width:68px; height:68px;}
+.rightDiyCon .mod .fltC a span{ display:none; width:19px; height:19px; overflow:hidden; position:absolute; right:0; bottom:0; z-index:3}
+.rightDiyCon .mod .fltC a span i{ display:block; width:0; height:0; overflow:hidden; border-left:19px solid transparent; border-right:19px solid transparent; border-top:0; border-bottom:19px solid transparent; position:absolute; left:0; bottom:0}
+.rightDiyCon .mod .fltC a span:after{ content:url(../images/wtDg.png); position:absolute; right:0; bottom:1px; display:block; z-index:5}
+.rightDiyCon .mod .fltC .cur span{ display:block}
+.rightDiyCon .mod .fltC .cls1{ border-color:#646469}
+.rightDiyCon .mod .fltC .cls1 span i{ border-bottom-color:#646469}
+.rightDiyCon .mod .fltC .cls2{ border-color:#f05a27}
+.rightDiyCon .mod .fltC .cls2 span i{ border-bottom-color:#f05a27}
+.rightDiyCon .mod .fltC .cls3{ border-color:#221814}
+.rightDiyCon .mod .fltC .cls3 span i{ border-bottom-color:#221814}
+.rightDiyCon .mod .fltC .cls4{ border-color:#e51f78}
+.rightDiyCon .mod .fltC .cls4 span i{ border-bottom-color:#e51f78}
+.rightDiyCon .mod .fltC .cls5{ border-color:#ffd600}
+.rightDiyCon .mod .fltC .cls5 span i{ border-bottom-color:#ffd600}
+.rightDiyCon .mod .fltC .cls6{ border-color:#f4ce1f}
+.rightDiyCon .mod .fltC .cls6 span i{ border-bottom-color:#f4ce1f}
+.rightDiyCon .mod .fltC .cls7{ border-color:#e9569a}
+.rightDiyCon .mod .fltC .cls7 span i{ border-bottom-color:#e9569a}
+.rightDiyCon .mod .fltC .cls8{ border-color:#9f25b5}
+.rightDiyCon .mod .fltC .cls8 span i{ border-bottom-color:#9f25b5}
+.rightDiyCon .mod .fltC .cls9{ border-color:#21ade5}
+.rightDiyCon .mod .fltC .cls9 span i{ border-bottom-color:#21ade5}
+.rightDiyCon .mod .fltC .cls10{ border-color:white}
+.rightDiyCon .mod .fltC .cls10 span i{ border-bottom-color:white}
+.rightDiyCon .mod .fltC .cls10 span:after{ content:url(../images/wtDg2.png)}
+.rightDiyCon .mod .fltC .nbd{ border:0; width:70px; height:70px}
+.rightDiyCon .mod .fltC .nbd span{ right:2px; bottom:2px}
+.rightDiyCon .mod .fltC .nbd span:after{ content:url(../images/wtDg.png)}
+.rightDiyCon .mod .fltC .nbd span i{ border-bottom-color:#d66118}
+
+.rightDiyCon .mod .fltC .cls11{ border-color:#e60817}
+.rightDiyCon .mod .fltC .cls11 span i{ border-bottom-color:#e60817}
+.rightDiyCon .mod .fltC .cls12{ border-color:#d66118}
+.rightDiyCon .mod .fltC .cls12 span i{ border-bottom-color:#d66118}
+
+
+.rightDiyCon .mod .tbT a{ border:0; width:70px; height:70px}
+.rightDiyCon .mod .tbT a img{ width:70px; height:70px}
+.rightDiyCon .mod .tbT a span i{ border-bottom-color:#f05a27}
+.rightDiyCon .mod .tbC a{ border:0; width:119px; height:56px; margin-right:10px; margin-bottom:0; cursor:default}
+.rightDiyCon .mod .tbC a img{ width:119px; height:56px}
+.rightDiyCon .mod .tbC a span i{ border-bottom-color:#f05a27}
+
+
+.rightDiyCon .DIYcon{ position:absolute; left:20px; right:12px; top:5px; bottom:5px; overflow:hidden;}
+
+
+.mCSB_inside > .mCSB_container{ margin-right:8px;}
+.mCSB_scrollTools{ width:5px;}
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width:5px;}
+.full-pages .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{ width:5px;}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ width:5px }
+.mCSB_scrollTools .mCSB_draggerRail,.mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width:5px}
+.rightDiyCon .DIYcon .mCS-dark-thin .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background:#a0a0a0}
+.rightDiyCon .DIYcon .mCS-dark-thin .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background:#a0a0a0}
+
+
+
+
+.addCartBtn{ display:block; margin:10px auto 0 auto; cursor:pointer; border:0; font-size:14px; color:#fff; outline:none; border-radius:3px; height:30px; line-height:30px; width:257px;background-image:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDAsMCwwLDAuMSkiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');background-size:100%;background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255,255,255,0.1)), color-stop(100%, rgba(0,0,0,0.1)));background-image:-webkit-linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.1));background-image:-moz-linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.1));background-image:-o-linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.1));background-image:linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.1));-webkit-box-shadow:0 2px 3px rgba(0,0,0,0.29),inset -1px 0 rgba(128,128,128,0.4),inset 1px 0 rgba(128,128,128,0.4),inset 0 -1px rgba(128,128,128,0.4),inset 0 1px rgba(128,128,128,0.4);-moz-box-shadow:0 2px 3px rgba(0,0,0,0.29),inset -1px 0 rgba(128,128,128,0.4),inset 1px 0 rgba(128,128,128,0.4),inset 0 -1px rgba(128,128,128,0.4),inset 0 1px rgba(128,128,128,0.4);box-shadow:0 2px 3px rgba(0,0,0,0.29),inset -1px 0 rgba(128,128,128,0.4),inset 1px 0 rgba(128,128,128,0.4),inset 0 -1px rgba(128,128,128,0.4),inset 0 1px rgba(128,128,128,0.4); background-color:#fc5f2a}
+.addCartBtn:hover{ background:#f46738}
+
+.addCartBtnPrev{ display:block; margin:10px auto 0 auto; cursor:pointer; border:0; font-size:14px; color:#fff; outline:none; border-radius:3px; height:30px; line-height:30px; width:257px;background-image:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDAsMCwwLDAuMSkiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');background-size:100%;background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255,255,255,0.1)), color-stop(100%, rgba(0,0,0,0.1)));background-image:-webkit-linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.1));background-image:-moz-linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.1));background-image:-o-linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.1));background-image:linear-gradient(rgba(255,255,255,0.1),rgba(0,0,0,0.1));-webkit-box-shadow:0 2px 3px rgba(0,0,0,0.29),inset -1px 0 rgba(128,128,128,0.4),inset 1px 0 rgba(128,128,128,0.4),inset 0 -1px rgba(128,128,128,0.4),inset 0 1px rgba(128,128,128,0.4);-moz-box-shadow:0 2px 3px rgba(0,0,0,0.29),inset -1px 0 rgba(128,128,128,0.4),inset 1px 0 rgba(128,128,128,0.4),inset 0 -1px rgba(128,128,128,0.4),inset 0 1px rgba(128,128,128,0.4);box-shadow:0 2px 3px rgba(0,0,0,0.29),inset -1px 0 rgba(128,128,128,0.4),inset 1px 0 rgba(128,128,128,0.4),inset 0 -1px rgba(128,128,128,0.4),inset 0 1px rgba(128,128,128,0.4); background-color:#fc5f2a}
+.addCartBtnPrev:hover{ background:#f46738}
+
+
+
+.footer{ height:40px; background:#000; width:100%; min-width:1200px; overflow:hidden; position:absolute; left:0; bottom:0}
+
+
+#imgBox{  background:#fff; position:absolute; left:50%; top:50%; width:642px; z-index:20; margin:-221px 0 0 -321px;height:442px;padding: 0 20px;}
+#imgBox span{ display:block; text-align:center; padding:10px 0; font-size:16px; color:#333}

@@ -70,6 +70,17 @@
 .footerBox p.copyrights{text-align: center; font-size: 12px; color: #646566; padding: 15px 0;}
 
 @media (max-width:1200px){
-	.headerBox .ContentsBox, .headerBox .ContentsBox { max-width:90%; }
+	.headerBox .ContentsBox, .footerBox .ContentsBox { max-width:90%; }
 	.headerBox .top_menu ul li h3 a{ line-height: 30px; color: #666; padding: 0 15px; }
+	.footerBox h1.logo{padding-right: 40px;}
+}
+@media (max-width:1100px){
+	.footerBox p.other_link a{padding: 0 10px;}
+}
+@media (max-width:1000px){
+	.headerBox h1.logo{padding-right: 15px;}
+	.headerBox .top_menu ul li h3 a{ padding: 0 10px;}
+	.footerBox h1.logo{padding-right: 20px;}
+	.footerBox p.other_link{font-size: 15px;}
+	.footerBox p.other_link a{padding: 0 8px;}
 }

@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+/*---------初始化样式---------*/
+html,body{/*font-family:"[PingFangSC]","Microsoft YaHei", "SimSun", '\5b8b\4f53', sans-serif, Arial*/ font-family: 'Bitter',"微軟正黑體",'Arial',"Microsoft JhengHei", serif;  -webkit-font-smoothing: antialiased;;color:#333;font-size: 14px; }
+*{ margin:0px; padding:0px;_word-break:break-all}
+img{border:none;vertical-align: middle;width:auto;  height:auto;}
+ul,ol,li,dl,dt,dd{list-style:none;}
+a{text-decoration: none; color: #333;}
+i{font-style:normal;}
+input{font-family: "Microsoft Yahei",'Tahoma',"SimSun";color:#666;outline: none;}
+.clearfix{_zoom:1}
+.clearfix:after{content:"\0020";display:block;height:0;clear:both}
+*+html .clearfix{overflow:hidden}
+div, form, img, ul, ol, li, dl, dt, dd, p, h1, h2, h3, h4, h5, h6 {margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6，button, input, select, textarea {font-size: 100%;border: 0}
+address, cite, dfn, em, var { font-style: normal}
+code, kbd, pre, samp {  font-family: courier new, courier, monospace}
+input { outline:none;}
+textarea {  outline:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+.cle{ clear:both;}
+.mb70{ margin-bottom:5rem;}
+.mt75{ margin-top:75px;}
+.w{ max-width:1000px; margin:auto;}
+
+/*首页*/
+.tp_z{ width:100%; background-color:#333333; height:30px; line-height:30px;}
+.tp_z a{ float:right; color:#FFF; padding:0 20px;}
+.tp_z a:first-child{ padding-right:0;}
+.top_index{ width:100%; height:50px; line-height:40px; box-sizing:border-box;}
+.dinz_index{ display:inline-block; margin-left:35px;}
+.dinz_index a{ font-size:16px; margin-right:20px; display:inline-block;}
+.dinz_index a:hover{border-bottom: 2px solid rgb(231,101,26);}
+
+.dinz_index a.cur{border-bottom: 2px solid rgb(231,101,26);}.dinz02{ float:right; height:50px; display:flex;  align-items: center; position:relative;}
+.dinz02 a{ display:inline-block; margin:auto 20px auto 15px;position: relative;}
+.ewm{ position:absolute; top:60px; left:-85px; width:150px; height:200px; z-index:666; text-align:center; background-color:#FFF; display:none;}
+.ewm img:first-of-type{ margin-top:-70px;}
+.ewm img:nth-of-type(2){margin-top:-50px;width:100%;}
+.ewm p{ font-size:14px; margin-top:8px; line-height:16px;}
+.dinz03:hover .ewm{ display:block;}
+.lrq{ width:1000px; margin:auto;  padding:30px 200px  ;}
+.tit{ width:100%; text-align:center;}
+.tit h3{ font-weight:normal; font-size:26px; margin-top:16px;}
+.tit span{ display:block; width:40px; height:3px; background-color:#75bf1f; margin:20px auto 10px;}
+.tit p{ font-size:16px; color:#666; line-height:32px;}
+.tit a{ display:block; text-align: center; width:110px; height:30px; line-height:30px; color:#FFF; font-size:18px; background-color:#71c100; border-radius:50px; margin:30px auto 0;}
+.tit02{width:100%; text-align:center; margin:1.8rem auto 2.5rem;}
+.nav{ width:100%; display:flex; justify-content: space-around; margin-top:35px;}
+.nav li{ float:left; width:100px; text-align:center;}
+.nav li a i{ display:block; margin:auto; width:86px; height:93px; background:url(/Public/web_dcw/img/index/tp10.png);}
+.nav li a i h1{ font-weight:normal; font-size:31px; color:#FFF; text-transform:uppercase;}
+.nav li:last-child a i h1{ margin-bottom:10px;}
+.nav li a p{ margin-top:10px; font-size:19.85px; line-height:21px; color:#333; }
+.nav li a span{ display:block; font-size:14.56px; line-height:21px; color:#999;}
+.dz01{ width:100%; height:349px; background-color:#79bf39; }
+.dz_x{ width:1000px; height:100%; margin:auto; position:relative; }
+.dz_x_z{ width:214px; height:100%; padding-top:85px; box-sizing:border-box; text-align:center; color:#FFF; letter-spacing:4px;}
+.dz_x_z h1{ width:80px; font-size:30px; font-weight:normal; letter-spacing:6px; line-height:45px;   margin:auto; margin-bottom:30px;}
+.dz_x_z p{ font-size:18px; line-height:35px;}
+.dz_x_z span{ display:block; margin: auto; width:25px; height:1px; background-color:#FFF; }
+.dz_x_y{ position:absolute; left:214px; top:0; height:100%;  min-width:786px; }
+.dz02{ width:100%; height:350px;}
+.dz02 img{ width:690px; height:350px;}
+.dz02_y{ float:right; width:210px; height:100%; background-color:#2b2b2b; position:relative; color:#79bf39; letter-spacing:4px;}
+.dz02_y img{ width:auto; height:auto; margin:105px auto 55px -45px; }
+.dz02_y h1{ font-weight:normal; font-size:30px; margin-left:-25px; }
+.dz02_y p{ font-size:18px; margin-left:-55px; letter-spacing:6px;}
+.dz03{ width:100%; height:350px;}
+.dz03 img{ width:500px; height:100%;}
+.dz03_y{ float:right; width:500px; height:100%; padding:60px 45px 0 0; box-sizing:border-box; background-color:#79bf39; color:#FFF; text-align:right; letter-spacing:2px;}
+.dz03_y h1{font-size:30px; font-weight:normal; word-spacing:1.6px; line-height:45px;}
+.dz03_y span{ float:right; margin:10px auto 20px; width:30px; height:1px; background-color:#FFF; display:block;}
+.dz03_y p{ float:right; width:100%;}
+.dz04{ width:100%; padding:80px 0 0 156px; box-sizing:border-box; background:url(/Public/web_dcw/img/index/tp15_03.jpg) 100% 100% no-repeat; height:395px; }
+.dz04 a{ width:100%; height:100%;}
+.dz04 a p{ font-family:"[HYa3gj]"; font-size:22px; color:#767676; margin-bottom:10px;}
+.dz04 a h1{ display:inline-block; font-size:34px; color:#79bf39; line-height:45px;}
+.dz04 a div{ width:90px; height:30px; line-height:30px; text-align:center; font-size:22px; color:#FFF; display:inline-block; background-color:#79bf39; margin-left:20px;}
+.dz04 a span{ color:#767676; font-size:20px; margin-top:10px; display:block;}
+.tit02{ border-top:#b1b1b1 1px solid; margin-top:70px; padding-top:45px; text-align:center;}
+.tit03{ width: 100%; margin: 0; border: none;} /*EE 新增*/
+
+.tit_w p{ font-size:1.36rem;}
+.tit_w span{ display:block; height:1px; width:25px; background-color:#ea5413; margin:1.3rem auto 0;}
+.lr_t{ width:100%; margin-bottom:1.1rem;}
+.lr_t a img{ width:100%;}
+.zx{ width:100%; display:flex; justify-content: center; color:#999; margin-top:30px;}
+.zx a{ font-size:16px; color:#767676; padding:0 25px;}
+.hx{ width:120px; height:1px; background-color:#b5b5b5; margin:35px auto 15px;}
+.foot{ width:100%; height:215px;  background-color:#c8c8c8; color:#666; font-size:16px; padding-top:65px; text-align:center; box-sizing:border-box;}
+.foot p{ margin-bottom:25px;}
+.foot p img{ display:inline-block;}
+.lxw{ margin-bottom:35px;}
+.lxw p{ font-size:14px; color:#767676; line-height:22px; text-align:center;}
+
+
+/*0221 EE新增*/
+.dealerListBox{ width: 100%; background: url(../img/br_dealer_02.png) center bottom no-repeat;}
+.dealerListBox .brTop{width: 100%; background: url(../img/br_dealer_01.png) center top no-repeat;}
+.dealerListBox .topTitle{ width: 100%; min-height: 680px; max-width: 490px; margin: 0 auto; }
+.dealerListBox .topTitle img{ max-width: 490px; margin-top: 200px; }
+
+.dealerListBox .ContentsBox{ width: 100%; max-width: 1050px; margin: 0 auto;}
+.dealerListBox ul.dListBox{ width: 100%; padding-bottom: 100px; }
+.dealerListBox ul.dListBox li{ width: 35%; min-height: 300px; float: left; padding-left: 15%; color: #666;}
+.dealerListBox ul.dListBox li.topBox{ width: 100%; padding-left: 0; min-height: 190px;}
+.dealerListBox ul.dListBox li.topBox .title{ max-width:730px; margin: 0 auto;  }
+.dealerListBox ul.dListBox li.topBox .title p{font-size: 22px; color: #666;}
+.dealerListBox ul.dListBox li.topBox .title p.logo{width: 244px; height: 40px; display: block;  background: url(../img/logo_giant.png) center center no-repeat; background-size: contain; text-indent: -9999px; margin-bottom: 20px;}
+.dealerListBox ul.dListBox li h4{font-size: 26px; font-weight: normal; padding-bottom: 20px;}
+.dealerListBox ul.dListBox li p{line-height: 34px;}
+.dealerListBox ul.dListBox li p.area{ color: #459dd6; font-size: 18px; }
+.dealerListBox .linkBox{ min-height: 490px; width: 100%; max-width: 830px; margin: 0 auto; }
+.dealerListBox .linkBox p.title{ color: #fff; font-size: 28px; margin: 0 auto; padding: 100px 0 60px; max-width: 700px; }
+.dealerListBox .linkBox ul{ width: 100%; }
+.dealerListBox .linkBox ul li{ width: 33%; float: left; }
+.dealerListBox .linkBox ul li p{ text-indent: -9999px; }
+.dealerListBox .linkBox ul li a{ width: 100%; display: block; height: 40px;}
+.dealerListBox .linkBox ul li a:hover{opacity: .8;}
+.dealerListBox .linkBox ul li a.logo_01{ background: url(../img/logo_link_01.png) center center no-repeat; background-size: contain;}
+.dealerListBox .linkBox ul li a.logo_02{ background: url(../img/logo_link_02.png) center center no-repeat; background-size: contain;}
+.dealerListBox .linkBox ul li a.logo_03{ background: url(../img/logo_link_03.png) center center no-repeat; background-size: contain;}
+@media (max-width:1440px){.dealerListBox{ width: 100%; background: url(../img/br_dealer_02_m.png) center bottom no-repeat;}
+  .dealerListBox .brTop{width: 100%; background: url(../img/br_dealer_01_m.png) center top no-repeat;}}
+@media (max-width:1060px){ .dealerListBox ul.dListBox li{ padding-left: 14%; width: 36%;}}
+@media (max-width:1000px){ .dealerListBox ul.dListBox li{ padding-left: 10%; width: 40%;}}
+/*0221 EE新增 結束*/
+
+.dz_x_za{ width:324px; height:100%; padding-left: 128px;padding-top: 102px;box-sizing:border-box; text-align:center; color:#FFF; letter-spacing:4px;}
+.dz_x_za h1{ width:80px; font-size:46px; font-weight:normal; letter-spacing:6px; line-height:normal}
+.dz_x_za p{ font-size:24px; line-height:normal; margin-bottom: 50px;}
+.dz_x_za span{ display:block; margin: auto; width:25px; height:1px; background-color:#FFF; }
+.dz_x_ya{ position:absolute; left: 551px;top: 56px; height:100%;  min-width:786px; }

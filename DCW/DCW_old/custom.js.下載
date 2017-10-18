@@ -1,0 +1,154 @@
+// JavaScript Document
+
+$(function(){
+	$(".cms-hdm-tits a").mouseenter(function(){
+		$(this).siblings().removeClass("on");
+		$(this).addClass("on");
+		$(this).parents(".alls").find(".cms-hdm-conts:eq("+$(this).index()+")").css("display","block");
+		$(this).parents(".alls").find(".cms-hdm-conts:eq("+$(this).index()+")").siblings(".cms-hdm-conts").css("display","none");
+		});
+	
+	
+	
+	
+	
+	//Please Add Other Code
+	
+	});
+
+function posLogo(){//初始化LOGO位置
+	try{
+	  
+	}catch(e){}
+	  
+	}
+
+$(window).resize(function(){
+	  
+	  
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+//图片合成
+function draw(fn){
+    var data1= new Array();
+    for(var i=0;i<$('.bikeContainer img').length;i++){
+        data1[i]=$('.bikeContainer img').eq(i).attr('src');
+    }
+    var c=document.createElement('canvas'),
+        ctx=c.getContext('2d'),
+        len=data1.length,
+		cW = $('.bikeContainer').width(),
+		cH = $('.bikeContainer').height();
+    c.width=cW;
+    c.height=cH;
+    ctx.rect(0,0,c.width,c.height);
+    ctx.fillStyle='transparent';//画布填充颜色
+    ctx.fill();
+    function drawing(n){
+        if(n<len){
+            var img=new Image,
+				eles = $('.bikeContainer img').eq(n);
+				posT = eles.position().top,
+				posL = eles.position().left;
+            //img.crossOrigin = 'Anonymous'; //解决跨域
+            img.src=data1[n];
+            img.onload=function(){
+				var wh = img.width,
+					ht = img.height;
+				
+				if (eles.hasClass('pieces')) {
+					ctx.save();//保存状态
+					var tslX = 0,
+						tslY = 0,
+						rtt = 0;
+					if (eles.hasClass('Spoke1')) {
+						tslX = 341;
+						tslY = 73;
+						rtt = -147;
+						} else if (eles.hasClass('Spoke2')) {
+							tslX = 411;
+							tslY = 21;
+							rtt = 121;
+							} else if (eles.hasClass('Spoke3')) {
+							tslX = 390;
+							tslY = 70;
+							rtt = 24;
+							} else if (eles.hasClass('Spoke4')) {
+							tslX = 318;
+							tslY = 122;
+							rtt = 307;
+							} else if (eles.hasClass('Spoke5')) {
+							tslX = 47;
+							tslY = 10;
+							rtt = 55;
+							} else if (eles.hasClass('Spoke6')) {
+							tslX = 138;
+							tslY = 45;
+							rtt = 145;
+							} else if (eles.hasClass('Spoke7')) {
+							tslX = 96;
+							tslY = 82;
+							rtt = 55;
+							} else if (eles.hasClass('Spoke8')) {
+							tslX = 12;
+							tslY = 106;
+							rtt = -36;
+								}	
+					ctx.translate((tslX + 64), (tslY + 114));//设置画布上的(0,0)位置，也就是旋转的中心点
+					ctx.rotate(rtt*Math.PI/180);
+					ctx.drawImage(img,0,0,48,22);//把图片绘制在旋转的中心点，
+					ctx.restore();//恢复状态
+					} else {
+						  ctx.drawImage(img,posL,posT,wh,ht);
+						}
+                drawing(n+1);//递归
+            }
+        }else{
+            //保存生成作品图片
+            convertCanvasToImage(c);
+            //Canvas2Image.saveAsJPEG(c); //保存到电脑
+        }
+    }
+    drawing(0);
+}
+function convertCanvasToImage(canvas) {
+    var hc_image = new Image();
+    hc_image.src = canvas.toDataURL("image/png");
+    $('#imgBox div').html(hc_image);
+}
+	
+	
+	
+	
+	
+	
+	

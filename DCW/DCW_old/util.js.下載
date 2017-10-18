@@ -1,0 +1,65 @@
+/**
+ * 工具函数
+ */! function(util) {
+  //写日志
+  util.log = function() {
+    //console.log.apply(console,arguments);
+    var enableLogging = false;
+    if (enableLogging && console && console.log) {
+      console.log(objectToLog);
+    }
+  }
+  //判断是否是移动端
+  util._isMobile = undefined;
+  util.isMobile = function() {
+    util.log("UserAgent: " + navigator.userAgent);
+    util._isMobile = /iPhone|iPad|iPod|Windows Phone|IEMobile/i.test(navigator.userAgent) || /android.*mobile/i.test(navigator.userAgent) || /mozilla.*mobile.*firefox/i.test(navigator.userAgent);
+    var isNikeId = /^\/([A-Za-z]{2})\/([A-Za-z]{2})_([A-Za-z]{2})\/product\/*/i.test(window.location.pathname);
+    if (isNikeId) {
+      var tablet = /ipad|android\s3/i.test(navigator.userAgent);
+      util._isMobile = util._isMobile || tablet || (!tablet && !util._isMobile && /android/i.test(navigator.userAgent));
+    }
+    return util._isMobile;
+  };
+  //发送post请求
+  util.post = function(url,param,success,error){
+    var options = {};
+    options.url = url;
+    options.data = param;
+    options.dataType = 'json';
+    options.error = error || function(){
+      window.layer && layer.closeAll();
+    }
+    options.success = success;
+    options.type = 'post';
+    options.timeout = 30000;//3s
+    $.ajax(options);
+  }
+  //执行动画
+  util.animate = function($dom,animateName,callback){
+    var animateClass = animateName + ' animated';
+    var evt = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    $dom.each(function(){
+      var $this = $(this);
+      $this.removeClass(animateClass).addClass(animateClass);
+      $this.off(evt);
+      $this.on(evt, function(){
+        $this.off(evt);
+        $(this).removeClass(animateClass);
+        callback && callback();
+      });
+    });
+  }
+  util.getUrlParam = function(name){
+        //构造一个含有目标参数的正则表达式对象
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        //匹配目标参数
+        var r = window.location.search.substr(1).match(reg);
+        //返回参数值
+        if (r!=null) return unescape(r[2]);
+        return null;
+  }
+  util.showNav = function(index){
+    $('.dinz_index').children(':nth-child(' + index + ')').addClass('cur').siblings().removeClass('cur');
+  }
+}(window.util = window.util || {});

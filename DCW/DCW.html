@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<htm>
+<head>
+<meta charset="UTF-8">
+<title>DCW</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="./DCW_old/general.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/master.css">
+
+<script type="text/javascript" src="./DCW_old/util.js.下載"></script>
+<script type="text/javascript" src="./DCW_old/general.js.下載"></script>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/menu_js.js"></script>
+
+    <link href="./DCW_old/common.css" type="text/css" rel="stylesheet">
+    <link href="./DCW_old/jquery.mCustomScrollbar.css" type="text/css" rel="stylesheet">
+    <link href="./DCW_old/jquery.qtip.css" type="text/css" rel="stylesheet">
+    <link href="./DCW_old/main.css" type="text/css" rel="stylesheet">
+
+    <style>
+
+    .item_param{
+        padding-top: 640px;
+    }
+    .item_param .img{
+        margin:2px 0px;
+    }
+    .item_param .img:nth-last-child(1) {
+        margin-bottom: 42px;
+    }
+    .item_param .img img {
+        width: 1000px;
+        display:block;
+        margin:0 auto;
+        //height: 200px;
+    }
+
+    .rightDiyCon .mod .fltC a.cur{
+        border-color:green;
+    }
+    .rightDiyCon .mod a.cur span i{
+        border-bottom-color:green;
+    }
+    #sizePanel{
+        display: none;
+    }
+    #sizePanel .imgBg{
+        position: fixed;
+        left: 0;
+        right:0;
+        width: 100%;
+        height:100%;
+        z-index:19;
+        background-color: #000;
+        opacity: 0.8;
+    }
+    #sizePanel .tabs{
+        height: 50px;
+        line-height: 50px;
+        margin-bottom: 20px;
+        vertical-align: middle;
+        font-size:14px;
+        background-color: #111;
+        color:#FFF;
+    }
+    #sizePanel ul{
+        font-size:14px;
+    }
+    .exp-id-buyingtools__answer-container{
+        border: 1px solid #dddddd;
+        margin: -1px 0 0 -1px;
+        cursor: pointer;
+    }
+    .displayName{
+        border: 1px solid #dddddd;
+        margin: -1px 0 0 -1px;
+        cursor: pointer;
+    }
+    .buyingtools--is--selected{
+        background-color: #111;
+        color: #fff;
+    }
+    @font-face{
+        font-family:'Italic2';
+        src:url('/Public/mobile/css/Rage Italic.ttf') format('truetype');
+    }
+    </style>
+<link rel="stylesheet" href="./DCW_old/layer.css" id="layui_layer_skinlayercss" style="">
+<script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/util.js"></script>
+<script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/pagejs.js"></script>
+</head>
+
+<body class="goodDetails">
+
+<header class="headerBox">
+    <section class="ContentsBox clearfix">
+        <h1 class="logo"><a href="index.html">DCW</a></h1>
+        <nav class="top_menu">
+            <ul>
+                <li><h3><a href="#">首页</a></h3></li>
+                <li><h3><a href="#" class="menu_classify_01">分类</a></h3></li>
+                <li><h3><a href="#" class="menu_classify_02">客制化单车</a></h3></li>
+                <li><h3><a href="#" class="menu_classify_03">婴儿车</a></h3></li>
+                <li><h3><a class="btn_in" href="event.html">活动专区</a></h3></li>
+            </ul>
+        </nav>
+        <a class="shopping_car" href="#"><span>1</span></a>
+        <div class="userBox">
+            <p class="the_id">1823544718235447</p>
+            <ul class="sub_menu">
+                <li><p><a href="#">我的订单</a></p></li>
+                <li><p><a href="#">退出登录</a></p></li>
+            </ul>
+        </div>
+        <div class="searchBox">
+            <a class="icon_search"></a>
+        </div>
+    </section>
+</header>
+
+<section class="TopSubMenuBox" id="classify_01">
+    <div class="ContentsBox">
+        <ul class="goodsType">
+            <li><a href="#">
+                    <img src="images/subMenu/goods_01_1.png" width="100%" alt="超级英雄">
+                    <p class="name">超级英雄</p>
+                    <p class="new"><span>新品</span></p>
+                </a>
+            </li>
+            <li><a href="#">
+                    <img src="images/subMenu/goods_01_2.png" width="100%" alt="客制化单车">
+                    <p class="name">客制化单车</p>
+                </a>
+            </li>
+            <li><a href="#">
+                    <img src="images/subMenu/goods_01_3.png" width="100%" alt="客制婴儿车">
+                    <p class="name">客制婴儿车</p>
+                </a>
+            </li>
+            <li><a href="#">
+                    <img src="images/subMenu/goods_01_4.png" width="100%" alt="潮流装备">
+                    <p class="name">潮流装备</p>
+                </a>
+            </li>
+            <li><a href="#">
+                    <img src="images/subMenu/goods_01_5.png" width="100%" alt="大牌尖货">
+                    <p class="name">大牌尖货</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="TopSubMenuBox" id="classify_02">
+    <div class="ContentsBox">
+        <ul class="goodsType">
+            <li><a href="#">
+                    <img src="images/subMenu/goods_02_1.png" width="100%" alt="超级英雄">
+                    <p class="name">超级英雄</p>
+                    <p class="new"><span>新品</span></p>
+                </a>
+            </li>
+            <li><a href="#">
+                    <img src="images/subMenu/goods_02_1.png" width="100%" alt="超级英雄">
+                    <p class="name">超级英雄</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="TopSubMenuBox" id="classify_03">
+    <div class="ContentsBox">
+        <ul class="goodsType">
+            <li><a href="#">
+                    <img src="images/subMenu/goods_03_1.png" width="100%" alt="HC-318">
+                    <p class="name">HC-318</p>
+                    <p class="new"><span>新品</span></p>
+                </a>
+            </li>
+            <li><a href="#">
+                    <img src="images/subMenu/goods_03_2.png" width="100%" alt="HC-500Q">
+                    <p class="name">HC-500Q</p>
+                </a>
+            </li>
+            <li><a href="#">
+                    <img src="images/subMenu/goods_03_3.png" width="100%" alt="HC-818">
+                    <p class="name">HC-818</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="theSearchBox" id="theSearchBox">
+    <div class="ContentsBox">
+        <a class="closeBtn"></a>
+        <div class="searchKeyWord clearfix">
+            <input type="" name="">
+            <a class="btn_search" href="#"></a>
+        </div>
+        <p class="hotWord">
+            <a href="#">客制化男款</a>
+            <a href="#">客制化女款</a>
+            <a href="#">客制化青少年款</a>
+        </p>
+    </div>
+</section>
+
+<content class="main_content">
+    <div class="contents">
+<!--             <div class="tp_z">
+      <div class="w">
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2191533489&amp;site=qq&amp;menu=yes" style="color:#FFF">在线客服</a>
+        <a href="http://www.danche-w.com/dcw/login" style="padding:0px 10px;color:#FFF">登陆</a>
+        <a style="padding:0px;">/</a>
+        <a href="http://www.danche-w.com/dcw/reg" style="padding:0px 10px;color:#FFF">注册</a>
+      </div>
+    </div> -->
+<!-- <div class="top_index">
+  <div class="w">
+    <a href="http://www.danche-w.com/dcw">
+        <img class="logo-img" src="./DCW_old/logo.png">
+    </a>
+    <div class="dinz_index">
+      <a href="http://www.danche-w.com/dcw">首页</a>
+      <a href="http://www.danche-w.com/dcw/diy?id=6" class="cur">定制男款</a>
+      <a href="http://www.danche-w.com/dcw/diy?id=7">定制女款</a>
+      <a href="http://www.danche-w.com/dcw/diy?id=8">定制青少年款</a>
+      <a href="http://www.danche-w.com/dcw/list">玩家潮品</a>
+      <a href="http://www.danche-w.com/dcw/checkOrder">我的订单</a>
+      <a href="http://www.danche-w.com/dcw/brand">品牌动态</a>
+    </div>
+    <div class="dinz02">
+      <a class="dinz03" href="http://www.danche-w.com/dcw/diy?id=6#">
+        <img src="./DCW_old/tp01.png">
+        <div class="ewm">
+          <img src="./DCW_old/tp12.png">
+          <img src="./DCW_old/ewm.png">
+          <p>关注官方微信</p>
+          <p>体验移动定制平台</p>
+        </div>
+      </a>
+      <a href="http://www.danche-w.com/dcw/cart">
+        <style>
+        .dcw-cart-count{
+          background: #fa5400;
+          line-height: 1.4;
+          border-radius: 10px;
+          text-align: center;
+          font-size: 14px;
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          z-index: 2;
+          padding: 0px 5px 1px 4px;
+          color: #FFF;
+        }
+        </style>
+        <img src="./DCW_old/tp02.png" style="display:block">
+      </a>
+    </div>
+  </div>
+</div> -->
+
+<script>
+var id = util.getUrlParam('id');
+var map = {};
+var index = 2;
+map['6'] = index++;
+map['7'] = index++;
+map['8'] = index++;
+if(id && map[id]){
+  util.showNav(map[id]);
+}
+</script>
+
+<script>
+  $(function(){
+    //登出
+    $('#btnLogout').on('click',function(){
+      $.post('/dcw/logoutDcw',{},function(res){
+        console.log(res);
+        if(res && res.status == 1){
+          window.location = '/dcw';
+        }
+      });
+    });
+  });
+</script>
+
+        <div class="absltCon">
+
+            <!-- left DIY Start -->
+            <div class="leftDIY">
+
+                <div class="lDInCon" style="overflow: hidden;">
+                    <div class="bikeContainer" style="width: 500px; height: 500px; background: none; transform: none; transform-origin: 50% 50% 0px; cursor: move;">
+                        <div class="inCon DIYImgCon" style="width:500px;height:500px;background: url(&#39;&#39;) no-repeat 0 bottom;background-size:500px 30px">
+                            <canvas id="mainCanvas" style="width:500px;height:500px" width="1500" height="1500"></canvas>
+                        </div>
+                        <!-- Created by SVGDeveloper 1.0 -->
+                        <svg style="display:none" class="goodSVG-1" width="542" height="309" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!--前轮 -->
+                            <path class="frontTyreInner" data-class="frontTyre" title="前轮" d="M336 188 A94 94 0 1 1 336 189 Z M506 187 A75 75 0 1 0 506 188 Z" style="fill-rule:evenodd; fill:transparent"></path>
+                            <!--后轮 -->
+                            <path class="backTyreInner" data-class="backTyre" title="后轮" d="M43 188 A94 94 0 1 1 43 189 Z M213 187 A75 75 0 1 0 213 188 Z" style="fill-rule:evenodd; fill:transparent"></path>
+                            <!--辐条-->
+                            <path class="frontFourImgInner" data-class="frontPieces" title="辐条卡" d="M357 188 A73 73 0 1 1 357 189 Z" style="fill-rule:evenodd; fill:transparent"></path>
+                            <path class="backFourImgInner" data-class="backPieces" title="辐条卡" d="M64 188 A73 73 0 1 1 64 189 Z" style="fill-rule:evenodd; fill:transparent"></path>
+                            <!--车架 -->
+                            <path class="frameInner" data-class="frame" title="车架" d="M218 65 L380 46 L433 187 L382 81 L268 202 L140 183 Z" style="fill-rule:evenodd; fill:transparent"></path>
+                            <!--车垫 -->
+                            <path class="cushionInner" data-class="cushion" title="车垫" d="M163 4 L246 4 L246 9 L235 15 L185 17 L163 9 Z" style="fill-rule:evenodd; fill:transparent"></path>
+                            <!--把手 -->
+                            <path class="handleInner" data-class="handle" title="把手" d="M395 0 L401 15 L376 26 L383 45 L370 50 L359 25 L361 16 L395 0 Z" style="fill-rule:evenodd; fill:transparent"></path>
+                            <!--后轮图案 -->
+                            <path class="backTyrePatternInner" data-class="backTyrePattern" title="后轮图案" d="M213 187 A75 75 0 1 0 213 188 Z" style="fill-rule:evenodd; fill:transparent"></path>
+                        </svg>
+                    </div>
+
+                    <div class="searchZoom">
+                        <div>
+                            <!-- <span>搜索其他设计</span> -->
+                            <a class="zoomOut" title="放大"></a>
+                            <a class="zoomIn" title="缩小"></a>
+                        </div>
+                    </div>
+
+                    <div class="defaultRow" style="display:none">
+                        <a>
+                            <img src="./DCW_old/default1.png">
+                        </a>
+                        <a>
+                            <img src="./DCW_old/default2.png">
+                        </a>
+                        <a>
+                            <img src="./DCW_old/default3.png">
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- left DIY End -->
+
+            <!-- right DIY Start -->
+            <div class="rightDiyCon">
+                <div class="rDCInCon">
+                    <div class="rDCTop">
+                        <span class="t1">DCW单车&nbsp;男款</span>
+                        <div class="prsPf">
+                            <span class="prs">¥<span id="price">1598</span></span>
+                            <span class="pf">★★★★★</span>
+                            <span>库存：5000</span>
+                        </div>
+                        <div class="btnRow goNxtPrv">
+                            <a class="prevBtn dis">&lt; 上一步</a>
+                            <a class="nextBtn">下一步 &gt;</a>
+                        </div>
+                    </div>
+
+                    <div class="scrollCon">
+                        <div class="menus DIYmns" id="componentNavPanel">
+                            <a class="done cur" data-index="0" data-type="frame" data-draw="img" title="车架"></a>
+                            <a class="done" data-index="1" data-type="cushion" data-draw="img" title="坐垫"></a>
+                            <a class="done" data-index="2" data-type="wheel-before" data-draw="img" title="前轮"></a>
+                            <a class="done" data-index="3" data-type="wheel-after" data-draw="img" title="后轮"></a>
+                            <a class="done" data-index="4" data-type="handlebar" data-draw="img" title="手把"></a>
+                            <a class="" data-index="5" data-type="sign" data-draw="sign" title="签名"></a>
+                            <a class="" data-index="6" data-type="wheel-before-card" data-draw="img2" title="辐条卡"></a>
+                            <a class="" data-index="7" data-type="wheel-after-img" data-draw="img2" title="后轮图形"></a>
+                            <a class="" data-index="8" data-type="drive_recorder" data-draw="img2" title="行车记录仪"></a>
+                        </div>
+                        <div class="DIYcon mCustomScrollbar _mCS_1 mCS_no_scrollbar"><div id="mCSB_1" class="mCustomScrollBox mCS-dark-thin mCSB_vertical mCSB_inside" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                            <div class="tabCon" id="palettePanel"><div class="mod " style="display:block">
+            <span class="inFirTit">车架</span>
+            <div class="inSecT">
+                <span class="lt">选择车架颜色</span>
+                <span class="selectTips">珠光橙</span>
+            </div>
+            <div class="inCs">
+                <div class="fltC normalDIY">
+                    <a class="color" title="抛光亮银" rel="1" img="/Public/images/dcw/6/frame/1.png" style="">
+                        <div style=" width: 68px; height: 68px;border-radius: 0%;; background: rgb(192,192,192);"></div>
+                        <span> <i></i>
+                        </span>
+                    </a>
+                    <a class="color cur" title="珠光橙" rel="2" img="/Public/images/dcw/6/frame/2.png" style="">
+                        <div style=" width: 68px; height: 68px;border-radius: 0%;; background: rgb(250,128,10);"></div>
+                        <span> <i></i>
+                        </span>
+                    </a>
+                    <a class="color" title="亚光黑" rel="3" img="/Public/images/dcw/6/frame/3.png" style="">
+                        <div style=" width: 68px; height: 68px;border-radius: 0%;; background: rgb(0,0,0);"></div>
+                        <span> <i></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div></div>
+
+                        </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-thin mCSB_scrollTools_vertical mCSB_scrollTools_onDrag_expand" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px; height: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+                        <div class="subTips">
+                            <i class="closeBtn" title="关闭">×</i>
+                            <div class="sTIn">
+                                <span class="erT">您有以下选项没选</span>
+                                <div class="erC unDIYParts"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="button" value="加入购物车" class="addCartBtn">
+                </div>
+            </div>
+            <!-- right DIY End -->
+        </div>
+
+        <!--产品参数图片-->
+        <div class="item_param  w">
+            <div class="img">
+                <img id="signTextImg">
+            </div>
+            <div class="img">
+                <img src="./DCW_old/471_男－网页端.jpg">
+            </div>
+            <div class="img">
+                <img src="./DCW_old/479_157_2.gif">
+            </div>
+            <div class="img">
+                <img src="./DCW_old/480_159_3.gif">
+            </div>
+            <div class="img">
+                <img src="./DCW_old/481_160_4.gif">
+            </div>
+            <div class="img">
+                <img src="./DCW_old/482_161_5.gif">
+            </div>
+            <div class="img">
+                <img src="./DCW_old/483_162_6.gif">
+            </div>
+            <div class="img">
+                <img src="./DCW_old/484_163_7.gif">
+            </div>
+            <div class="img">
+                <img src="./DCW_old/485_164_8.gif">
+            </div>
+        </div>
+
+<link rel="stylesheet" href="./DCW_old/zxc.css">
+
+    </div>
+    <div id="sizePanel">
+        <div class="imgBg"></div>
+        <div id="imgBox">
+            <span>DCW单车&nbsp;男款&nbsp;&nbsp;&nbsp;¥1598.0</span>
+            <div class="tabs">选择尺码</div>
+            <ul id="chimaPanel"></ul>
+            <input type="button" value="加入购物车" class="addCartBtnPrev">
+        </div>
+    </div>
+    <div id="textPanel" style="position:fixed;left:0;top:0;width:100%;background-color: #f7f7f7;color:#000;z-index:100000;bottom:0px;display:none;opacity:0.9">
+        <div style="width:100%;height:100%">
+            <input type="text" style="margin:auto auto;text-align:center;border: 1px solid rgb(17, 17, 17);font-size:18px;border-radius: 2px;width: 220px;height:60px;display: block;position:relative;top:50%;font-family: Italic2" placeholder="ABCDE">
+            <p style="margin:auto auto;position:relative;top:50%;text-align:center;margin-top:5px;font-size:14px;color:rgb(141, 141, 141)">个性签名，请输入英文字母</p>
+            <div style="margin:auto auto;position:relative;top:50%;text-align:center;margin-top:5px;line-height:40px;vertical-align: middle;">
+                <img class="sign-btn" action="exit" src="./DCW_old/flag_exit.svg" style="padding-top: 3px; height: 14px; width: 14px;display:inline-block;">
+                <img class="sign-btn" action="check" src="./DCW_old/flag_check.svg" style="padding-top: 3px; height: 14px; width: 14px;display:inline-block;margin-left:40px;">
+            </div>
+        </div>
+    </div>
+    <div style="visibility:hidden;width:0;height:0">
+        <input type="file" id="uploadFile">
+    </div>
+    <script type="text/template" id="component_tpl">
+        {each list as val index}
+        <a class="{if val.done}done{/if}" data-index="{index}" data-type="{val.type}" data-draw="{val.draw_type}" title="{val.title}"></a>
+        {/each}
+    </script>
+    <script type="text/template" id="color_tpl">
+        <div  class="mod "  style="display:block" >
+            <span class="inFirTit">{title}</span>
+            <div class="inSecT">
+                <span class="lt">选择{title}颜色</span>
+                <span class="selectTips"></span>
+            </div>
+            <div class="inCs">
+                <div class="fltC normalDIY">
+                    {each data as val}
+                    <a class=" color" title="{val.name}{if val.price}￥{val.price}{/if}" rel="{val.id}" img="{val.img}" style="">
+                        <div style=" width: 68px; height: 68px;border-radius: 0%;; background: rgb({val.color});"></div>
+                        <span> <i></i>
+                        </span>
+                    </a>
+                    {/each}
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="color_tpl2">
+    <div  class="mod "  style="display:block" >
+        <span class="inFirTit">{title}</span>
+        <div class="inSecT">
+            <span class="lt">选择{title}系列</span>
+            <span class="selectTips"></span>
+        </div>
+        <div class="inCs">
+            <div class="fltC normalDIY">
+                {each data as val}
+                <a class=" color" title="{val.name}{if val.price}(代工制作费)￥{val.price}{/if}" rel="{val.id}" img="{val.img}" img-full="{val.img_full}" style="">
+                    <img src="{val.img_icon}" alt="" />
+                    <span> <i></i>
+                    </span>
+                </a>
+                {/each}
+            </div>
+            <div class="inSecT">
+                <span class="lt">{title}图形(默认前4个)</span>
+                <span class="selectTips"></span>
+            </div>
+            <div class="fltC tbC collctionCon">
+                <img src="" alt="" style="border:0;margin:10px;width:240px;height:240px;"/>
+            </div>
+        </div>
+    </div>
+    </script>
+
+    <script type="text/template" id="upload_tpl">
+        <div  class="mod "  style="display:block" >
+            <span class="inFirTit">{title}</span>
+            <div class="inSecT">
+                <span class="selectTips"></span>
+            </div>
+            <div class="inCs">
+                <div class="fltC normalDIY">
+                    <a class=" color" title="制作费￥58" style="" action="sign">
+                        <div style=" width: 68px; height: 68px;border-radius: 0%;ertical-align: middle;line-height: 68px;">文字</div>
+                        <span> <i></i>
+                        </span>
+                    </a>
+                    <a class=" color" title="空" style="" action="sign_clear">
+                        <div style=" width: 68px; height: 68px;border-radius: 0%;ertical-align: middle;line-height: 68px;">空白</div>
+                        <span> <i></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="upload_tpl_bak">
+        <div  class="mod "  style="display:block" >
+            <span class="inFirTit">{title}</span>
+            <div class="inSecT">
+                <span class="lt">点击上传{title}图片</span>
+                <span class="selectTips"></span>
+            </div>
+            <div class="inCs">
+                <div class="fltC normalDIY">
+                    <div style="width:250px;">
+                        <img id="imgUpload" style="width:100%;height:98px" src="/Public/mobile/images/sign_upload.png" alt="点击上传签名图片"/>
+                    </div>
+                </div>
+                <div class="inSecT">
+                    <span class="lt">您上传的签名图片</span>
+                    <span class="selectTips"></span>
+                </div>
+                <div class="fltC tbC collctionCon">
+                    <img src="" alt="" style="border:0;margin:10px;width:240px;height:240px;"/>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="design_tpl">
+        {each list as val index}
+        <button class="exp-id-my-designs__design-btn nsg-bg--near-white js-myDesignsDesignBtn " rel="{index}" >
+          <img src="{val.img}" alt="">
+        </button>
+        {/each}
+    </script>
+    <script type="text/template" id="chima_tpl">
+    {each list.data as val index}
+    <li  class="exp-id-buyingtools__answer-container" data-id="{val.id}">
+        <span class="nsg-font-family--base displayName">{val.name}</span>
+    </li>
+    {/each}
+</script>
+    <script src="./DCW_old/jquery-1.9.1.min.js.下載"></script>
+    <script src="./DCW_old/template.js.下載"></script>
+    <script type="text/javascript" src="./DCW_old/jquery.mCustomScrollbar.concat.min.js.下載"></script>
+    <script type="text/javascript" src="./DCW_old/jquery.panzoom.js.下載"></script>
+    <script type="text/javascript" src="./DCW_old/canvas2image.js.下載"></script>
+    <script type="text/javascript" src="./DCW_old/jquery.qtip.js.下載"></script>
+    <script type="text/javascript" src="./DCW_old/layer.js.下載"></script>
+    <script type="text/javascript" src="./DCW_old/custom.js.下載"></script>
+    <script>
+        var curProduct = {};
+        curProduct.id = +'1';
+        curProduct.id = +'6';
+        curProduct.ori_img = 'http://danche-w.oss-cn-shanghai.aliyuncs.com/449_default.png';
+        curProduct.options = '[%7B%22title%22:%22%E8%BD%A6%E6%9E%B6%22,%22type%22:%22frame%22,%22draw_type%22:%22img%22,%22data%22:%22[%7B%5C%22id%5C%22:1,%5C%22name%5C%22:%5C%22%E6%8A%9B%E5%85%89%E4%BA%AE%E9%93%B6%5C%22,%5C%22color%5C%22:%5C%22192,192,192%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D,%7B%5C%22id%5C%22:2,%5C%22name%5C%22:%5C%22%E7%8F%A0%E5%85%89%E6%A9%99%5C%22,%5C%22color%5C%22:%5C%22250,128,10%5C%22,%5C%22default%5C%22:true,%5C%22price%5C%22:0%7D,%7B%5C%22id%5C%22:3,%5C%22name%5C%22:%5C%22%E4%BA%9A%E5%85%89%E9%BB%91%5C%22,%5C%22color%5C%22:%5C%220,0,0%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D]%22%7D,%7B%22title%22:%22%E5%9D%90%E5%9E%AB%22,%22type%22:%22cushion%22,%22draw_type%22:%22img%22,%22data%22:%22[%7B%5C%22id%5C%22:1,%5C%22name%5C%22:%5C%22%E7%BA%A2%5C%22,%5C%22color%5C%22:%5C%22230,29,121%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D,%7B%5C%22id%5C%22:2,%5C%22name%5C%22:%5C%22%E9%BB%84%5C%22,%5C%22color%5C%22:%5C%22255,255,0%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D,%7B%5C%22id%5C%22:3,%5C%22name%5C%22:%5C%22%E9%BB%91%5C%22,%5C%22color%5C%22:%5C%220,0,0%5C%22,%5C%22default%5C%22:true,%5C%22price%5C%22:0%7D]%22%7D,%7B%22title%22:%22%E5%89%8D%E8%BD%AE%22,%22type%22:%22wheel-before%22,%22draw_type%22:%22img%22,%22data%22:%22[%7B%5C%22id%5C%22:1,%5C%22name%5C%22:%5C%22%E9%BB%91%5C%22,%5C%22color%5C%22:%5C%220,0,0%5C%22,%5C%22default%5C%22:true,%5C%22price%5C%22:0%7D,%7B%5C%22id%5C%22:2,%5C%22name%5C%22:%5C%22%E9%BB%84%5C%22,%5C%22color%5C%22:%5C%22255,255,0%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D,%7B%5C%22id%5C%22:3,%5C%22name%5C%22:%5C%22%E6%9A%97%E7%BA%A2%5C%22,%5C%22color%5C%22:%5C%22230,29,121%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D]%22%7D,%7B%22title%22:%22%E5%90%8E%E8%BD%AE%22,%22type%22:%22wheel-after%22,%22draw_type%22:%22img%22,%22data%22:%22[%7B%5C%22id%5C%22:1,%5C%22name%5C%22:%5C%22%E6%9A%97%E7%BA%A2%5C%22,%5C%22color%5C%22:%5C%22230,29,121%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D,%7B%5C%22id%5C%22:2,%5C%22name%5C%22:%5C%22%E9%BB%84%5C%22,%5C%22color%5C%22:%5C%22255,255,0%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D,%7B%5C%22id%5C%22:3,%5C%22name%5C%22:%5C%22%E9%BB%91%5C%22,%5C%22color%5C%22:%5C%220,0,0%5C%22,%5C%22default%5C%22:true,%5C%22price%5C%22:0%7D]%22%7D,%7B%22title%22:%22%E6%89%8B%E6%8A%8A%22,%22type%22:%22handlebar%22,%22draw_type%22:%22img%22,%22data%22:%22[%7B%5C%22id%5C%22:1,%5C%22name%5C%22:%5C%22%E7%81%B0%5C%22,%5C%22color%5C%22:%5C%2296,96,96%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D,%7B%5C%22id%5C%22:2,%5C%22name%5C%22:%5C%22%E7%BA%A2%5C%22,%5C%22color%5C%22:%5C%22230,29,121%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D,%7B%5C%22id%5C%22:3,%5C%22name%5C%22:%5C%22%E9%BB%91%5C%22,%5C%22color%5C%22:%5C%220,0,0%5C%22,%5C%22default%5C%22:true,%5C%22price%5C%22:0%7D]%22%7D,%7B%22title%22:%22%E7%AD%BE%E5%90%8D%22,%22type%22:%22sign%22,%22draw_type%22:%22sign%22,%22data%22:%22[]%22%7D,%7B%22title%22:%22%E8%BE%90%E6%9D%A1%E5%8D%A1%22,%22type%22:%22wheel-before-card%22,%22draw_type%22:%22img2%22,%22data%22:%22[%7B%5C%22id%5C%22:1,%5C%22name%5C%22:%5C%22%E9%BB%91%E6%AD%A6%E5%A3%AB%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:28%7D,%7B%5C%22id%5C%22:2,%5C%22name%5C%22:%5C%22%E8%BF%AA%E5%A3%AB%E5%B0%BC%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:28%7D,%7B%5C%22id%5C%22:3,%5C%22name%5C%22:%5C%22%E6%84%A4%E6%80%92%E7%9A%84%E5%B0%8F%E9%B8%9F%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:28%7D,%7B%5C%22id%5C%22:999,%5C%22name%5C%22:%5C%22%E7%A9%BA%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D]%22%7D,%7B%22title%22:%22%E5%90%8E%E8%BD%AE%E5%9B%BE%E5%BD%A2%22,%22type%22:%22wheel-after-img%22,%22draw_type%22:%22img2%22,%22data%22:%22[%7B%5C%22id%5C%22:1,%5C%22name%5C%22:%5C%22%E8%9C%98%E8%9B%9B%E4%BE%A0%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:219%7D,%7B%5C%22id%5C%22:2,%5C%22name%5C%22:%5C%22%E6%84%A4%E6%80%92%E7%9A%84%E5%B0%8F%E9%B8%9F%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:219%7D,%7B%5C%22id%5C%22:3,%5C%22name%5C%22:%5C%22%E8%9D%99%E8%9D%A0%E4%BE%A01%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:219%7D,%7B%5C%22id%5C%22:4,%5C%22name%5C%22:%5C%22%E5%A4%A7%E5%9C%A3%E5%BD%92%E6%9D%A5%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:219%7D,%7B%5C%22id%5C%22:5,%5C%22name%5C%22:%5C%22%E8%9D%99%E8%9D%A0%E4%BE%A02%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:219%7D,%7B%5C%22id%5C%22:999,%5C%22name%5C%22:%5C%22%E7%A9%BA%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D]%22%7D,%7B%22title%22:%22%E8%A1%8C%E8%BD%A6%E8%AE%B0%E5%BD%95%E4%BB%AA%22,%22type%22:%22drive_recorder%22,%22draw_type%22:%22img2%22,%22data%22:%22[%7B%5C%22id%5C%22:1,%5C%22name%5C%22:%5C%22%E8%AE%B0%E5%BD%95%E4%BB%AA%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:299%7D,%7B%5C%22id%5C%22:999,%5C%22name%5C%22:%5C%22%E7%A9%BA%5C%22,%5C%22default%5C%22:false,%5C%22price%5C%22:0%7D]%22%7D]';
+        curProduct.options = decodeURIComponent(curProduct.options);
+        if(typeof curProduct.options == 'string' && curProduct.options.length){
+            curProduct.options = JSON.parse(curProduct.options);
+        }
+        if(curProduct.options && curProduct.options.length){
+            $.each(curProduct.options,function(i,one){
+                if(one.data){
+                    one.data = JSON.parse(one.data);
+                }
+            });
+        }
+        //商品附加属性
+        curProduct.extra = '[]';
+        curProduct.extra = decodeURIComponent(curProduct.extra);
+        if(typeof curProduct.extra == 'string' && curProduct.extra.length){
+            curProduct.extra = JSON.parse(curProduct.extra);
+        }
+        if(curProduct.extra && curProduct.extra.length){
+            curProduct.hasExtra = true;
+            $.each(curProduct.extra,function(i,one){
+                if(one.data){
+                    one.data = JSON.parse(one.data);
+                }
+            });
+            curProduct.extra = curProduct.extra[0];
+        }
+
+
+        var carProduct = {};
+        carProduct.extra = curProduct.extra;
+        carProduct.hasExtra = curProduct.hasExtra;
+        carProduct.id = +'6';
+        carProduct.car_id = +'';
+        carProduct.img = '';
+        carProduct.ori_img = carProduct.img;
+        carProduct.options = '';
+        carProduct.options = decodeURIComponent(carProduct.options);
+        if(typeof carProduct.options == 'string' && carProduct.options.length){
+            carProduct.options = JSON.parse(carProduct.options);
+        }
+        if(carProduct.options && carProduct.options.length){
+            $.each(carProduct.options,function(i,one){
+                if(one.data){
+                    one.data = JSON.parse(one.data);
+                }
+            });
+        }
+        //如果商品的配置项下架，则购物车去除购物车商品的相应配置项
+        if(carProduct.car_id){
+            var curMap = {};
+            $.each(curProduct.options,function(i,one){
+                curMap[one.type] = one;
+            });
+            for(var i = carProduct.options.length - 1; i >= 0 ; i--){
+                var obj = carProduct[0];
+                if(!curMap[obj.type]){
+                    carProduct.options.splice(i,1);
+                }
+                else{
+                    var dataMap = {};
+                    $.each(curMap[obj.type]['data'],function(j,d){
+                        dataMap[d.id] = d;
+                    });
+                    for(var j = obj.data.length - 1 ; j >=0 ; j--){
+                        var objData = obj['data'][j];
+                        if(!dataMap[objData.id]){
+                            obj.data.splice(j,1);
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+     <script type="text/javascript" src="./DCW_old/product.js.下載"></script>
+
+</content>
+<footer class="footerBox">
+    <div class="ContentsBox">
+        <div class="topBox clearfix">
+            <h1 class="logo"><a href="index.html">DCW</a></h1>
+            <p class="other_link"><a href="#">在线客服</a>    ·    <a href="#">我的订单</a>    ·    <a href="#">使用条款</a>    ·    <a href="#">隐私政策</a>    ·    <a href="#">说明书下载</a></p>
+            <div class="info">
+                <p>TEL        86－21-62347531
+ADD        上海市古北路585号B座6楼     </p>
+                <a href="#" class="icon_wechat"></a>
+            </div>
+        </div>
+        <div class="bottomBox">
+            <p class="copyrights">© 2017 All rights reserved. 动谷科技（上海）有限公司. 沪ICP备16041745号-1</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

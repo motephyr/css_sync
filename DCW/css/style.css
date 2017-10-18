@@ -158,8 +158,8 @@
 
 /*shopping cart*/
 .br_c01{background-color: #f1f1f1;}
-.shopping_cart_one{ width: 100%; padding-bottom: 40px; }
-.shopping_cart_one h3.top_title{ font-size: 22px; color: #333; padding: 15px 0 12px 0; }
+.shopping_cart_one{ width: 100%; padding:20px 0 40px 0; }
+.shopping_cart_one h3.top_title{ font-size: 22px; color: #333; padding-bottom: 12px; }
 
 .shopping_cart_one .for_border{border:1px solid #eaeaea; border-width: 1px 1px 0 1px; margin-bottom: 18px;}
 
@@ -329,6 +329,16 @@ input.checkbox_org[type=radio]:not(old):checked + label{ background-position : 0
 .myShoppingCart ul.the_centre li.operating p.goPay a.btn_green{ width: 100%; margin: 0 auto; background-color: #29a29a; color: #fff; height: 32px; line-height: 32px; display: block; max-width: 108px; }
 .myShoppingCart ul.the_centre li.operating p.goPay a.cancel{ color: #666666; display: block; padding-top:10px; }
 .myShoppingCart ul.the_centre li.operating p.goPay a.cancel:hover{text-decoration: underline;}
+
+/*terms box*/
+.terms_content .agreementBox{ width: 100%; padding: 10px 0 60px 0;}
+.terms_content .agreementBox h2.title{ font-size: 24px; padding: 30px 0; color: #333;}
+.terms_content .agreementBox h3{ padding: 15px 0; font-size: 16px; font-weight: bold; color: #0ba29a; }
+.terms_content .agreementBox h3.m_title{ color: #333; font-size: 20px; padding: 10px 0 0 0; }
+.terms_content .agreementBox p{font-size: 16px; line-height: 26px; text-align: justify; padding-bottom: 15px;}
+.terms_content .agreementBox p a{ color: #0ba29a; }
+.terms_content .agreementBox p a:hover{ text-decoration: underline; }
+.terms_content .agreementBox ul.listbox{list-style-type: disc; color: #555; padding-left: 20px; padding-bottom: 30px; }
 
 @media (max-width:1200px){
 	.main_content .ContentsBox{ max-width: 90%; }

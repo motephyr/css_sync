@@ -1,0 +1,678 @@
+/*
+ * 定制页面控制代码
+ */
+$(function(){
+	var currentStep = 1, //为下一步上一步记步数
+        emptyImg = 'images/empty.png', //可不选的时候给空图片
+        spokeEmptTps = '<p style="font-size:12px;color:#d1d1d1;text-align:center;padding:40px 30px 0 30px;line-height:160%">如果您想购买辐条卡，请在上面选择一个辐条卡系列！</p>'; //辐条卡空提示
+    var $body = $(document.body);
+	var $componentNavPanel = $('#componentNavPanel');
+	var $palettePanel = $('#palettePanel');
+	var util = {};
+	var globalUtil = window.util;
+	var curProduct = window.curProduct;
+	var diyList = [];
+	var defaultCfg = {'img':'','options':{},'car_id':0};
+	var curType;
+	var imageBaseUrl = window.imageBaseUrl || '/Public/images/dcw/';
+	var cacheCanvas = document.createElement("canvas");//当前canvas绘制的内容
+	var hideCanvas = document.createElement("canvas");//当前canvas绘制的内容
+	var canvasWidth = 500;
+	var canvasHeight = 500;
+	var rate = 3;
+	canvasWidth = canvasWidth * rate;
+	canvasHeight = canvasHeight * rate;
+	var imgSize = 5242880;//5MF
+    var imgFormat = ["image/jpg", "image/jpeg", "image/png", "image/bmp", "image/gif", "image/tiff", "image/jpe"];
+	var mainCanvas = $('#mainCanvas')[0];
+	var curCfg;
+	var totalStep = 0;
+	var hasEdit = false;
+	var $textPanel = $('#textPanel');
+	var $signInput = $textPanel.find('input');
+	var $singBtn = $('img.sign-btn');
+	var storage = window.localStorage;
+	var storeKey = 'dcw_diy';
+	var sign_result = false;
+	var globalObj = {};
+	cacheCanvas.width = canvasWidth;
+	cacheCanvas.height = canvasHeight;
+	hideCanvas.width = canvasWidth;
+	hideCanvas.height = canvasHeight;
+    util.drawImage = function(canvas,url,cb){
+    	if(!url){
+			cb && cb();
+			return;
+		}
+		var ctx = canvas.getContext("2d");
+			function requestImg(url){
+				var img = new Image();
+				img.setAttribute('crossOrigin', 'anonymous');
+				
+				//console.log(canvas,url);
+				img.onload = function() {
+					console.log(img.width,img.height);
+					ctx.drawImage(img,0,0,img.width,img.height, 0,0,canvasWidth,canvasHeight);
+					cb && cb();
+				}
+
+				img.onerror = function(){
+					var timeStamp = +new Date();
+					requestImg(url+'?'+timeStamp);
+				}
+				
+				img.src = url;
+			}
+			requestImg(url)
+	}
+
+	util.clearImage = function(canvas){
+		//var ctx = canvas.getContext("2d");
+		//ctx.fillRect(0,0,canvasWidth,canvasHeight);
+		canvas.width = 0;
+		canvas.height = 0;
+		canvas.width = canvasWidth;
+		canvas.height = canvasHeight;
+	}
+	util.getImage = function(canvas){
+		return canvas.toDataURL();
+	}
+	util.cacheImage = function(cache,canvas){
+		util.clearImage(cache);
+		var ctx = cache.getContext("2d");
+		ctx.drawImage(canvas, 0,0,canvasWidth,canvasHeight);
+	}
+	util.restoreImage = function(cache,canvas){
+		util.clearImage(canvas);
+		// console.log(canvas.width);
+		var ctx = canvas.getContext("2d");
+		ctx.drawImage(cache, 0,0,canvasWidth,canvasHeight);
+	}
+	util.isUndefined = function(obj){
+		return typeof obj === 'undefined';
+	}
+	util.getUrlParam = function(name){
+	    //构造一个含有目标参数的正则表达式对象
+	    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	    //匹配目标参数
+	    var r = window.location.search.substr(1).match(reg);
+	    //返回参数值
+	    if (r!=null) return unescape(r[2]);
+	    return null;
+	}
+	/**
+	 * 该方法不绘制辐条卡
+	 */
+	util.drawAll = function(canvas,config,cb,exType){
+		util.clearImage(hideCanvas);
+		var arr = [];
+		$.each(config,function(key,one){
+			if(key != exType && key != 'wheel-before-card'){
+				arr.push(one);
+			}
+		});
+		function callback(){
+			util.restoreImage(hideCanvas,canvas);
+			cb && cb();
+		}
+		util.drawImage(hideCanvas,curProduct.img,function(){
+			var index = 0;
+			var len = arr.length;
+			fn();
+			function fn(){
+				if(index >= len){
+					callback();
+					return;
+				}
+				var one = arr[index];
+				index++;
+				var img = '';
+				$.each(one.data,function(j,d){
+					if(d.default){
+						img = d.img;
+					}
+				});
+				if(img){
+					util.drawImage(hideCanvas,img,fn);
+				}
+				else{
+					fn();
+				}
+			}
+		});
+		// setTimeout(function(){
+		// 	console.log(util.getImage($canvasHide[0]));
+		// },3000);
+		//util.restoreImage(tmpCanvas,canvas);
+	}
+	    //绘制默认签名图片
+    util.drawSignImage = function(canvas,cb,url){
+        var ctx = canvas.getContext("2d");
+        ctx.save();
+        if (curProduct.id == 7){
+        	ctx.translate(300 * rate,273 * rate);
+        	ctx.rotate(-39 * Math.PI / 180);
+	    } else if (curProduct.id == 93 || curProduct.id == 116){
+      	ctx.translate(297 * rate,230 * rate);
+      	ctx.rotate(-5 * Math.PI / 180);
+	    } else {	      	
+			ctx.translate(300 * rate,206 * rate);
+        	ctx.rotate(-47 * Math.PI / 180);
+	      }
+        var img = new Image();
+		img.setAttribute('crossOrigin', 'anonymous');
+        img.onload = function() {
+            // console.log(img.width,img.height);
+            ctx.drawImage(img, 0,0,img.width,img.height,0,0,26 * rate,10 * rate);
+            ctx.restore();
+            cb && cb();
+        }
+        img.src = url || (imageBaseUrl + 'sign_tpl.png');
+    }
+    util.drawSignText = function(canvas,text){
+    	var width = 700;
+    	var height = 300;
+		canvas.width = 0;
+		canvas.height = 0;
+		canvas.width = width;
+		canvas.height = height;
+		var ctx = canvas.getContext("2d");
+		ctx.save();
+		if (curProduct.id != 93 && curProduct.id != 116){
+			ctx.fillStyle = '#FFFFFF';
+			ctx.fillRect(0,0,width,height);
+		}
+		ctx.fillStyle = '#000000';
+		ctx.font="200px Italic2";
+		ctx.fillText(text,30,200);
+	    ctx.restore();
+	}
+	globalObj.addToCart = function (){
+    	var param = {};
+		var options = $.extend(true,{},curCfg.options);
+		$.each(options,function(i,one){
+			if(one.data){
+				one.data = JSON.stringify(one.data);
+			}
+		});
+		//对象转数组
+		var tmp = [];
+		$.each(options,function(i,one){
+			tmp.push(one);
+		});
+		tmp.sort(function(a,b){
+			return a._order - b._order;
+		});
+		// console.log(options,tmp);
+		param.shang_pin_id = id;
+		param.num = 1;
+		if(curCfg.car_id){
+			param.add_from = 'update';
+			param.car_id = curCfg.car_id;
+		}
+		else{
+			param.add_from = 'new';
+		}
+		param.platform = "pc";
+		param.design = JSON.stringify(tmp);
+		param.extra = JSON.stringify(curProduct.extra);
+		param.pic = curCfg.img;
+		if(!hasEdit){
+			param.pic = curProduct.ori_img;
+		}
+		var url = '/common_car/add_car';
+		var layerIndex = layer.load(2, {shade: [0.1,'#fff']});
+		globalUtil.post(url,param,function(data){
+			layer.close(layerIndex);
+			if(data && data.status == 1 ){
+				window.location = '/dcw/cart';
+			}else if(data && data.status == -1){
+				//保存到本地缓存
+				if(storage){
+					storage.setItem(storeKey,JSON.stringify(curCfg));
+					storage.setItem(storeKey + 'extra',param.extra);
+				}
+				window.location = '/dcw/login?url=' + encodeURI(window.location.href);
+			}
+			else{
+				layer.alert('购物车添加失败，请稍后重试', {
+					skin: 'layui-layer-lan',
+					closeBtn: 0,
+					shift: 4
+				});
+			}
+		});
+    }
+	var id = curProduct.id;
+	curProduct.img = curProduct.ori_img;
+	var car_id = util.getUrlParam('car_id');
+	if(car_id && window.carProduct.id){
+		curProduct = window.carProduct;
+	}
+	//剔除配置项下面选项数量为0的配置项
+	for(var i = curProduct.options.length - 1; i >=0 ; i--){
+		var obj = curProduct['options'][i];
+		if(obj.type != 'sign'){
+			if(!obj.data || !obj.data.length){
+				curProduct.options.splice(i,1);
+			}
+		}
+	}
+	//如果配置项为空，则不允许定制
+	if(curProduct.options.length){
+		hasEdit = true;
+	}
+	if(!hasEdit){
+		curProduct.img = curProduct.ori_img;
+		//隐藏上一步，下一步
+		$('.goNxtPrv').hide();
+	}
+	!function init(){
+		totalStep = curProduct.options.length;
+		$.each(curProduct.options,function(i,one){
+			one._order = i;
+			one.icon = imageBaseUrl + one.type + '.png';
+			$.each(one.data,function(j,item){
+				var basePath = imageBaseUrl + curProduct.id + '/' + one.type + '/'
+				if (item.id) {
+					item.img = basePath + item.id + '.png';
+					item.img_full = basePath + 'full'+ item.id + '.png';
+					item.img_icon = basePath + 'icon'+ item.id + '.png';
+				}
+			});
+			defaultCfg['options'][one.type] = one;
+		});
+		defaultCfg.img = curProduct.img;
+		defaultCfg.car_id = curProduct.car_id;
+		curCfg = $.extend(true,{},defaultCfg);
+		if(storage){
+			var storeCfg = storage.getItem(storeKey);
+			try{
+				storeCfg = JSON.parse(storeCfg);
+			}
+			catch(e){
+				storeCfg = null;
+			}
+			var extraCfg = storage.getItem(storeKey + 'extra');
+			try{
+				extraCfg = JSON.parse(extraCfg);
+			}
+			catch(e){
+				extraCfg = null;
+			}
+			if(extraCfg){
+				curProduct.extra = extraCfg;
+				storage.removeItem(storeKey + 'extra');
+			}
+			if(storeCfg){
+				// console.log(curCfg,storeCfg);
+				curCfg = storeCfg;
+				storage.removeItem(storeKey);
+				//尝试再次添加购物车
+				globalObj.addToCart();
+			}
+		}
+		//绘制默认图片
+		util.clearImage(mainCanvas);
+		util.drawImage(mainCanvas,curProduct.img);
+		//填充配置项导航列表
+		console.log(curProduct);
+		$.each(curProduct.options,function(i,one){
+			if(one.type == 'sign'){
+				one.done = !!one.img;
+			}
+			else{
+				one.done = false;
+				$.each(one.data,function(j,item){
+					if(item.default){
+						one.done = true;
+					}
+				});
+			}
+		});
+		if (curProduct.id == 119 || curProduct.id == 120 || curProduct.id == 121){
+			for(var i=0;i<curProduct.options.length;i++){
+				if(curProduct.options[i].type == 'frame'){
+					curProduct.options[i].icon = "/Public/images/dcw/baby-frame.png"
+				}
+			    if(curProduct.options[i].type == 'cushion'){
+					curProduct.options[i].icon = "/Public/images/dcw/baby-cushion.png"
+				}
+			}
+		}
+		var html = template('component_tpl',{list:curProduct.options});
+		$componentNavPanel.html(html);
+	}();
+    $(function() {
+        //鼠标经过提示效果
+        // $('.goodSVG-1 path').each(function() {
+        //     var that = $(this),
+        //         tips = that.attr('title');
+        //     that.qtip({
+        //         content: tips,
+        //         style: {
+        //             classes: 'qtip-blue qtip-shadow qtip-youtube'
+        //         },
+        //         position: {
+        //             target: 'mouse' // my target
+        //         }
+        //     });
+        // });
+        //右边滚动条
+        $(".DIYcon").mCustomScrollbar({
+            theme: "dark-thin",
+            autoExpandScrollbar: true,
+            scrollInertia: 0,
+            advanced: {
+                autoExpandHorizontalScroll: true
+            }
+        });
+        //放大缩小
+        $('.bikeContainer').panzoom({
+            $zoomIn: $(".zoomIn"),
+            $zoomOut: $(".zoomOut"),
+            $reset: $('.addCartBtn'),
+            maxScale:3
+        });
+        //右侧导航菜单
+        $componentNavPanel.on('click', 'a',function() {
+            var $this = $(this),
+				type = $this.data('type'),
+				draw = $this.data('draw'),
+				list = curCfg['options'][type]['data'];
+			curType = type;
+			currentStep = $this.index() + 1;
+			$this.siblings().removeClass("cur");
+            $this.addClass("cur");
+			//保存当前canvas绘制的内容
+			util.cacheImage(cacheCanvas,mainCanvas);
+			if(draw == 'img'){
+				//填充部件颜色
+				var html = template('color_tpl',{data:list,title:curCfg['options'][type]['title']});
+				$palettePanel.html(html);
+				//是否有默认项
+				$.each(list,function(i,one){
+					if(one['default']){
+						$palettePanel.find('.color[rel=' + one.id + ']').click();
+					}
+				});
+			}
+			else if(draw == 'sign'){
+				//填充画布
+				var html = template('upload_tpl',{title:curCfg['options'][type]['title']});
+				$palettePanel.html(html);
+				$('#imgUpload').on('click',function(){
+					$('#uploadFile').click();
+				});
+				$('#uploadFile').on('change',function(e){
+					// console.log(e);
+					var files = e.target.files;;
+					if(files && files.length){
+						var f = files[0];
+						// console.log(f.type);
+						//校验图片格式
+						if ($.inArray(f.type, imgFormat) < 0){
+							alert("图片格式不正确或图片已损坏！");
+							return;
+						}
+                		if (f.size > imgSize){
+                			alert("单张图片最大为5M！");
+                			return;
+                		}
+						var reader = new FileReader();
+						reader.onload = function(ee){
+							var imgData = ee.target.result;
+							curCfg['options'][curType]['img'] = imgData;
+                            $palettePanel.find('.collctionCon img').attr('src',curCfg['options'][curType]['img']);
+                            util.drawSignImage(mainCanvas);
+                            $('.DIYmns [data-type=' + curType + ']').addClass('done');
+						}
+						reader.readAsDataURL(f);
+					}
+				});
+				if(curCfg['options'][curType]['img']){
+					//如果已经上传过，则显示
+					$palettePanel.find('.collctionCon img').attr('src',curCfg['options'][curType]['img']);
+                    util.drawSignImage(mainCanvas,null,curCfg['options'][curType]['img']);
+                    $('.DIYmns [data-type=' + curType + ']').addClass('done');
+				}
+			}
+			else if(draw == 'img2'){
+				var html = template('color_tpl2',{data:list,title:curCfg['options'][type]['title']});
+                $palettePanel.html(html);
+				//是否有默认项
+				$.each(list,function(i,one){
+					if(one['default']){
+						$palettePanel.find('.color[rel=' + one.id + ']').click();
+					}
+				});
+			};
+            var $diyPanel = $palettePanel.find('.normalDIY');
+            $diyPanel.siblings().toggle(type == 'wheel-before-card' || type == 'sign');
+            updatePrevStyle();
+            updateNextStyle();
+        });
+		//选择定制颜色
+		$palettePanel.on('click','.color',function(){
+			var $this = $(this),
+				action = $this.attr('action'),
+				title = $this.attr('title'),
+				img = $this.attr('img'),
+				rel = $this.attr('rel') || img,
+				img_full = $this.attr('img-full'),
+				selectedClass = 'cur';
+			$this.parent().parent().prev('.inSecT').find('.selectTips').text(title);
+			if(curType == 'wheel-before-card'){
+				$this.parent().parent().find('.collctionCon img').attr('src',img_full);
+			}
+       if(action == 'sign' || action == 'sign_clear'){
+				if(action == 'sign'){
+					$textPanel.show();
+					$signInput.val(curCfg['options'][curType]['text'] || '');
+					$singBtn.off('click').on('click',function(){
+						var action = $(this).attr('action');
+						var text = $.trim($signInput.val());
+						if(action == 'check' && text.length){
+							util.drawSignText(hideCanvas,text);
+							var signImg = util.getImage(hideCanvas);
+							// console.log(signImg);
+							//$('#signTextImg').attr('src',signImg);
+							curCfg['options'][curType]['img'] = signImg;
+							curCfg['options'][curType]['text'] = text;
+						    util.drawSignImage(mainCanvas,null,signImg);
+						    update();
+				            fn();
+				      if (!sign_result){
+					      $('#price').text(parseInt($('#price').text()) + 58)
+					      sign_result = true;
+				    	}
+						}
+						//清空签名
+						$signInput.val('');
+						$textPanel.hide();
+					});
+				}
+				else{
+
+					curCfg['options'][curType]['img'] = null;
+					curCfg['options'][curType]['text'] = null;
+					update();
+					fn();
+				  if (sign_result){
+					  $('#price').text(parseInt($('#price').text()) - 58)
+					  sign_result = false;
+				  }
+				}
+
+
+			}else{
+				update();
+	            //保存选项
+	            var draw = curCfg['options'][curType]['draw_type'];
+	            if(draw == 'img' || draw == 'img2'){
+	            	var originPrice = parseInt($('#price').text())
+	              var flag = false
+	              $.each(curCfg['options'][curType]['data'],function(i,one){
+	                  if(one['default'] && one.price != 0){
+	                  	flag = true
+	                  }
+
+	                  if(one.id == rel || one.img == rel){
+	                      one['default'] = true;
+	                      originPrice = originPrice +one.price
+	                  }
+	                  else{
+	                      one['default'] = false;
+	                  }
+	              });
+	              if (flag) {
+	              		originPrice = originPrice - curCfg['options'][curType]['data'][0].price;
+	              		flag = false;
+	              }
+	              $('#price').text(originPrice)
+	              // console.log(originPrice)
+	            }
+	            fn();
+			}
+            // if(curType == 'chain'){
+			// 	//重新绘制所有图片
+			// 	util.drawAll(mainCanvas,curCfg['options'],function(){
+			// 		util.drawImage(mainCanvas,img);
+			// 	});
+			// }
+			// else{
+			// 	util.drawImage(mainCanvas,img);
+			// }
+			//重新绘制所有图片
+			function fn(){
+				util.drawAll(mainCanvas,curCfg['options'],function(){
+					util.drawImage(mainCanvas,img,function(){
+						$.each(curCfg['options'],function(ii,one){
+							if(one.type == 'sign' && one.img){
+								util.drawSignImage(mainCanvas,null,one.img);
+							}
+							if(curType != 'wheel-before-card' && one.type == 'wheel-before-card'){
+								//绘制辐条卡
+								var cardImg = '';
+								if(one.data && one.data.length){
+									$.each(one.data,function(j,item){
+										if(item.default){
+											cardImg = item.img;
+										}
+									});
+								}
+								if(cardImg){
+									util.drawImage(mainCanvas,cardImg);
+								}
+							}
+						});
+					});
+				},curType);
+			}
+			function update(){
+				if(!$this.hasClass(selectedClass)){
+					$this.addClass(selectedClass);
+					$this.siblings().removeClass(selectedClass);
+				}
+	            //重置左边菜单是否打钩的状态
+	            if($this.parent().find('.cur').length > 0) {
+	                $('.DIYmns [data-type=' + curType + ']').addClass('done');
+	            } else {
+	                $('.DIYmns [data-type=' + curType + ']').removeClass('done');
+	            }
+			}
+		});
+		$componentNavPanel.find('a:nth-child(' + currentStep + ')').click();
+		function updatePrevStyle(){
+			//如果是第一步
+	        if(currentStep <= 1) {
+	            currentStep = 1;
+	            $('.goNxtPrv .dis').removeClass('dis');
+	            $('.goNxtPrv .prevBtn').addClass('dis');
+	        }
+		}
+		function updateNextStyle(){
+			//如果是最后一步
+	        if(currentStep >= totalStep) {
+	            currentStep = totalStep;
+	            $('.goNxtPrv .dis').removeClass('dis');
+	            $('.goNxtPrv .nextBtn').addClass('dis');
+	        }
+		}
+	    //上一步
+	    $body.on('click', '.goNxtPrv .prevBtn',function() {
+	        currentStep--;
+	        $('.goNxtPrv .nextBtn').removeClass('dis');
+	        updatePrevStyle();
+	        $componentNavPanel.find('a:nth-child(' + currentStep + ')').click();
+	    });
+	    //下一步
+	    $body.on('click', '.goNxtPrv .nextBtn',function() {
+	        currentStep++;
+	        $('.goNxtPrv .prevBtn').removeClass('dis');
+	        updateNextStyle();
+	        // console.log(currentStep,$componentNavPanel.find('a:nth-child(' + currentStep + ')'));
+	        $componentNavPanel.find('a:nth-child(' + currentStep + ')').click();
+	    });
+	    //加入购物车
+	    $body.on('click', '.addCartBtn',function() {
+	        if(hasEdit){
+	        	curCfg.img = util.getImage(mainCanvas);
+	        }
+	        if(curProduct.hasExtra){
+				$('#sizePanel').show();
+			}
+			else{
+				globalObj.addToCart();
+			}
+	    });
+	    $body.on('click', '.addCartBtnPrev',function() {
+	        globalObj.addToCart();
+	    });
+	    $('#sizePanel imgBg').on(function(){
+	    	$('#sizePanel').hide();
+	    });
+
+	    //未DIY项点击到相应项目
+	    $('body').on('click', '.unDIYParts a',function() {
+	        var that = $(this),
+	            unCls = that.attr('data-class'),
+	            DIYcon = $('.DIYcon .' + unCls),
+	            DIYmns = $('.DIYmns .' + unCls);
+	        $('.DIYcon .mod').css('display', 'none');
+	        DIYcon.css('display', 'block');
+	        $('.DIYmns a').removeClass("cur");
+	        DIYmns.addClass("cur");
+	        $('.subTips').hide();
+	    });
+	    //尺码相关逻辑
+	    !function(){
+	    	var $chimaPanel = $('#chimaPanel');
+			//填充尺码
+			if(curProduct.hasExtra){
+				var html = template('chima_tpl',{list:curProduct.extra});
+				$chimaPanel.html(html);
+			}
+			$chimaPanel.on('click','li',function(){
+				var $this = $(this),
+					id = $this.data('id'),
+					selectedClass = 'buyingtools--is--selected',
+					$label = $this.find('span');
+				if($label.hasClass(selectedClass)){
+					return;
+				}
+				$.each(curProduct.extra,function(one,i){
+					if(one.id == id){
+						one.default = true;
+					}
+					else{
+						one.default = false;
+					}
+				});
+				$label.addClass(selectedClass)
+				$this.siblings().find('span').removeClass(selectedClass);
+			});
+			$chimaPanel.children(':first').click();
+	    }();
+	});
+});

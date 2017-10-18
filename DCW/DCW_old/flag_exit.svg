@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px" height="24px" viewBox="0 0 26 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Modal Close Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Specs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="B16---SAVE_V3a-Copy-2" transform="translate(-174.000000, -1134.000000)" stroke="#111111" fill="#111111">
+            <g id="BottomBar2" transform="translate(0.000000, 1086.000000)">
+                <g id="Close-Copy" transform="translate(143.000000, 16.000000)">
+                    <path d="M46.5686185,43.9096082 L55.8350384,34.5750386 L53.2675831,32 L44.0064398,41.3292392 L34.7429668,32 L32.1755115,34.5750386 L41.4448005,43.9097139 L32,53.4239606 L34.5664962,56 L44.0070391,46.4900267 L53.4335038,55.9829865 L56,53.407948 L46.5686185,43.9096082 Z" id="Modal-Close-Copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

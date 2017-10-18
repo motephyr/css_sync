@@ -1,0 +1,37 @@
+$(function(){
+	menuSlide();
+})
+
+
+function menuSlide(){
+	$(".topMenu li").on("mouseenter",function(){
+		$(this).children("div").stop().slideDown();
+	});
+	
+	$(".topMenu li").on("mouseleave",function(){
+		$(this).children("div").stop().slideUp();
+	});
+	
+	$(".cart-slide").on("mouseenter",function(){
+		$(this).find("ul").stop().slideDown();
+	})
+	$(".cart-slide").on("mouseleave",function(){
+		$(this).find("ul").stop().slideUp();
+	});
+	
+//	$(".cart-li").on("mouseenter",function(){
+//		$(this).find("div").stop().show();
+//	})
+//	
+//	$(".cart-li").on("mouseleave",function(){
+//		$(this).find("div").stop().hide();
+//	})
+	$("#icon-check").on("mouseenter",function(){
+		$(".checkOrder").show();
+	})
+	$("#icon-check").on("mouseleave",function(){
+		$(".checkOrder").hide();
+	})
+}
+
+
