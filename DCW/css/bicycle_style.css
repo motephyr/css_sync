@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*--DCW by PC - bicycle edit--*/
+.bicycle_editBox { width: 100%; height: 100vh; background-color: #f7f7f7; display: block;}
+.ContentsBox{ width: 100%; min-height: 100%; }
+
+.bicycle_editBox .leftBox{position: relative; float: left; width: 100%; min-height: 97vh; display: block; width: calc(100% - 478px ); display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center}
+.bicycle_editBox .leftBox img{max-width: 600px}
+.bicycle_editBox .leftBox .the_bicycle{ width: 100%; max-width: 600px; margin: 0 auto ; }
+
+.bicycle_editBox .leftBox a.arr{ width: 40px; height: 64px; display: block; position: absolute; top: 50%; cursor: pointer; margin-top: -32px;}
+.bicycle_editBox .leftBox a.arr:hover{opacity: .9;}
+.bicycle_editBox .leftBox a.arr_left{ left: 5%; background: url(../images/edit/arr_l.png) center center no-repeat; background-size:contain;}
+.bicycle_editBox .leftBox a.arr_right{ right: 5%; background: url(../images/edit/arr_r.png) center center no-repeat; background-size:contain;}
+
+.bicycle_editBox p.btn_fine_line{font-size: 14px; text-align: center; padding: 60px 0; width: 100%; position: absolute ; left: 0; bottom: 0px; }
+.bicycle_editBox p.btn_fine_line a{ color: #5f5f5f; width: 158px; height: 34px; line-height: 34px; margin: 0 auto; display: block; border: 1px solid #dcdcdc; }
+
+.bicycle_editBox .rightMenu{ position: fixed; right: 0; top: 0; width: 475px;  height: 100vh; border-left: 3px solid #fff;}
+.bicycle_editBox .rightMenu ul.parts{ width: 100%; overflow-y:scroll ; height: 100vh; }
+.bicycle_editBox .rightMenu ul.parts li{ cursor: pointer; min-height: 128px; text-align: center; padding: 15px 0; border-top: 3px solid #fff;transition:width 1s; -moz-transition:all 1s; -ms-transition: all 1s; -webkit-transition:all 1s; -o-transition:all 1s;}
+.bicycle_editBox .rightMenu ul.parts li img{max-width: 105px;}
+.bicycle_editBox .rightMenu ul.parts li p{font-size: 16px;}
+.bicycle_editBox .rightMenu ul.parts li:hover{opacity: .9; transition:width 1s; -moz-transition:all 1s; -ms-transition: all 1s; -webkit-transition:all 1s; -o-transition:all 1s;}
+.bicycle_editBox .rightMenu ul.parts li.none_line{border: none;}
+.bicycle_editBox .rightMenu ul.parts li .top_photo{max-width: 105px; margin: 0 auto;}
+
+.bicycle_editBox .rightMenu ul.to_color{ padding-top: 106px; height:calc(100vh - 190px); }
+.bicycle_editBox .rightMenu ul.to_color li{ width: 50%; float: left; position: relative; }
+.bicycle_editBox .rightMenu ul.to_color li::after{content: ""; position: absolute; left: -3px; width: 3px; height: 100%; background-color: #fff; top: 0; display: block;}
+.bicycle_editBox .rightMenu ul.to_color li.btn_in{background-color: #e6e6e6;}
+
+.bicycle_editBox .rightMenu h3.top_title{ width: 100%; font-size: 22px; border-bottom: 3px solid #fff; background-color: #f7f7f7; position: absolute; top: 0; text-align: center; height: 106px; line-height: 106px; z-index: 6; }
+.bicycle_editBox .rightMenu .btn_Y_N{ width: 100%; position: absolute; bottom: 0; height: 84px; background-color: #fff; z-index: 6; }
+.bicycle_editBox .rightMenu .btn_Y_N a{ cursor: pointer; width: 50%; height: 84px; display: block; float: left; }
+.bicycle_editBox .rightMenu .btn_Y_N a.no{ background:url(../images/edit/btn_no.png) center center no-repeat; background-size: contain;}
+.bicycle_editBox .rightMenu .btn_Y_N a.ok{ background:url(../images/edit/btn_ok.png) center center no-repeat; background-size: contain;}
+
+
+@media (max-width:1300px){
+	.bicycle_editBox .leftBox{ width: calc(100% - 300px);}
+	.bicycle_editBox .rightMenu{ width: 300px;}
+	.bicycle_editBox .rightMenu ul.parts li{ min-height: 100px;}
+	.bicycle_editBox .rightMenu ul.parts li img{max-width: 75px;}
+}
+@media (max-width:1100px){
+	.bicycle_editBox .leftBox{ width: calc(100% - 250px);}
+	.bicycle_editBox .rightMenu{ width: 250px;}
+	.bicycle_editBox .rightMenu ul.parts li{ min-height: 80px;}
+	.bicycle_editBox .rightMenu ul.parts li img{max-width: 70px;}
+}
